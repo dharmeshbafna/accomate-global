@@ -10,6 +10,18 @@
   color: #5264F3;
 }
 
+.t3 {
+  color: #A8A2D8;
+}
+
+.t4 {
+  color: #F2ECFF;
+}
+
+.t5 {
+  color: #1e8fdb;
+}
+
 .hover\:underline-animation:hover::after {
   transform: scaleX(1);
 }
@@ -20,6 +32,20 @@
   width: 100%;
   height: 2px;
   background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover\:underline-animation2:hover::after {
+  transform: scaleX(1);
+}
+
+.hover\:underline-animation2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #5264F3;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }

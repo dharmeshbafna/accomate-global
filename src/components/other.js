@@ -81,15 +81,15 @@ export const Navbar = () => {
             </div>
 
             {/* Sticky */}
-            <div className={`${sticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg ' : 'hidden'} py-6 px-8 bg-gradient-to-r from-[#5264F3] to-[#5264F3]`}>
+            <div className={`${sticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg ' : 'hidden'} py-6 px-8 bg-white`}>
                 <div className="grid grid-cols-2">
 
                     {/* Logo */}
                     <div className="flex items-center">
                         <Image
-                            src={WhiteLogo}
+                            src={Logo1}
                             alt="Accomate Logo"
-                            className="h-5 w-auto"
+                            className="h-8 w-auto"
                         />
                     </div>
 
@@ -99,15 +99,15 @@ export const Navbar = () => {
                         {navitems.map((i, index) => {
                             return (
                                 <div className="w-fit text-lg relative">
-                                    <a href={i.link} className={`text-white hover:underline-animation`}>
+                                    <a href={i.link} className={`${isActive(i.link) ? 'text-[#5264F3]' : ''}  hover:underline-animation2`}>
                                         {i.name}
                                     </a>
-                                    <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-white transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                    <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#5264F3] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
                                 </div>
                             )
                         })}
 
-                        <button className="text-[#5264F3] bg-white px-5 py-2 rounded-full shadow-lg">
+                        <button className="text-white bg-[#5264F3]  px-5 py-2 rounded-full shadow-lg">
                             Contact Us
                         </button>
                     </div>

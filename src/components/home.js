@@ -94,7 +94,7 @@ export const Banner = () => {
 
                         {/* Text */}
                         <div className={`absolute top-[20%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                            <div className=" text-[50px] font-semibold text-white">
+                            <div className="text-[50px] font-semibold text-white">
                                 {slide.title}
                             </div>
                             <div className="my-5 text-white">
@@ -124,7 +124,7 @@ export const About = () => {
                         alt="About Image"
                         className="w-[80%] h-auto flex justify-center mx-auto drop-shadow-xl"
                     />
-                    <div className="drop-shadow-lg absolute w-[80%] h-full bg-[#5264F3] top-[5%] left-[7%] -z-10"></div>
+                    <div className="drop-shadow-lg absolute w-[80%] h-full bg-[#5264F389] top-[5%] left-[7%] -z-10"></div>
                 </div>
 
                 <div className="flex items-center my-auto">
@@ -242,12 +242,25 @@ export const Services = () => {
         },
     ];
 
+    const canadaservices = [
+
+    ];
+
     const handleNext = (e) => {
         if (e && e.stopPropagation) {
             e.stopPropagation();
         }
         if (slider.current) {
             slider.current.next();
+        }
+    };
+
+    const handlePrev = (e) => {
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        }
+        if (slider.current) {
+            slider.current.prev();
         }
     };
 
@@ -363,8 +376,13 @@ export const Services = () => {
                         </div> : ''}
 
 
+                    {/* Prev Button */}
+                    <button onClick={() => handlePrev()} className="drop-shadow-lg absolute -left-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                        <FaChevronLeft />
+                    </button>
+
                     {/* Next Button */}
-                    <button onClick={() => handleNext()} className="absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                    <button onClick={() => handleNext()} className="drop-shadow-lg absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
                         <FaChevronRight />
                     </button>
                 </div>
