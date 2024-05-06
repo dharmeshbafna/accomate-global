@@ -6,8 +6,8 @@ import AboutImg from "../../public/dummy1.png"
 import Banner1 from "../../public/banner1.jpg"
 import Banner2 from "../../public/banner2.jpg"
 import USA from "../../public/usa.webp"
-import Canada from "../../public/canada.webp"
-import Australia from "../../public/australia.webp"
+import Canada from "../../public/circular_canada.jpg"
+import Australia from "../../public/circular_australia.jpg"
 
 import { useRef } from "react";
 import Slider from "react-slick";
@@ -81,7 +81,7 @@ export const Banner = () => {
         <div className="overflow-x-hidden relative">
             <Slider ref={sliderRef} {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="h-[90vh] w-full relative">
+                    <div key={index} className="h-[70vh] w-full relative">
                         <Image
                             src={slide.image}
                             priority={true}
@@ -93,7 +93,7 @@ export const Banner = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-[#0000005d]"></div>
 
                         {/* Text */}
-                        <div className={`absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                        <div className={`absolute top-[20%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
                             <div className=" text-[50px] font-semibold text-white">
                                 {slide.title}
                             </div>
@@ -181,7 +181,7 @@ export const Services = () => {
             '(min-width: 1024px)': {
                 slides: {
                     origin: 'auto',
-                    perView: 2.75,
+                    perView: 3,
                     spacing: 32,
                 },
             },
@@ -268,43 +268,52 @@ export const Services = () => {
                 We provide a wide range of services
             </div>
 
-            <div className="flex mt-10 items-center my-auto relative">
+            <div className="mt-10 ">
 
                 {/* Country */}
-                <div className="lg:w-[20%] flex items-center my-auto">
-                    <div className="space-y-5 w-full">
-                        <button
-                            onClick={() => setType('usa')}
-                            className={`rounded-full w-fit h-fit ${type == 'usa' ? 'border-4 border-[#5264F3]' : ''} flex justify-center mx-auto p-1 hover:scale-[110%] duration-300`}>
-                            <Image
-                                src={USA}
-                                alt="USA"
-                                className="h-24 w-24 rounded-full "
-                            />
+                <div className="flex justify-center items-center m-auto pb-10">
+                    <div className="lg:w-1/2 flex items-center my-auto space-x-5">
+                        <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                                <Image
+                                    src={USA}
+                                    alt="USA"
+                                    className="h-10 w-10 rounded-full "
+                                />
+                            </div>
+                            <div className="flex justify-center mx-auto text-center text-lg">
+                                USA
+                            </div>
                         </button>
-                        <button
-                            onClick={() => setType('canada')}
-                            className={`rounded-full w-fit h-fit ${type == 'canada' ? 'border-4 border-[#5264F3]' : ''} flex justify-center mx-auto p-1 hover:scale-[110%] duration-300`}>
-                            <Image
-                                src={Canada}
-                                alt="canada"
-                                className="h-24 w-24 rounded-full "
-                            />
+                        <button onClick={() => setType('canada')} className={`${type == 'canada' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                                <Image
+                                    src={Canada}
+                                    alt="Canada"
+                                    className="h-10 w-10 rounded-full "
+                                />
+                            </div>
+                            <div className="flex justify-center mx-auto text-center text-lg">
+                                Canada
+                            </div>
                         </button>
-                        <button
-                            onClick={() => setType('australia')}
-                            className={`rounded-full w-fit h-fit ${type == 'australia' ? 'border-4 border-[#5264F3]' : ''} flex justify-center mx-auto p-1 hover:scale-[110%] duration-300`}>
-                            <Image
-                                src={Australia}
-                                alt="australia"
-                                className="h-24 w-24 rounded-full "
-                            />
+                        <button onClick={() => setType('australia')} className={`${type == 'australia' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                                <Image
+                                    src={Australia}
+                                    alt="Australia"
+                                    className="h-10 w-10 rounded-full "
+                                />
+                            </div>
+                            <div className="flex justify-center mx-auto text-center text-lg">
+                                Australia
+                            </div>
                         </button>
                     </div>
                 </div>
 
                 {/* Services */}
-                <div className="lg:w-[80%] px-4">
+                <div className="px-4 relative">
                     {type == 'usa' ?
                         <div ref={sliderRef} className="keen-slider">
 
@@ -352,12 +361,14 @@ export const Services = () => {
                             })}
 
                         </div> : ''}
+
+
+                    {/* Next Button */}
+                    <button onClick={() => handleNext()} className="absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                        <FaChevronRight />
+                    </button>
                 </div>
 
-                {/* Next Button */}
-                <button onClick={() => handleNext()} className="absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
-                    <FaChevronRight />
-                </button>
             </div>
         </div>
     )
