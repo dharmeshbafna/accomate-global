@@ -1,4 +1,9 @@
 import Image from "next/image";
+import {
+  Banner,
+  About,
+  Services
+} from "@/components/home";
 
 export const metadata = {
   title: "Accomate Global",
@@ -10,7 +15,9 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      Hello
+      <Banner />
+      <About />
+      <Services />
     </div>
   );
 }
