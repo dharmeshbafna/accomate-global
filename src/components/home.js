@@ -424,12 +424,12 @@ export const Software = () => {
 
                         <div className="relative p-12 rounded-full">
 
-                            <div className="relative p-12 rounded-full">
+                            <div className="relative p-8 rounded-full">
                                 {/* Main icon */}
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-10 w-auto"
+                                    className="h-14 w-auto"
                                 />
 
                                 {/* ====== First Circle ======= */}
