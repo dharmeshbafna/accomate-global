@@ -2,7 +2,8 @@ import Image from "next/image";
 import {
   Banner,
   About,
-  Services
+  Services,
+  Software
 } from "@/components/home";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
       <Banner />
       <About />
       <Services />
+      <Software />
     </div>
   );
 }

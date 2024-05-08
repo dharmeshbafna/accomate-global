@@ -7,6 +7,7 @@ import WhiteLogo from "../../public/accomate_logo_white.png"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation"
@@ -16,10 +17,18 @@ export const Navbar = () => {
 
     const path = usePathname();
     const [sticky, setSticky] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
     const navitems = [
         { name: "Home", link: "/" },
         { name: "About Us", link: "/about" },
-        { name: "Services", link: "/services" },
+        {
+            name: "Services", link: "/services",
+            dropdown: [
+                { name: 'USA', link: '/services/usa' },
+                { name: 'Canada', link: '/services/canada' },
+                { name: 'Australia', link: '/services/australia' },
+            ]
+        },
         { name: "Infrastructure", link: "/infrastructure" },
     ];
 
@@ -48,10 +57,10 @@ export const Navbar = () => {
     return (
         <div className={``}>
             <div className={`py-6 px-8 bg-gradient-to-r from-[#5264F3] to-[#5264F3]`}>
-                <div className="grid grid-cols-2">
+                <div className="flex items-center my-auto w-full">
 
                     {/* Logo */}
-                    <div className="flex items-center">
+                    <div className="flex items-center lg:w-[40%]">
                         <Image
                             src={WhiteLogo}
                             alt="Accomate Logo"
@@ -60,15 +69,37 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Items */}
-                    <div className="flex items-center justify-end space-x-8">
+                    <div className="flex items-center justify-end space-x-8 lg:w-[60%]">
 
                         {navitems.map((i, index) => {
                             return (
                                 <div className="w-fit text-lg relative">
-                                    <a href={i.link} className={`text-white hover:underline-animation`}>
-                                        {i.name}
+                                    <a
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                        href={i.link} className={`text-white hover:underline-animation text-nowrap`}>
+                                        <span className="flex items-center my-auto">
+                                            {i.name} <FiChevronDown className={`ml-1 text-white ${i.name == "Services" ? '' : 'hidden'} flex-shrink-0`} />
+                                        </span>
                                     </a>
-                                    <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-white transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                    <span
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-white transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                    {dropdown && i.name == "Services" ?
+                                        <div
+                                            onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                            onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+
+                                            {i.dropdown.map((d, index) => {
+                                                return (
+                                                    <a href={d.link} className="block text-black hover:text-[#5264F3] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                        {d.name}
+                                                    </a>
+                                                )
+                                            })}
+                                        </div> : ''}
                                 </div>
                             )
                         })}
@@ -82,10 +113,10 @@ export const Navbar = () => {
 
             {/* Sticky */}
             <div className={`${sticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg ' : 'hidden'} py-6 px-8 bg-white`}>
-                <div className="grid grid-cols-2">
+                <div className="flex items-center my-auto w-full">
 
                     {/* Logo */}
-                    <div className="flex items-center">
+                    <div className="flex items-center lg:w-[40%]">
                         <Image
                             src={Logo1}
                             alt="Accomate Logo"
@@ -94,15 +125,38 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Items */}
-                    <div className="flex items-center justify-end space-x-8">
+                    <div className="flex items-center justify-end space-x-8 lg:w-[60%]">
 
                         {navitems.map((i, index) => {
                             return (
                                 <div className="w-fit text-lg relative">
-                                    <a href={i.link} className={`${isActive(i.link) ? 'text-[#5264F3]' : ''}  hover:underline-animation2`}>
-                                        {i.name}
+                                    <a
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                        href={i.link}
+                                        className={`${isActive(i.link) ? 'text-[#5264F3]' : ''}  hover:underline-animation2 text-nowrap`}>
+                                        <span className="flex items-center my-auto">
+                                            {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" ? '' : 'hidden'} flex-shrink-0`} />
+                                        </span>
                                     </a>
-                                    <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#5264F3] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                    <span
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#5264F3] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                    {dropdown && i.name == "Services" ?
+                                        <div
+                                            onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
+                                            onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+
+                                            {i.dropdown.map((d, index) => {
+                                                return (
+                                                    <a href={d.link} className="block text-black hover:text-[#5264F3] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                        {d.name}
+                                                    </a>
+                                                )
+                                            })}
+                                        </div> : ''}
                                 </div>
                             )
                         })}

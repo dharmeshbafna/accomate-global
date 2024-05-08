@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
+import CircleIcon from "../../public/circle_icon.png"
+
 import AboutImg from "../../public/dummy1.png"
 import Banner1 from "../../public/banner1.jpg"
 import Banner2 from "../../public/banner2.jpg"
@@ -81,7 +83,7 @@ export const Banner = () => {
         <div className="overflow-x-hidden relative">
             <Slider ref={sliderRef} {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="h-[70vh] w-full relative">
+                    <div key={index} className="h-[73vh] w-full relative">
                         <Image
                             src={slide.image}
                             priority={true}
@@ -385,6 +387,117 @@ export const Services = () => {
                     <button onClick={() => handleNext()} className="drop-shadow-lg absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
                         <FaChevronRight />
                     </button>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+export const Software = () => {
+    return (
+        <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full">
+            <div className="grid grid-cols-2 gap-3 w-full">
+
+                <div>
+                    <div className="text-[#5264F3]">Software Expertise</div>
+                    <div className="font-semibold text-3xl">
+                        We work with your choice of Accounting software
+                    </div>
+
+                    <div className="my-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu elementum, vehicula lacus sit amet, elementum odio.
+                        Donec aliquam vitae nibh vel tempus. Sed imperdiet, neque sit amet dictum bibendum, mauris nibh consectetur risus, sed vehicula odio nisi nec erat.
+                        <br /><br />
+                        Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
+                    </div>
+
+                    <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
+                        Read More
+                    </button>
+                </div>
+
+                {/* Circular animate */}
+                <div className="flex items-center justify-center m-auto">
+
+                    <div className="relative p-12 rounded-full">
+
+                        <div className="relative p-12 rounded-full">
+
+                            <div className="relative p-12 rounded-full">
+                                {/* Main icon */}
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-10 w-auto"
+                                />
+
+                                {/* ====== First Circle ======= */}
+                                <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
+                                    <div className="relative w-full h-full rounded-full rotate-animation">
+                                        <Image
+                                            src={CircleIcon}
+                                            alt="Main Icon"
+                                            className="h-8 w-auto absolute top-0 left-0 bg-white"
+                                        />
+                                        <Image
+                                            src={CircleIcon}
+                                            alt="Main Icon"
+                                            className="h-8 w-auto absolute bottom-0 right-0 bg-white"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* ======== Second Circle ======== */}
+                            <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                                <div className="relative w-full h-full rotate-animation">
+                                    <Image
+                                        src={CircleIcon}
+                                        alt="Main Icon"
+                                        className="h-8 w-auto absolute -top-3 left-1/2 bg-white"
+                                    />
+                                    <Image
+                                        src={CircleIcon}
+                                        alt="Main Icon"
+                                        className="h-8 w-auto absolute -bottom-3 right-1/2 bg-white"
+                                    />
+                                    <Image
+                                        src={CircleIcon}
+                                        alt="Main Icon"
+                                        className="h-8 w-auto absolute bottom-1/2 -right-3 bg-white"
+                                    />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* ======== Third Circle ======== */}
+                        <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                            <div className="relative w-full h-full rotate-animation ">
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-8 w-auto absolute top-1/2 -left-3 bg-white"
+                                />
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-8 w-auto absolute top-1/2 -right-3 bg-white"
+                                />
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-8 w-auto absolute -bottom-3 right-[30%] bg-white"
+                                />
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-8 w-auto absolute -top-3 left-[30%] bg-white"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

@@ -49,3 +49,16 @@
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 10s linear infinite;
+}
