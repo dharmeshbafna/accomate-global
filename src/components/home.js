@@ -870,7 +870,7 @@ export const Counter = () => {
 
     return (
         <div className="px-8 py-20 min-h-[35vh] w-full home-counter relative">
-            <div className="absolute w-full h-full bg-[#5265f387] top-0 left-0 px-8 py-16 ">
+            <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 px-8 py-16 ">
                 <div className="grid grid-cols-4 gap-5 w-full" id="counters-section">
 
                     <div className="flex justify-center mx-auto">
