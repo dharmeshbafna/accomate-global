@@ -52,13 +52,26 @@
 
 @keyframes rotate {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .rotate-animation {
   animation: rotate 10s linear infinite;
+}
+
+.rotate-animation2:hover {
+  animation: rotate 5s linear infinite;
+}
+
+.home-counter {
+  background-image: url("/banner1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

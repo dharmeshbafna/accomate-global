@@ -3,7 +3,9 @@ import {
   Banner,
   About,
   Services,
-  Software
+  Software,
+  Counter,
+  Testimonial
 } from "@/components/home";
 
 export const metadata = {
@@ -20,6 +22,8 @@ export default function Home() {
       <About />
       <Services />
       <Software />
+      <Counter />
+      <Testimonial />
     </div>
   );
 }

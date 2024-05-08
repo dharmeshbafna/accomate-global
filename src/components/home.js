@@ -18,8 +18,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
+import { GrDocumentText } from "react-icons/gr";
+import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import { BsFileEarmarkFont, BsFileEarmarkCheck } from "react-icons/bs";
+import { PiUsersThree } from "react-icons/pi";
 
 import { Lordicon } from "./other"
 
@@ -116,8 +120,7 @@ export const Banner = () => {
 
 export const About = () => {
     return (
-        <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full">
-
+        <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full relative overflow-hidden">
             <div className="grid grid-cols-2 gap-3 w-full">
 
                 <div className="relative mb-5">
@@ -165,6 +168,56 @@ export const Services = () => {
     const [hoverd, setHovered] = useState(true);
     const [type, setType] = useState('usa');
     const [sliderRef, slider] = useKeenSlider({
+        loop: true,
+        duration: 1500,
+        slides: {
+            origin: 'center',
+            perView: 1,
+            spacing: 16,
+        },
+        breakpoints: {
+            '(min-width: 768px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 1.25,
+                    spacing: 16,
+                },
+            },
+            '(min-width: 1024px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 3,
+                    spacing: 32,
+                },
+            },
+        },
+    });
+    const [sliderRef1, slider1] = useKeenSlider({
+        loop: true,
+        duration: 1500,
+        slides: {
+            origin: 'center',
+            perView: 1,
+            spacing: 16,
+        },
+        breakpoints: {
+            '(min-width: 768px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 1.25,
+                    spacing: 16,
+                },
+            },
+            '(min-width: 1024px)': {
+                slides: {
+                    origin: 'auto',
+                    perView: 3,
+                    spacing: 32,
+                },
+            },
+        },
+    });
+    const [sliderRef2, slider2] = useKeenSlider({
         loop: true,
         duration: 1500,
         slides: {
@@ -245,7 +298,122 @@ export const Services = () => {
     ];
 
     const canadaservices = [
+        {
+            icon: '/book.json',
+            head: 'Accounting',
+            head2: 'Our accounting services include:',
+            list: [
+                'Data entry',
+                'Payroll processing (T4 &T5)',
+                'Bank reconciliation'
+            ]
+        },
+        {
+            icon: '/doc.json',
+            head: 'Financial Statement Compilation',
+            head2: 'Our financial statements compilation services for corporates and trusts includes preparation of:',
+            list: [
+                'Balance sheets',
+                'Income statements',
+                'Cash flow statements'
+            ]
+        },
+        {
+            icon: '/zoom.json',
+            head: 'Audit & Assurance',
+            head2: 'Our audit & assurance services including but not limited to:',
+            list: [
+                'Preparation of audit schedules',
+                'Financial statement audits',
+                'Assisting audit queries'
+            ]
+        },
+        {
+            icon: '/home.json',
+            head: 'Payroll Processing',
+            head2: 'Our payroll services include:',
+            list: [
+                'Payroll accounting and prompt processing and filing',
+                'Annual filing of T4 and T5 slips for all employees',
+                'Ordering property valuation',
+                'Payroll Tax management and compliance'
+            ]
+        },
+        {
+            icon: '/privacy-policy.json',
+            head: 'Tax Compilation',
+            head2: 'Our comprehensive tax services include:',
+            list: [
+                'Preparation and filing of GST returns',
+                'Payroll Tax management and filings',
+                'Tax guidance and Tax Planning',
+            ]
+        },
+    ];
 
+    const australiaservices = [
+        {
+            icon: '/book.json',
+            head: 'Accounting',
+            head2: 'Our accounting services include:',
+            list: [
+                'Data entry',
+                'Bank reconciliation',
+                'Accounts payable / receivable management'
+            ]
+        },
+        {
+            icon: '/doc.json',
+            head: 'Financial Statement Compilation',
+            head2: 'Our financial statements compilation services for corporates and trusts includes preparation of:',
+            list: [
+                'Balance sheets',
+                'Income statements',
+                'Cash flow statements'
+            ]
+        },
+        {
+            icon: '/zoom.json',
+            head: 'Audit & Assurance',
+            head2: 'Our audit & assurance services including but not limited to:',
+            list: [
+                'Preparation of audit schedules',
+                'Financial statement audits',
+                'Assisting audit queries',
+            ]
+        },
+        {
+            icon: '/home.json',
+            head: 'Mortgage Broking',
+            head2: 'Our mortgage broking services include:',
+            list: [
+                'Data entry and document verification',
+                'Serviceability analysis',
+                'Ordering property valuation',
+                'Online Application and lodgment'
+            ]
+        },
+        {
+            icon: '/privacy-policy.json',
+            head: 'Tax Compilation',
+            head2: 'Our comprehensive tax services include:',
+            list: [
+                'Tax guidance and Tax Planning',
+                'Managing PAYG Tax / Payroll Taxation',
+                'Preparation of Business Activity Statements (Bases)',
+            ]
+        },
+        {
+            icon: '/commodity.json',
+            head: 'Managing SMSF',
+            head2: 'Below are the services we provide for SMSF:',
+            list: [
+                'SMSF accounting',
+                'Ensuring Compliance with regulations',
+                'Preparation of SMSF Tax Returns',
+                'Preparation of audit workpapers',
+            ]
+        },
     ];
 
     const handleNext = (e) => {
@@ -276,8 +444,64 @@ export const Services = () => {
         return () => clearInterval(interval);
     }, [slider, hoverd]);
 
+    const handleNext1 = (e) => {
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        }
+        if (slider1.current) {
+            slider1.current.next();
+        }
+    };
+
+    const handlePrev1 = (e) => {
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        }
+        if (slider1.current) {
+            slider1.current.prev();
+        }
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (slider1 && slider1.current && hoverd) {
+                slider1.current.next();
+            }
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [slider1, hoverd]);
+
+    const handleNext2 = (e) => {
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        }
+        if (slider2.current) {
+            slider2.current.next();
+        }
+    };
+
+    const handlePrev2 = (e) => {
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        }
+        if (slider2.current) {
+            slider2.current.prev();
+        }
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (slider2 && slider2.current && hoverd) {
+                slider2.current.next();
+            }
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [slider2, hoverd]);
+
     return (
-        <div className="px-8 py-10">
+        <div className="px-8 py-10 bg-gray-100">
             <div className="text-[#5264F3] flex justify-center mx-auto text-center">Our Services</div>
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 We provide a wide range of services
@@ -288,7 +512,7 @@ export const Services = () => {
                 {/* Country */}
                 <div className="flex justify-center items-center m-auto pb-10">
                     <div className="lg:w-1/2 flex items-center my-auto space-x-5">
-                        <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                        <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
                             <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
                                 <Image
                                     src={USA}
@@ -300,7 +524,7 @@ export const Services = () => {
                                 USA
                             </div>
                         </button>
-                        <button onClick={() => setType('canada')} className={`${type == 'canada' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                        <button onClick={() => setType('canada')} className={`${type == 'canada' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
                             <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
                                 <Image
                                     src={Canada}
@@ -312,7 +536,7 @@ export const Services = () => {
                                 Canada
                             </div>
                         </button>
-                        <button onClick={() => setType('australia')} className={`${type == 'australia' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3]`}>
+                        <button onClick={() => setType('australia')} className={`${type == 'australia' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
                             <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
                                 <Image
                                     src={Australia}
@@ -375,16 +599,111 @@ export const Services = () => {
                                 )
                             })}
 
-                        </div> : ''}
+                        </div> :
+                        type == 'canada' ?
+                            <div ref={sliderRef1} className="keen-slider">
+
+                                {canadaservices.map((i, index) => {
+                                    return (
+                                        <div
+                                            onMouseEnter={() => setHovered(false)}
+                                            onMouseLeave={() => setHovered(true)}
+                                            className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
+                                            <blockquote className="bg-white w-full border border-gray-400 rounded-lg shadow-lg px-3 py-5 h-full flex ">
+                                                <div className="space-y-4 flex flex-col justify-between items-center relative">
+
+                                                    <div className="flex justify-center mx-auto">
+                                                        <Lordicon
+                                                            src={i.icon}
+                                                            trigger="loop"
+                                                            style={{ width: '100px', height: '100px' }}
+                                                        />
+                                                    </div>
+
+                                                    <div className="text-center font-semibold text-[#5264F3] text-xl flex justify-center mx-auto">
+                                                        {i.head}
+                                                    </div>
+
+                                                    <div className="font-semibold">
+                                                        {i.head2}
+                                                    </div>
+
+                                                    <ul className="w-full list-disc pl-4">
+                                                        {i.list.map((j) => (
+                                                            <li>
+                                                                {j}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+
+                                                    <button className="bg-[#5264F3] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                        Read More
+                                                    </button>
+                                                </div>
+                                            </blockquote>
+                                        </div>
+
+                                    )
+                                })}
+
+                            </div> :
+                            type == 'australia' ?
+                                <div ref={sliderRef2} className="keen-slider">
+
+                                    {australiaservices.map((i, index) => {
+                                        return (
+                                            <div
+                                                onMouseEnter={() => setHovered(false)}
+                                                onMouseLeave={() => setHovered(true)}
+                                                className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
+                                                <blockquote className="bg-white w-full border border-gray-400 rounded-lg shadow-lg px-3 py-5 h-full flex ">
+                                                    <div className="space-y-4 flex flex-col justify-between items-center relative">
+
+                                                        <div className="flex justify-center mx-auto">
+                                                            <Lordicon
+                                                                src={i.icon}
+                                                                trigger="loop"
+                                                                style={{ width: '100px', height: '100px' }}
+                                                            />
+                                                        </div>
+
+                                                        <div className="text-center font-semibold text-[#5264F3] text-xl flex justify-center mx-auto">
+                                                            {i.head}
+                                                        </div>
+
+                                                        <div className="font-semibold">
+                                                            {i.head2}
+                                                        </div>
+
+                                                        <ul className="w-full list-disc pl-4">
+                                                            {i.list.map((j) => (
+                                                                <li>
+                                                                    {j}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+
+                                                        <button className="bg-[#5264F3] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                            Read More
+                                                        </button>
+                                                    </div>
+                                                </blockquote>
+                                            </div>
+
+                                        )
+                                    })}
+
+                                </div>
+                                : ''}
 
 
                     {/* Prev Button */}
-                    <button onClick={() => handlePrev()} className="drop-shadow-lg absolute -left-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                    <button onClick={type == 'usa' ? () => handlePrev() : type == 'canada' ? () => handlePrev1() : () => handlePrev2()} className="drop-shadow-lg absolute -left-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
                         <FaChevronLeft />
                     </button>
 
                     {/* Next Button */}
-                    <button onClick={() => handleNext()} className="drop-shadow-lg absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                    <button onClick={type == 'usa' ? () => handleNext() : type == 'canada' ? () => handleNext1() : () => handleNext2()} className="drop-shadow-lg absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
                         <FaChevronRight />
                     </button>
                 </div>
@@ -399,22 +718,24 @@ export const Software = () => {
         <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full">
             <div className="grid grid-cols-2 gap-3 w-full">
 
-                <div>
-                    <div className="text-[#5264F3]">Software Expertise</div>
-                    <div className="font-semibold text-3xl">
-                        We work with your choice of Accounting software
-                    </div>
+                <div className="flex items-center my-auto">
+                    <div>
+                        <div className="text-[#5264F3]">Software Expertise</div>
+                        <div className="font-semibold text-3xl">
+                            We work with your choice of Accounting software
+                        </div>
 
-                    <div className="my-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu elementum, vehicula lacus sit amet, elementum odio.
-                        Donec aliquam vitae nibh vel tempus. Sed imperdiet, neque sit amet dictum bibendum, mauris nibh consectetur risus, sed vehicula odio nisi nec erat.
-                        <br /><br />
-                        Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
-                    </div>
+                        <div className="my-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu elementum, vehicula lacus sit amet, elementum odio.
+                            Donec aliquam vitae nibh vel tempus. Sed imperdiet, neque sit amet dictum bibendum, mauris nibh consectetur risus, sed vehicula odio nisi nec erat.
+                            <br /><br />
+                            Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
+                        </div>
 
-                    <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
-                        Read More
-                    </button>
+                        <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
+                            Read More
+                        </button>
+                    </div>
                 </div>
 
                 {/* Circular animate */}
@@ -426,11 +747,13 @@ export const Software = () => {
 
                             <div className="relative p-10 rounded-full">
                                 {/* Main icon */}
-                                <Image
-                                    src={CircleIcon}
-                                    alt="Main Icon"
-                                    className="h-16 w-auto"
-                                />
+                                <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
+                                    <Image
+                                        src={CircleIcon}
+                                        alt="Main Icon"
+                                        className="h-16 w-auto shadow-md rounded-full "
+                                    />
+                                </div>
 
                                 {/* ====== First Circle ======= */}
                                 <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
@@ -500,6 +823,160 @@ export const Software = () => {
                     </div>
                 </div>
 
+            </div>
+        </div>
+    )
+}
+
+export const Counter = () => {
+
+    const [counters, setCounters] = useState({
+        counter1: 0,
+        counter2: 0,
+        counter3: 0,
+        counter4: 0
+    });
+
+    useEffect(() => {
+        const updateCounters = () => {
+            setCounters(prevCounters => ({
+                counter1: prevCounters.counter1 < 15000 ? prevCounters.counter1 + 1500 : prevCounters.counter1,
+                counter2: prevCounters.counter2 < 100 ? prevCounters.counter2 + 10 : prevCounters.counter2,
+                counter3: prevCounters.counter3 < 900 ? prevCounters.counter3 + 90 : prevCounters.counter3,
+                counter4: prevCounters.counter4 < 500 ? prevCounters.counter4 + 50 : prevCounters.counter4
+            }));
+        };
+
+        const countersSection = document.getElementById("counters-section");
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const interval = setInterval(updateCounters, 200);
+                        return () => clearInterval(interval);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(countersSection);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+    return (
+        <div className="px-8 py-20 min-h-[35vh] w-full home-counter relative">
+            <div className="absolute w-full h-full bg-[#5265f387] top-0 left-0 px-8 py-16 ">
+                <div className="grid grid-cols-4 gap-5 w-full" id="counters-section">
+
+                    <div className="flex justify-center mx-auto">
+                        <div className="flex text-white gap-x-4">
+                            <BsFileEarmarkCheck className="h-20 w-auto mt-1" />
+                            <div className="font-semibold">
+                                <div className="text-[40px]"><span id="counter1">{counters.counter1}</span> +</div>
+                                <div className="text-lg">INVOICES PROCESSED</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center mx-auto">
+                        <div className="flex text-white gap-x-4">
+                            <HiOutlinePresentationChartLine className="h-20 w-auto mt-1" />
+                            <div className="font-semibold">
+                                <div className="text-[40px]"><span id="counter2">{counters.counter2}</span> +</div>
+                                <div className="text-lg">SMSF RETURNS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center mx-auto">
+                        <div className="flex text-white gap-x-4">
+                            <BsFileEarmarkFont className="h-20 w-auto mt-1" />
+                            <div className="font-semibold">
+                                <div className="text-[40px]"><span id="counter3">{counters.counter3}</span> +</div>
+                                <div className="text-lg">TAX RETURNS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex justify-center mx-auto">
+                        <div className="flex text-white gap-x-4">
+                            <PiUsersThree className="h-20 w-auto mt-1" />
+                            <div className="font-semibold">
+                                <div className="text-[40px]"><span id="counter4">{counters.counter4}</span> +</div>
+                                <div className="text-lg">HAPPY CLIENTS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const Testimonial = () => {
+
+    const sliderRef = useRef();
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        waitForAnimate: false,
+        pauseOnHover: true,
+        beforeChange: (current, next) => setCurrentSlide(next),
+        customPaging: function (i) {
+            return (
+                <div className={`p-1 rounded-full mt-6 ${currentSlide === i ? 'bg-black' : 'bg-gray-300'}`}>
+                </div>
+            );
+        },
+    };
+
+    const clientele = [
+        { name: 'Abc Xyz', company: 'ABC Company', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales tellus vitae libero lacinia, quis hendrerit nisl molestie. Cras venenatis, sem vel ullamcorper tempus, arcu massa fringilla lectus, quis ornare risus augue ac felis. Quisque sed ex id arcu efficitur imperdiet at in arcu. Donec interdum leo non felis vestibulum convallis. Pellentesque ex ex, faucibus ac magna quis, porttitor tristique arcu. Suspendisse tempus massa a velit laoreet, sit amet elementum leo scelerisque. Cras vitae est sem.' },
+        { name: 'Def hij', company: 'Hij Company', desc: 'Morbi dictum justo laoreet rutrum gravida. Sed eget massa augue. Donec hendrerit sodales orci non laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean in lacus id lectus finibus facilisis. Phasellus a velit tincidunt, ullamcorper dolor vitae, blandit ipsum. Integer laoreet vitae eros at viverra.' },
+        { name: 'Mno Qrs', company: 'Xyz Company', desc: 'Praesent a dictum sapien, sit amet semper lectus. Mauris convallis elementum tempus. Maecenas finibus varius diam, eu auctor nulla accumsan non. Sed nec nibh nec sem maximus pharetra sed sed leo. Fusce sed porttitor justo, vel convallis mi. Nulla id pulvinar turpis, vitae tincidunt felis. Sed eu tempor erat. Etiam nisl dui, pellentesque at sapien in, efficitur sodales urna.' }
+    ];
+
+    return (
+        <div className="px-8 py-14">
+            <div className="text-[#5264F3] flex justify-center mx-auto text-center">Testimonials</div>
+            <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+                What Our Client Says
+            </div>
+
+            <div className="mt-10 pb-6">
+                <Slider ref={sliderRef} {...settings}>
+                    {clientele.map((i, index) => {
+                        return (
+                            <div key={index} className="w-full">
+                                <div className="italic text-center flex justify-center mx-auto lg:w-[60%]">
+                                    {i.desc}
+                                </div>
+                                <div className="mt-5">
+                                    <div className="text-[#5264F3] text-center font-semibold text-xl">
+                                        {i.name}
+                                    </div>
+                                    <div className="text-center">
+                                        {i.company}
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </Slider>
             </div>
         </div>
     )
