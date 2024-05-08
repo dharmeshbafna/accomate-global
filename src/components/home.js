@@ -420,16 +420,16 @@ export const Software = () => {
                 {/* Circular animate */}
                 <div className="flex items-center justify-center m-auto">
 
-                    <div className="relative p-12 rounded-full">
+                    <div className="relative p-16 rounded-full">
 
-                        <div className="relative p-12 rounded-full">
+                        <div className="relative p-14 rounded-full">
 
-                            <div className="relative p-8 rounded-full">
+                            <div className="relative p-10 rounded-full">
                                 {/* Main icon */}
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-14 w-auto"
+                                    className="h-16 w-auto"
                                 />
 
                                 {/* ====== First Circle ======= */}
@@ -438,12 +438,12 @@ export const Software = () => {
                                         <Image
                                             src={CircleIcon}
                                             alt="Main Icon"
-                                            className="h-8 w-auto absolute top-0 left-0 bg-white"
+                                            className="h-10 w-auto absolute top-0 left-0 bg-white"
                                         />
                                         <Image
                                             src={CircleIcon}
                                             alt="Main Icon"
-                                            className="h-8 w-auto absolute bottom-0 right-0 bg-white"
+                                            className="h-10 w-auto absolute bottom-0 right-0 bg-white"
                                         />
                                     </div>
                                 </div>
@@ -455,17 +455,17 @@ export const Software = () => {
                                     <Image
                                         src={CircleIcon}
                                         alt="Main Icon"
-                                        className="h-8 w-auto absolute -top-3 left-1/2 bg-white"
+                                        className="h-10 w-auto absolute -top-3 left-1/2 bg-white"
                                     />
                                     <Image
                                         src={CircleIcon}
                                         alt="Main Icon"
-                                        className="h-8 w-auto absolute -bottom-3 right-1/2 bg-white"
+                                        className="h-10 w-auto absolute -bottom-3 right-1/2 bg-white"
                                     />
                                     <Image
                                         src={CircleIcon}
                                         alt="Main Icon"
-                                        className="h-8 w-auto absolute bottom-1/2 -right-3 bg-white"
+                                        className="h-10 w-auto absolute bottom-1/2 -right-3 bg-white"
                                     />
                                 </div>
                             </div>
@@ -478,22 +478,22 @@ export const Software = () => {
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-8 w-auto absolute top-1/2 -left-3 bg-white"
+                                    className="h-10 w-auto absolute top-1/2 -left-3 bg-white"
                                 />
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-8 w-auto absolute top-1/2 -right-3 bg-white"
+                                    className="h-10 w-auto absolute top-1/2 -right-3 bg-white"
                                 />
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-8 w-auto absolute -bottom-3 right-[30%] bg-white"
+                                    className="h-10 w-auto absolute -bottom-3 right-[30%] bg-white"
                                 />
                                 <Image
                                     src={CircleIcon}
                                     alt="Main Icon"
-                                    className="h-8 w-auto absolute -top-3 left-[30%] bg-white"
+                                    className="h-10 w-auto absolute -top-3 left-[30%] bg-white"
                                 />
                             </div>
                         </div>
