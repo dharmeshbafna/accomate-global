@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: "Accomate Global",
   icons: {
-    icon: '/icon.png',
+    icon: '/n_icon.png',
   }
 };
 

@@ -6,9 +6,13 @@
   color: #5264F3;
 }
 
-.t2 {
-  color: #5264F3;
-}
+.n1 { color: #1B2D9F };
+.n2 { color: #9F8D1B };
+.n3 { color: #9F1B6F };
+.n4 { color: #1B9F4B };
+
+.n1-light { color: #1b2d9f5b }
+.n2-light { color: #9f8e1b5c };
 
 .t3 {
   color: #A8A2D8;
@@ -45,7 +49,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background: #5264F3;
+  background: #1B2D9F;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }

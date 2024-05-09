@@ -3,7 +3,7 @@ import { Breadcrumb } from "@/components/other";
 export const metadata = {
     title: 'Canada | Services | Accomate Global',
     icons: {
-        icon: '/icon.png'
+        icon: '/n_icon.png'
     }
 }
 

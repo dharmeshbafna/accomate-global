@@ -7,7 +7,7 @@ import {
 export const metadata = {
     title: 'About | Accomate Global',
     icons: {
-        icon: '/icon.png'
+        icon: '/n_icon.png'
     }
 }
 

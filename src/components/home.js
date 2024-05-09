@@ -32,7 +32,7 @@ import 'keen-slider/keen-slider.min.css';
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa"
 import { BsFileEarmarkFont, BsFileEarmarkCheck } from "react-icons/bs";
 import { PiUsersThree } from "react-icons/pi";
 
@@ -98,7 +98,7 @@ export const Banner = () => {
         <div className="overflow-x-hidden relative">
             <Slider ref={sliderRef} {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="h-[73vh] w-full relative">
+                    <div key={index} className="h-[90vh] w-full relative">
                         <Image
                             src={slide.image}
                             priority={true}
@@ -118,7 +118,7 @@ export const Banner = () => {
                                 {slide.description}
                             </div>
 
-                            <button className="text-lg px-5 py-2 bg-[#5264F3] text-white rounded-full shadow-lg">
+                            <button className="text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
                                 Read More
                             </button>
                         </div>
@@ -140,12 +140,12 @@ export const About = () => {
                         alt="About Image"
                         className="w-[80%] h-auto flex justify-center mx-auto drop-shadow-xl"
                     />
-                    <div className="drop-shadow-lg absolute w-[80%] h-full bg-[#5264F389] top-[5%] left-[7%] -z-10"></div>
+                    <div className="drop-shadow-lg absolute w-[80%] h-full bg-[#9f8e1b5c] top-[5%] left-[7%] -z-10"></div>
                 </div>
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#5264F3]">About Us</div>
+                        <div className="text-[#1B2D9F]">About Us</div>
                         <div className="font-semibold text-3xl">
                             Born from experience, built for success
                         </div>
@@ -164,12 +164,15 @@ export const About = () => {
                             Technology, Financial Service, Real Estate,
                             Insurance, Healthcare, and Manufacturing.
                         </div>
-                        <a href="/about" className="w-fit text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
+                        <a href="/about" className="w-fit text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
                             Read More
                         </a>
                     </div>
                 </div>
             </div>
+
+            <div className="absolute -right-10 -top-10 p-20 rounded-full bg-[#1b2d9f5b]"></div>
+            <div className="absolute -left-10 -bottom-5 py-20 px-10 rounded-lg bg-[#1b2d9f5b]"></div>
         </div>
     )
 }
@@ -513,7 +516,7 @@ export const Services = () => {
 
     return (
         <div className="px-8 py-10 bg-gray-100">
-            <div className="text-[#5264F3] flex justify-center mx-auto text-center">Our Services</div>
+            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div>
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 We provide a wide range of services
             </div>
@@ -523,8 +526,8 @@ export const Services = () => {
                 {/* Country */}
                 <div className="flex justify-center items-center m-auto pb-10">
                     <div className="lg:w-1/2 flex items-center my-auto space-x-5">
-                        <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
-                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                        <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#1B2D9F] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#1B2D9F] hover:scale-[110%] duration-300`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#1B2D9F]">
                                 <Image
                                     src={USA}
                                     alt="USA"
@@ -535,8 +538,8 @@ export const Services = () => {
                                 USA
                             </div>
                         </button>
-                        <button onClick={() => setType('canada')} className={`${type == 'canada' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
-                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                        <button onClick={() => setType('canada')} className={`${type == 'canada' ? 'bg-[#1B2D9F] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#1B2D9F] hover:scale-[110%] duration-300`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#1B2D9F]">
                                 <Image
                                     src={Canada}
                                     alt="Canada"
@@ -547,8 +550,8 @@ export const Services = () => {
                                 Canada
                             </div>
                         </button>
-                        <button onClick={() => setType('australia')} className={`${type == 'australia' ? 'bg-[#5264F3] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#5264F3] hover:scale-[110%] duration-300`}>
-                            <div className="bg-white p-1 rounded-full border-r-2 border-[#5264F3]">
+                        <button onClick={() => setType('australia')} className={`${type == 'australia' ? 'bg-[#1B2D9F] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#1B2D9F] hover:scale-[110%] duration-300`}>
+                            <div className="bg-white p-1 rounded-full border-r-2 border-[#1B2D9F]">
                                 <Image
                                     src={Australia}
                                     alt="Australia"
@@ -584,7 +587,7 @@ export const Services = () => {
                                                     />
                                                 </div>
 
-                                                <div className="text-center font-semibold text-[#5264F3] text-xl flex justify-center mx-auto">
+                                                <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
                                                     {i.head}
                                                 </div>
 
@@ -600,7 +603,7 @@ export const Services = () => {
                                                     ))}
                                                 </ul>
 
-                                                <button className="bg-[#5264F3] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                     Read More
                                                 </button>
                                             </div>
@@ -731,7 +734,7 @@ export const Software = () => {
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#5264F3]">Software Expertise</div>
+                        <div className="text-[#1B2D9F]">Software Expertise</div>
                         <div className="font-semibold text-3xl">
                             We work with your choice of Accounting software
                         </div>
@@ -743,7 +746,7 @@ export const Software = () => {
                             Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
                         </div>
 
-                        <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
+                        <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
                             Read More
                         </button>
                     </div>
@@ -797,11 +800,11 @@ export const Software = () => {
                                             className="h-auto w-auto bg-white"
                                         />
                                     </div>
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex items-center border border-gray-300 absolute -bottom-5 right-1/2 ">
+                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-3 flex items-center border border-gray-300 absolute -bottom-5 right-1/2 ">
                                         <Image
                                             src={Taxcycle}
                                             alt="Main Icon"
-                                            className="h-auto w-auto bg-white rounded-full"
+                                            className="h-auto w-auto bg-white"
                                         />
                                     </div>
                                     <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
@@ -982,12 +985,15 @@ export const Testimonial = () => {
 
     return (
         <div className="px-8 py-14">
-            <div className="text-[#5264F3] flex justify-center mx-auto text-center">Testimonials</div>
+            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Testimonials</div>
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 What Our Client Says
             </div>
 
-            <div className="mt-10 pb-6">
+            <div className="mt-10 pb-6 relative">
+                <div className="absolute top-0 left-[17%]">
+                    <FaQuoteLeft className="text-[#1b2d9f5b] h-6 w-auto" />
+                </div>
                 <Slider ref={sliderRef} {...settings}>
                     {clientele.map((i, index) => {
                         return (
@@ -996,7 +1002,7 @@ export const Testimonial = () => {
                                     {i.desc}
                                 </div>
                                 <div className="mt-5">
-                                    <div className="text-[#5264F3] text-center font-semibold text-xl">
+                                    <div className="text-[#9F8D1B] text-center font-semibold text-xl">
                                         {i.name}
                                     </div>
                                     <div className="text-center">

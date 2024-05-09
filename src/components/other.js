@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image"
 
-import Logo1 from "../../public/logo-1.png"
-import Logo2 from "../../public/logo-2-1.png"
+import Logo1 from "../../public/n_logo1.png"
+import Logo2 from "../../public/n_logo2.png"
 import WhiteLogo from "../../public/accomate_logo_white.png"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
@@ -56,7 +56,7 @@ export const Navbar = () => {
 
     return (
         <div className={``}>
-            <div className={`py-6 px-8 bg-gradient-to-r from-[#5264F3] to-[#5264F3]`}>
+            <div className={`py-6 px-8 bg-[#1B2D9F]`}>
                 <div className="flex items-center my-auto w-full">
 
                     {/* Logo */}
@@ -96,7 +96,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="block text-black hover:text-[#5264F3] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
                                                         {d.name}
                                                     </a>
                                                 )
@@ -106,7 +106,7 @@ export const Navbar = () => {
                             )
                         })}
 
-                        <a href="/contact" className="text-[#5264F3] bg-white px-5 py-2 rounded-full shadow-lg">
+                        <a href="/contact" className="text-[#1B2D9F] bg-white px-5 py-2 rounded-full shadow-lg">
                             Contact Us
                         </a>
                     </div>
@@ -123,7 +123,7 @@ export const Navbar = () => {
                             <Image
                                 src={Logo1}
                                 alt="Accomate Logo"
-                                className="h-8 w-auto"
+                                className="h-5 w-auto"
                             />
                         </a>
                     </div>
@@ -138,7 +138,7 @@ export const Navbar = () => {
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
                                         href={i.link}
-                                        className={`${isActive(i.link) ? 'text-[#5264F3]' : ''}  hover:underline-animation2 text-nowrap`}>
+                                        className={`${isActive(i.link) ? 'text-[#1B2D9F]' : ''}  hover:underline-animation2 text-nowrap`}>
                                         <span className="flex items-center my-auto">
                                             {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" ? '' : 'hidden'} flex-shrink-0`} />
                                         </span>
@@ -146,7 +146,7 @@ export const Navbar = () => {
                                     <span
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
-                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#5264F3] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
                                     {dropdown && i.name == "Services" ?
                                         <div
                                             onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
@@ -155,7 +155,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="block text-black hover:text-[#5264F3] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
                                                         {d.name}
                                                     </a>
                                                 )
@@ -165,7 +165,7 @@ export const Navbar = () => {
                             )
                         })}
 
-                        <a href="/contact" className="text-white bg-[#5264F3]  px-5 py-2 rounded-full shadow-lg">
+                        <a href="/contact" className="text-white bg-[#1B2D9F]  px-5 py-2 rounded-full shadow-lg">
                             Contact Us
                         </a>
                     </div>
@@ -199,19 +199,19 @@ export const Footer = () => {
 
                     <div className="flex items-center my-auto space-x-5">
 
-                        <a href="#" className="rounded-full p-2 bg-[#5264F3] text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 bg-[#9F8D1B] shadow text-white hover:scale-[110%] duration-300">
                             <FaFacebookF className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#5264F3] text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 bg-[#9F8D1B] shadow text-white hover:scale-[110%] duration-300">
                             <FaInstagram className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#5264F3] text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 bg-[#9F8D1B] shadow text-white hover:scale-[110%] duration-300">
                             <FaLinkedinIn className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#5264F3] text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 bg-[#9F8D1B] shadow text-white hover:scale-[110%] duration-300">
                             <FaXTwitter className="text-lg" />
                         </a>
                     </div>
@@ -220,21 +220,21 @@ export const Footer = () => {
                 {/* Useful Links */}
                 <div className="lg:w-[30%] flex justify-center mx-auto">
                     <div>
-                        <div className="font-semibold text-xl">
+                        <div className="font-semibold text-xl text-[#1B2D9F]">
                             Useful Links
                         </div>
 
                         <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
-                            <a href="#" className="hover:text-[#5264F3] duration-300">
+                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="hover:text-[#5264F3] duration-300">
+                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="hover:text-[#5264F3] duration-300">
+                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
                                 Disclaimer
                             </a>
-                            <a href="#" className="hover:text-[#5264F3] duration-300">
+                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
                                 Support
                             </a>
                         </div>
@@ -244,24 +244,24 @@ export const Footer = () => {
                 {/* Contact Us */}
                 <div className="lg:w-[30%] flex justify-center mx-auto">
                     <div>
-                        <div className="font-semibold text-xl">
+                        <div className="font-semibold text-xl text-[#1B2D9F]">
                             Contact Us
                         </div>
 
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
-                            <a href="#" className="flex items-center my-auto hover:text-[#5264F3] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
                                 +91 XXXXXXXXXX
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#5264F3] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
                                 <MdOutlineEmail className="flex-shrink-0 mr-2 text-xl" />
                                 info@accomateglobal.com
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#5264F3] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
                                 <IoCallOutline className="flex-shrink-0 mr-2 text-xl" />
                                 +91 XXXXXXXXXX
                             </a>
-                            <a href="#" className="flex hover:text-[#5264F3] duration-300">
+                            <a href="#" className="flex hover:text-[#1B2D9F] duration-300">
                                 <IoLocationOutline className="flex-shrink-0 mr-2 text-xl mt-1" />
                                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
                             </a>
