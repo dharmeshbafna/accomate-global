@@ -111,7 +111,7 @@ export const Banner = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-[#0000005d]"></div>
 
                         {/* Text */}
-                        <div className={`absolute top-[20%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                        <div className={`absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
                             <div className="text-[50px] font-semibold text-white">
                                 {slide.title}
                             </div>
