@@ -178,7 +178,7 @@ export const Navbar = () => {
 
 export const Footer = () => {
     return (
-        <div className="px-8 py-10 bg-gray-200">
+        <div className="px-8 py-10 bg-[#9f8e1b5c]">
             <div className="flex w-full space-x-3">
 
                 {/* About */}
@@ -272,7 +272,7 @@ export const Footer = () => {
 
 
             {/* Copyright */}
-            <div className="flex justify-center mx-auto border-t border-gray-400 pt-8 text-center mt-6">
+            <div className="flex justify-center mx-auto border-t border-[#1B2D9F] pt-8 text-center mt-6">
                 ©2024 Accomate Global. All Rights Reserved.
             </div>
         </div>

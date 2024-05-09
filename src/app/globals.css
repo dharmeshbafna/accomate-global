@@ -68,8 +68,12 @@
   animation: rotate 10s linear infinite;
 }
 
-.rotate-animation2:hover {
-  animation: rotate 5s linear infinite;
+.rotate-animation2 {
+  animation: rotate 13s linear infinite;
+}
+
+.rotate-animation3 {
+  animation: rotate 17s linear infinite;
 }
 
 .home-counter {

@@ -21,6 +21,7 @@ import Xero from "../../public/software/xero.png"
 import Ultratax from "../../public/software/ultratax.png"
 import Taxcycle from "../../public/software/taxcycle.jpg"
 import Certified from "../../public/software/certified.png"
+import BGL from "../../public/software/bgl.png"
 
 import { useRef } from "react";
 import Slider from "react-slick";
@@ -634,7 +635,7 @@ export const Services = () => {
                                                         />
                                                     </div>
 
-                                                    <div className="text-center font-semibold text-[#5264F3] text-xl flex justify-center mx-auto">
+                                                    <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
                                                         {i.head}
                                                     </div>
 
@@ -650,7 +651,7 @@ export const Services = () => {
                                                         ))}
                                                     </ul>
 
-                                                    <button className="bg-[#5264F3] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                    <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                         Read More
                                                     </button>
                                                 </div>
@@ -681,7 +682,7 @@ export const Services = () => {
                                                             />
                                                         </div>
 
-                                                        <div className="text-center font-semibold text-[#5264F3] text-xl flex justify-center mx-auto">
+                                                        <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
                                                             {i.head}
                                                         </div>
 
@@ -697,7 +698,7 @@ export const Services = () => {
                                                             ))}
                                                         </ul>
 
-                                                        <button className="bg-[#5264F3] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                        <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                             Read More
                                                         </button>
                                                     </div>
@@ -712,12 +713,12 @@ export const Services = () => {
 
 
                     {/* Prev Button */}
-                    <button onClick={type == 'usa' ? () => handlePrev() : type == 'canada' ? () => handlePrev1() : () => handlePrev2()} className="drop-shadow-lg absolute -left-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                    <button onClick={type == 'usa' ? () => handlePrev() : type == 'canada' ? () => handlePrev1() : () => handlePrev2()} className=" absolute -left-6 top-1/2 p-2 bg-white border-2 border-[#1B2D9F] text-[#1B2D9F] rounded-full">
                         <FaChevronLeft />
                     </button>
 
                     {/* Next Button */}
-                    <button onClick={type == 'usa' ? () => handleNext() : type == 'canada' ? () => handleNext1() : () => handleNext2()} className="drop-shadow-lg absolute -right-3 top-1/2 p-2 bg-white border-2 border-[#5264F3] text-[#5264F3] rounded-full">
+                    <button onClick={type == 'usa' ? () => handleNext() : type == 'canada' ? () => handleNext1() : () => handleNext2()} className=" absolute -right-6 top-1/2 p-2 bg-white border-2 border-[#1B2D9F] text-[#1B2D9F] rounded-full">
                         <FaChevronRight />
                     </button>
                 </div>
@@ -792,7 +793,7 @@ export const Software = () => {
 
                             {/* ======== Second Circle ======== */}
                             <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
-                                <div className="relative w-full h-full rotate-animation">
+                                <div className="relative w-full h-full rotate-animation2">
                                     <div className="rounded-full h-14 w-14 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
                                         <Image
                                             src={Drake}
@@ -814,6 +815,13 @@ export const Software = () => {
                                             className="h-auto w-auto bg-white"
                                         />
                                     </div>
+                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                        <Image
+                                            src={BGL}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto bg-white"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -821,7 +829,7 @@ export const Software = () => {
 
                         {/* ======== Third Circle ======== */}
                         <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
-                            <div className="relative w-full h-full rotate-animation ">
+                            <div className="relative w-full h-full rotate-animation3">
                                 <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
                                     <Image
                                         src={Quickbooks}
