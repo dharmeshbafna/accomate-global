@@ -61,11 +61,13 @@ export const Navbar = () => {
 
                     {/* Logo */}
                     <div className="flex items-center lg:w-[40%]">
-                        <Image
-                            src={WhiteLogo}
-                            alt="Accomate Logo"
-                            className="h-5 w-auto"
-                        />
+                        <a href="/">
+                            <Image
+                                src={WhiteLogo}
+                                alt="Accomate Logo"
+                                className="h-5 w-auto"
+                            />
+                        </a>
                     </div>
 
                     {/* Desktop Items */}
@@ -104,9 +106,9 @@ export const Navbar = () => {
                             )
                         })}
 
-                        <button className="text-[#5264F3] bg-white px-5 py-2 rounded-full shadow-lg">
+                        <a href="/contact" className="text-[#5264F3] bg-white px-5 py-2 rounded-full shadow-lg">
                             Contact Us
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -117,11 +119,13 @@ export const Navbar = () => {
 
                     {/* Logo */}
                     <div className="flex items-center lg:w-[40%]">
-                        <Image
-                            src={Logo1}
-                            alt="Accomate Logo"
-                            className="h-8 w-auto"
-                        />
+                        <a href="/">
+                            <Image
+                                src={Logo1}
+                                alt="Accomate Logo"
+                                className="h-8 w-auto"
+                            />
+                        </a>
                     </div>
 
                     {/* Desktop Items */}
@@ -161,9 +165,9 @@ export const Navbar = () => {
                             )
                         })}
 
-                        <button className="text-white bg-[#5264F3]  px-5 py-2 rounded-full shadow-lg">
+                        <a href="/contact" className="text-white bg-[#5264F3]  px-5 py-2 rounded-full shadow-lg">
                             Contact Us
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -290,5 +294,50 @@ export const Lordicon = ({ src, trigger, style }) => {
             trigger={trigger}
             style={style}
         />
+    )
+}
+
+export const Breadcrumb = () => {
+
+    const path = usePathname();
+
+    return (
+        <div className="h-[45vh] relative w-full">
+            <Image
+                src={'/banner1.jpg'}
+                alt="Banner"
+                layout="fill"
+                objectFit="cover"
+            />
+            <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 flex justify-center items-center m-auto">
+
+                <div className="space-y-3">
+                    <div className="text-white font-semibold text-[3.5rem] text-center">
+                        {
+                            path == '/about' ? 'About Us' :
+                                path == '/contact' ? 'Contact Us' :
+                                    path == '/infrastructure' ? 'Infrastructure' :
+                                        path == '/services' ? 'services' :
+                                            path == '/services/usa' ? 'USA' :
+                                                path == '/services/canada' ? 'Canada' :
+                                                    path == '/services/australia' ? 'Australia' :
+                                                        ''}
+                    </div>
+                    <div className="text-white text-center text-lg">
+                        Home
+                        {
+                            path == '/about' ? ' / about' :
+                                path == '/contact' ? ' / contact' :
+                                    path == '/infrastructure' ? ' / infrastructure' :
+                                        path == '/services' ? ' / services' :
+                                            path == '/services/usa' ? ' / services / USA' :
+                                                path == '/services/canada' ? ' / services / Canada' :
+                                                    path == '/services/australia' ? ' / services / Australia' :
+                                                        ''}
+                    </div>
+                </div>
+            </div>
+
+        </div>
     )
 }

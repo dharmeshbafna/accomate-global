@@ -11,6 +11,17 @@ import USA from "../../public/usa.webp"
 import Canada from "../../public/circular_canada.jpg"
 import Australia from "../../public/circular_australia.jpg"
 
+// softwares
+import CCH from "../../public/software/cch.png"
+import Drake from "../../public/software/DrakeSoftware.png"
+import Myob from "../../public/software/myob.png"
+import Quickbooks from "../../public/software/quickbooks.png"
+import SalesTrekker from "../../public/software/salestrekker.png"
+import Xero from "../../public/software/xero.png"
+import Ultratax from "../../public/software/ultratax.png"
+import Taxcycle from "../../public/software/taxcycle.jpg"
+import Certified from "../../public/software/certified.png"
+
 import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -153,9 +164,9 @@ export const About = () => {
                             Technology, Financial Service, Real Estate,
                             Insurance, Healthcare, and Manufacturing.
                         </div>
-                        <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
+                        <a href="/about" className="w-fit text-lg flex px-5 py-2 rounded-full text-white bg-[#5264F3] shadow-lg">
                             Read More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -745,29 +756,33 @@ export const Software = () => {
 
                         <div className="relative p-14 rounded-full">
 
-                            <div className="relative p-10 rounded-full">
+                            <div className="relative p-12 rounded-full">
                                 {/* Main icon */}
                                 <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
                                     <Image
                                         src={CircleIcon}
                                         alt="Main Icon"
-                                        className="h-16 w-auto shadow-md rounded-full "
+                                        className="h-20 w-auto shadow-md rounded-full "
                                     />
                                 </div>
 
                                 {/* ====== First Circle ======= */}
                                 <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
                                     <div className="relative w-full h-full rounded-full rotate-animation">
-                                        <Image
-                                            src={CircleIcon}
-                                            alt="Main Icon"
-                                            className="h-10 w-auto absolute top-0 left-0 bg-white"
-                                        />
-                                        <Image
-                                            src={CircleIcon}
-                                            alt="Main Icon"
-                                            className="h-10 w-auto absolute bottom-0 right-0 bg-white"
-                                        />
+                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute top-0 left-0">
+                                            <Image
+                                                src={Myob}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white flex items-center my-auto"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-3 border border-gray-300 absolute bottom-0 right-0">
+                                            <Image
+                                                src={CCH}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -775,21 +790,27 @@ export const Software = () => {
                             {/* ======== Second Circle ======== */}
                             <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
                                 <div className="relative w-full h-full rotate-animation">
-                                    <Image
-                                        src={CircleIcon}
-                                        alt="Main Icon"
-                                        className="h-10 w-auto absolute -top-3 left-1/2 bg-white"
-                                    />
-                                    <Image
-                                        src={CircleIcon}
-                                        alt="Main Icon"
-                                        className="h-10 w-auto absolute -bottom-3 right-1/2 bg-white"
-                                    />
-                                    <Image
-                                        src={CircleIcon}
-                                        alt="Main Icon"
-                                        className="h-10 w-auto absolute bottom-1/2 -right-3 bg-white"
-                                    />
+                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
+                                        <Image
+                                            src={Drake}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto bg-white"
+                                        />
+                                    </div>
+                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex items-center border border-gray-300 absolute -bottom-5 right-1/2 ">
+                                        <Image
+                                            src={Taxcycle}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto bg-white rounded-full"
+                                        />
+                                    </div>
+                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
+                                        <Image
+                                            src={Ultratax}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto bg-white"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -798,26 +819,34 @@ export const Software = () => {
                         {/* ======== Third Circle ======== */}
                         <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
                             <div className="relative w-full h-full rotate-animation ">
-                                <Image
-                                    src={CircleIcon}
-                                    alt="Main Icon"
-                                    className="h-10 w-auto absolute top-1/2 -left-3 bg-white"
-                                />
-                                <Image
-                                    src={CircleIcon}
-                                    alt="Main Icon"
-                                    className="h-10 w-auto absolute top-1/2 -right-3 bg-white"
-                                />
-                                <Image
-                                    src={CircleIcon}
-                                    alt="Main Icon"
-                                    className="h-10 w-auto absolute -bottom-3 right-[30%] bg-white"
-                                />
-                                <Image
-                                    src={CircleIcon}
-                                    alt="Main Icon"
-                                    className="h-10 w-auto absolute -top-3 left-[30%] bg-white"
-                                />
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                    <Image
+                                        src={Quickbooks}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -right-5">
+                                    <Image
+                                        src={SalesTrekker}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto  bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute -bottom-5 right-[30%]">
+                                    <Image
+                                        src={Xero}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute -top-5 left-[30%]">
+                                    <Image
+                                        src={Certified}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -945,9 +974,10 @@ export const Testimonial = () => {
     };
 
     const clientele = [
-        { name: 'Abc Xyz', company: 'ABC Company', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sodales tellus vitae libero lacinia, quis hendrerit nisl molestie. Cras venenatis, sem vel ullamcorper tempus, arcu massa fringilla lectus, quis ornare risus augue ac felis. Quisque sed ex id arcu efficitur imperdiet at in arcu. Donec interdum leo non felis vestibulum convallis. Pellentesque ex ex, faucibus ac magna quis, porttitor tristique arcu. Suspendisse tempus massa a velit laoreet, sit amet elementum leo scelerisque. Cras vitae est sem.' },
-        { name: 'Def hij', company: 'Hij Company', desc: 'Morbi dictum justo laoreet rutrum gravida. Sed eget massa augue. Donec hendrerit sodales orci non laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean in lacus id lectus finibus facilisis. Phasellus a velit tincidunt, ullamcorper dolor vitae, blandit ipsum. Integer laoreet vitae eros at viverra.' },
-        { name: 'Mno Qrs', company: 'Xyz Company', desc: 'Praesent a dictum sapien, sit amet semper lectus. Mauris convallis elementum tempus. Maecenas finibus varius diam, eu auctor nulla accumsan non. Sed nec nibh nec sem maximus pharetra sed sed leo. Fusce sed porttitor justo, vel convallis mi. Nulla id pulvinar turpis, vitae tincidunt felis. Sed eu tempor erat. Etiam nisl dui, pellentesque at sapien in, efficitur sodales urna.' }
+        { name: 'Biren Joshi', company: 'Excel Financial Solutions', desc: 'Partnering with Accomate Global for all our ……. and other tax-related issues have benefited immensely.  We can always count on their highly professional quality of work with a proactive approach. They have also given us very sound guidance, counsel, and options. We never had to look back at this relationship. We truly value this partnership with Accomate Global and look forward to working with them for a long time.' },
+        { name: 'Biren Joshi', company: 'Excel Financial Solutions', desc: 'Accomate Global has been a game-changer for our business. Their outsourcing solutions have significantly reduced our accounting costs, saving valuable time and resources. Working with them looks pretty seamless and hassle-free. We are confident that our partnership with Accomate Global will continue contributing to our long-term financial success.' },
+        { name: 'Biren Joshi', company: 'Excel Financial Solutions', desc: `Being a client of Accomate Global has been an absolute pleasure. We have an expert veteran as our dedicated single point of contact, which has proven incredibly beneficial. Ronak/Pankaj's professionalism and deep industry knowledge have provided invaluable insights and guidance. Their personalized approach ensures efficient and effective communication, a huge advantage. I hope for this relationship to grow stronger and more fruitful.` },
+        { name: 'Biren Joshi', company: 'Excel Financial Solutions', desc: `For Mortgage broking need help from Biren, need to understand the process to highlight, how it has given better loan suggestions, and reduce their time to concentrate on increasing clientele.` }
     ];
 
     return (
