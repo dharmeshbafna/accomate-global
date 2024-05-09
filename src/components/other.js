@@ -199,19 +199,19 @@ export const Footer = () => {
 
                     <div className="flex items-center my-auto space-x-5">
 
-                        <a href="#" className="rounded-full p-2 bg-[#9F1B6F] shadow text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
                             <FaFacebookF className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#9F1B6F] shadow text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
                             <FaInstagram className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#9F1B6F] shadow text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
                             <FaLinkedinIn className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 bg-[#9F1B6F] shadow text-white hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
                             <FaXTwitter className="text-lg" />
                         </a>
                     </div>
