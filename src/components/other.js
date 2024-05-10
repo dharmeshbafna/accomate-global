@@ -274,7 +274,7 @@ export const Footer = () => {
 
             {/* Copyright */}
             <div className="flex justify-center mx-auto border-t border-gray-500 pt-10 text-center mt-6">
-                ©2024 Accomate Global. All Rights Reserved.
+                © 2024 Accomate Global. All Rights Reserved.
             </div>
         </div>
     )
