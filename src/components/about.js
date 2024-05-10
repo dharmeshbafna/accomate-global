@@ -208,8 +208,8 @@ export const Team = () => {
                                         <div
                                             onMouseEnter={() => setShow(i.name)}
                                             onMouseLeave={() => setShow('')}
-                                            className={`p-3 absolute top-0 left-0 rounded-lg bg-[#1B2D9F] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                            <div className="flex justify-center mx-auto text-center text-[#e8d13d] font-semibold text-xl">
+                                            className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                            <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
                                                 {i.name}
                                             </div>
 
