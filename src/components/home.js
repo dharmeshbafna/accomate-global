@@ -119,7 +119,7 @@ export const Banner = () => {
                                 {slide.description}
                             </div>
 
-                            <button className="text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
+                            <button className="hover:bg-[#1B2D9F] duration-300 text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
                                 Read More
                             </button>
                         </div>
@@ -165,7 +165,7 @@ export const About = () => {
                             Technology, Financial Service, Real Estate,
                             Insurance, Healthcare, and Manufacturing.
                         </div>
-                        <a href="/about" className="w-fit text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
+                        <a href="/about" className="hover:bg-[#1B2D9F] duration-300 w-fit text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
                             Read More
                         </a>
                     </div>
@@ -604,7 +604,7 @@ export const Services = () => {
                                                     ))}
                                                 </ul>
 
-                                                <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                     Read More
                                                 </button>
                                             </div>
@@ -651,7 +651,7 @@ export const Services = () => {
                                                         ))}
                                                     </ul>
 
-                                                    <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                    <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                         Read More
                                                     </button>
                                                 </div>
@@ -698,7 +698,7 @@ export const Services = () => {
                                                             ))}
                                                         </ul>
 
-                                                        <button className="bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                        <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                             Read More
                                                         </button>
                                                     </div>
@@ -747,7 +747,7 @@ export const Software = () => {
                             Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
                         </div>
 
-                        <button className="text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
+                        <button className="hover:bg-[#1B2D9F] duration-300 text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
                             Read More
                         </button>
                     </div>

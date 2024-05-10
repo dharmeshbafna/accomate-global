@@ -1,26 +1,38 @@
 'use client'
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import { Jost } from "next/font/google"
 
 import About1 from "../../public/dummy1.png"
 import About2 from "../../public/about2.png"
 import About3 from "../../public/about3.png"
+import Icon from "../../public/n_icon.png"
+import TextLogo from "../../public/n_text_logo.png"
 
 import { GoGoal } from "react-icons/go";
 import { FaRegLightbulb } from "react-icons/fa"
+
+const jost = Jost({ subsets: ["latin"], weight: '700' });
 
 export const Whoweare = () => {
     return (
         <div className="px-8 py-16 flex items-center my-auto w-full relative">
             <div className="grid grid-cols-2 gap-3">
 
-                <div className="flex items-center my-auto w-full">
-                    
+                <div className="flex justify-center items-center m-auto w-full">
+                    <div className="w-fit relative">
+                        <Image
+                            src={About2}
+                            alt="About1"
+                            className="shadow-lg h-96 w-auto"
+                        />
+                        <div className="absolute -bottom-6 -left-5 w-[80%] h-[80%] bg-[#9f8e1b5c] -z-10"></div>
+                    </div>
                 </div>
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#5264F3]">Who We Are</div>
+                        <div className="text-[#1B2D9F]">Who We Are</div>
                         <div className="font-semibold text-3xl">
                             Born from experience, built for success
                         </div>
@@ -60,13 +72,21 @@ export const Whoweare = () => {
 
 export const MissionVision = () => {
     return (
-        <div className="py-16">
+        <div className="pb-16">
             <div className="grid grid-cols-2 gap-x-4">
-                <div></div>
+                <div className={`${jost.className} flex justify-center items-center mx-auto text-[140px] text-nowrap text-gray-200`}>
+                    <div className="w-fit rounded-full p-6 border-2 border-[#1b2d9f32] h-36 w-36 flex justify-center items-center">
+                        <Image
+                            src={Icon}
+                            alt="Icon"
+                            className="h-auto w-auto opacity-20"
+                        />
+                    </div>
+                </div>
 
-                <div className="bg-[#5264F3] px-5 py-8 rounded-l-full">
+                <div className="bg-[#9F8D1B] px-5 py-8 rounded-l-full">
                     <div className="flex">
-                        <div className="min-w-[20%] flex justify-end mt-1">
+                        <div className="min-w-[20%] flex justify-end mt-2">
                             <GoGoal className="text-white h-14 w-auto flex-shrink-0" />
                         </div>
 
@@ -75,15 +95,15 @@ export const MissionVision = () => {
                                 Our Mission
                             </div>
                             <div>
-                            At Accomate Global, our mission is to empower Certified Public Accountants (CPAs) and Financial Professionals to achieve unparalleled success by offering high-quality outsourcing solutions. We are committed to being a trusted partner, leveraging our expertise and cutting-edge technology to enhance our clients' efficiency, productivity, and profitability.
+                                At Accomate Global, we empower CPAs and Financial Professionals for unparalleled success through premium outsourcing solutions. As a trusted partner, we utilize expertise and advanced technology to boost clients' efficiency, productivity, and profitability.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-[#5264F3] px-5 py-8 rounded-r-full">
+                <div className="bg-[#1B2D9F] px-7 py-8 rounded-r-full relative">
                     <div className="flex">
-                        <div className="min-w-[15%] flex justify-end mt-1">
+                        <div className="min-w-[10%] flex justify-end mt-2">
                             <FaRegLightbulb className="text-white h-14 w-auto flex-shrink-0" />
                         </div>
 
@@ -92,12 +112,19 @@ export const MissionVision = () => {
                                 Purpose
                             </div>
                             <div>
-                            We exist to elevate the perFormance oF CPAs and Financial Firms, enabling them to Focus on their core competencies while we handle the time- consuming and resource-intensive tasks. By streamlining operations, reducing overheads, and ensuring compliance, we strive to create a sustainable advantage For our clients in today's competitive business landscape.
+                                We elevate CPAs and Financial Firms, allowing them to focus on core competencies while we handle time-consuming tasks. By streamlining operations, cutting overhead, and ensuring compliance, we create a sustainable advantage for our clients in today's competitive landscape.
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div className="flex justify-center items-center">
+                    <Image
+                        src={TextLogo}
+                        alt="TextLogo"
+                        className="h-10 w-auto opacity-20"
+                    />
+                </div>
             </div>
         </div>
     )
