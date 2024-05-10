@@ -4,6 +4,7 @@ import Image from "next/image"
 import Logo1 from "../../public/n_logo1.png"
 import Logo2 from "../../public/n_logo2.png"
 import WhiteLogo from "../../public/accomate_logo_white.png"
+import WhiteLogo2 from "../../public/n_accomate_white.png"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -178,13 +179,13 @@ export const Navbar = () => {
 
 export const Footer = () => {
     return (
-        <div className="px-8 py-10 bg-[#9f8e1b5c]">
+        <div className="px-8 pt-14 pb-10 bg-gray-900 text-white">
             <div className="flex w-full space-x-3">
 
                 {/* About */}
                 <div className="lg:w-[40%] space-y-4">
                     <Image
-                        src={Logo2}
+                        src={WhiteLogo2}
                         alt="Accomate Logo"
                         className="h-28 w-auto"
                     />
@@ -199,19 +200,19 @@ export const Footer = () => {
 
                     <div className="flex items-center my-auto space-x-5">
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
                             <FaFacebookF className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
                             <FaInstagram className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
                             <FaLinkedinIn className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:scale-[110%] duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
                             <FaXTwitter className="text-lg" />
                         </a>
                     </div>
@@ -220,21 +221,21 @@ export const Footer = () => {
                 {/* Useful Links */}
                 <div className="lg:w-[30%] flex justify-center mx-auto">
                     <div>
-                        <div className="font-semibold text-xl text-[#1B2D9F]">
+                        <div className="font-semibold text-xl text-[#9F8D1B]">
                             Useful Links
                         </div>
 
                         <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
-                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
                                 Disclaimer
                             </a>
-                            <a href="#" className="hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
                                 Support
                             </a>
                         </div>
@@ -244,24 +245,24 @@ export const Footer = () => {
                 {/* Contact Us */}
                 <div className="lg:w-[30%] flex justify-center mx-auto">
                     <div>
-                        <div className="font-semibold text-xl text-[#1B2D9F]">
+                        <div className="font-semibold text-xl text-[#9F8D1B]">
                             Contact Us
                         </div>
 
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
-                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
                                 +91 XXXXXXXXXX
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <MdOutlineEmail className="flex-shrink-0 mr-2 text-xl" />
                                 info@accomateglobal.com
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <IoCallOutline className="flex-shrink-0 mr-2 text-xl" />
                                 +91 XXXXXXXXXX
                             </a>
-                            <a href="#" className="flex hover:text-[#1B2D9F] duration-300">
+                            <a href="#" className="flex hover:text-[#9F8D1B] duration-300">
                                 <IoLocationOutline className="flex-shrink-0 mr-2 text-xl mt-1" />
                                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
                             </a>
@@ -272,7 +273,7 @@ export const Footer = () => {
 
 
             {/* Copyright */}
-            <div className="flex justify-center mx-auto border-t border-[#1B2D9F] pt-8 text-center mt-6">
+            <div className="flex justify-center mx-auto border-t border-gray-500 pt-10 text-center mt-6">
                 ©2024 Accomate Global. All Rights Reserved.
             </div>
         </div>

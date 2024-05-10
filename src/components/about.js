@@ -7,7 +7,9 @@ import About1 from "../../public/dummy1.png"
 import About2 from "../../public/about2.png"
 import About3 from "../../public/about3.png"
 import Icon from "../../public/n_icon.png"
+import CircleIcon from "../../public/n_accomate_circle.png"
 import TextLogo from "../../public/n_text_logo.png"
+import Dummy from "../../public/team/dummy.jpg"
 
 import { GoGoal } from "react-icons/go";
 import { FaRegLightbulb } from "react-icons/fa"
@@ -72,16 +74,14 @@ export const Whoweare = () => {
 
 export const MissionVision = () => {
     return (
-        <div className="pb-16">
+        <div className="pt-5 pb-10">
             <div className="grid grid-cols-2 gap-x-4">
                 <div className={`${jost.className} flex justify-center items-center mx-auto text-[140px] text-nowrap text-gray-200`}>
-                    <div className="w-fit rounded-full p-6 border-2 border-[#1b2d9f32] h-36 w-36 flex justify-center items-center">
-                        <Image
-                            src={Icon}
-                            alt="Icon"
-                            className="h-full w-auto opacity-20"
-                        />
-                    </div>
+                    <Image
+                        src={CircleIcon}
+                        alt="Icon"
+                        className="h-36 w-auto opacity-20"
+                    />
                 </div>
 
                 <div className="bg-[#9F8D1B] px-5 py-8 rounded-l-full">
@@ -125,6 +125,111 @@ export const MissionVision = () => {
                         className="h-10 w-auto opacity-20"
                     />
                 </div>
+            </div>
+        </div>
+    )
+}
+
+export const Director = () => {
+    return (
+        <div className="px-8 py-16 flex">
+            <div className="lg:w-[70%] border border-[#9F8D1B] p-10 rounded-bl-3xl">
+                <div className="font-semibold text-2xl">
+                    Accomate Director’s vision
+                </div>
+                <div className="my-5">
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                </div>
+                <div className="flex justify-end w-full pt-5">
+                    <div className="text-right">
+                        <div className="font-semibold text-lg">Abc Xyz (CA)</div>
+                        <div>Director of Accomate Global</div>
+                    </div>
+                </div>
+            </div>
+            <div className="px-4 lg:w-[40%] relative">
+                <Image
+                    src={Dummy}
+                    alt="Director"
+                    className="w-full h-auto"
+                />
+                <div className="absolute bottom-0 left-0 bg-[#9f8e1b5c] w-[70%] h-[70%] -z-10"></div>
+            </div>
+        </div>
+    )
+}
+
+export const Team = () => {
+
+
+    const data = [
+        { name: 'Rohit Choksi', img: '/team/rohit.jpeg', list: ['CA, BCOM', 'Co Founder GK Choksi & CO.', '50 Yrs. Exp. in taxation'] },
+        { name: 'Vartik Choksi', img: '/team/vartik.jpeg', list: ['CA, CPA (USA)', 'Partner GK Choksi & CO.', '15 Yrs. Exp. in International taxation'] },
+        { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['CA, BCOM', 'President , GK Choski & Co.', '30 Yrs. Exp Audit & Assurance'] },
+        { name: 'Dr. Ashutosh Bharadwaj', img: '/team/dummy.jpg', list: ['Growth strategist', '20 Yrs. Industry Exp'] },
+        { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['EGMP (IIM-L), HRM (XLRI-J)', '20 Yrs. Industry Exp.'] },
+        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['CA, CPA (Aus), DISA, FAFD (ICAI)', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Yogesh Rawat', img: '/team/dummy.jpg', list: ['CPA (AUS)', '10 Yrs Exp in AUS Taxation'] },
+        { name: 'Ankit Sudrania', img: '/team/dummy.jpg', list: ['CA,CAIIB,MDP (MDI-Gurgaon)', '11 Yrs. Exp. in corporate finance'] },
+        { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['CA, CPA (Can)', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Hemant Chandak', img: '/team/dummy.jpg', list: ['CPA (Australia)', '8 Yrs. Exp. in Audit and Tax', 'Leading team of Audit/Tax managers & Associates'] },
+        { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['CA, EA, CPA (US)', '9 Yrs Exp in US Taxation', 'Leading Team of Tax managers & Associates'] },
+        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['CPA (Canada)', '8 Yrs. exp. in Audit and Tax', 'Leading team of Audit/Tax managers & Associates'] },
+    ];
+    const [show, setShow] = useState('');
+
+    return (
+        <div className="px-8 py-16 w-full">
+
+            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center w-full">Our Team</div>
+            <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                Dedicated experts driving excellence and innovation
+            </div>
+
+            <div className="mt-10">
+
+                <div className="grid grid-cols-4 gap-10">
+                    {data.map((i, index) => {
+                        return (
+                            <div
+                                onMouseEnter={() => setShow(i.name)}
+                                onMouseLeave={() => setShow('')}
+                                className="rounded-lg w-full h-80 shadow-lg relative">
+                                <Image
+                                    src={i.img}
+                                    alt="Team"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    className=""
+                                />
+                                <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                                    <div className="relative w-full h-full">
+                                        <div
+                                            onMouseEnter={() => setShow(i.name)}
+                                            onMouseLeave={() => setShow('')}
+                                            className={`p-3 absolute top-0 left-0 rounded-lg bg-[#1B2D9F] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                            <div className="flex justify-center mx-auto text-center text-[#e8d13d] font-semibold text-xl">
+                                                {i.name}
+                                            </div>
+
+                                            <ul className="list-disc text-white pl-7 mt-5">
+                                                {i.list.map((j) => {
+                                                    return (
+                                                        <li>{j}</li>
+                                                    )
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                            </div>
+                        )
+                    })}
+                </div>
+
             </div>
         </div>
     )

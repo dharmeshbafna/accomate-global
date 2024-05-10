@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
-import CircleIcon from "../../public/circle_icon.png"
+import CircleIcon from "../../public/n_accomate_circle.png"
 
 import AboutImg from "../../public/dummy1.png"
 import Banner1 from "../../public/banner1.jpg"

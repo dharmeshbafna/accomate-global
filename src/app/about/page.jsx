@@ -1,7 +1,9 @@
 import { Breadcrumb } from "@/components/other";
 import {
     Whoweare,
-    MissionVision
+    MissionVision,
+    Team,
+    Director
 } from "@/components/about";
 
 export const metadata = {
@@ -17,6 +19,8 @@ export default function AboutPage() {
             <Breadcrumb />
             <Whoweare />
             <MissionVision />
+            <Director />
+            <Team />
         </div>
     )
 }
