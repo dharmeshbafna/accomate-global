@@ -79,7 +79,7 @@ export const MissionVision = () => {
                         <Image
                             src={Icon}
                             alt="Icon"
-                            className="h-auto w-auto opacity-20"
+                            className="h-full w-auto opacity-20"
                         />
                     </div>
                 </div>
