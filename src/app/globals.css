@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.t1 {
+  color: #5264F3;
+}
+
+.n1 { color: #1B2D9F };
+.n2 { color: #9F8D1B };
+.n3 { color: #9F1B6F };
+.n4 { color: #1B9F4B };
+
+.n1-light { background-color: #1b2d9f5b };
+.n2-light { background-color: #9f8e1b5c };
+
+.t3 {
+  color: #A8A2D8;
+}
+
+.t4 {
+  color: #F2ECFF;
+}
+
+.t5 {
+  color: #1e8fdb;
+}
+
+.hover\:underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover\:underline-animation::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover\:underline-animation2:hover::after {
+  transform: scaleX(1);
+}
+
+.hover\:underline-animation2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1B2D9F;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 10s linear infinite;
+}
+
+.rotate-animation2 {
+  animation: rotate 13s linear infinite;
+}
+
+.rotate-animation3 {
+  animation: rotate 17s linear infinite;
+}
+
+.home-counter {
+  background-image: url("/banner1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
