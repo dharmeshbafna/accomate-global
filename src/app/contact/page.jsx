@@ -1,4 +1,3 @@
-import { Breadcrumb } from "@/components/other";
 import { Contact, Locations } from "@/components/contact";
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function CONTACT() {
         <div>
             <Breadcrumb />
             <Contact />
-            <Locations />
         </div>
     )
 }
