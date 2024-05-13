@@ -1,4 +1,5 @@
 import { Breadcrumb } from "@/components/other";
+import { Usa } from "@/components/services";
 
 export const metadata = {
     title: 'USA | Services | Accomate Global',
@@ -11,6 +12,7 @@ export default function USA() {
     return (
         <div>
             <Breadcrumb />
+            <Usa />
         </div>
     )
 }

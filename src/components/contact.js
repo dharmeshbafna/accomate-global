@@ -38,7 +38,7 @@ export const Contact = () => {
                     <div className="mt-6 space-y-5">
                         <div className="flex items-center my-auto pb-4 border-b border-gray-300 text-white">
                             <IoCallOutline className="font-semibold text-2xl" />
-                            <span className="ml-2">+91 XXXXXXXXXX</span>
+                            <span className="ml-2">+61-3991-77471</span>
                         </div>
                         <div className="flex items-center my-auto pb-4 border-b border-gray-300 text-white">
                             <MdOutlineEmail className="font-semibold text-2xl" />
@@ -136,7 +136,7 @@ export const Locations = () => {
             <div className="grid grid-cols-3 gap-6 mt-10">
 
                 <div className="space-y-5">
-                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8151879657576!2d72.56884717524724!3d23.030557016030293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d59e1eb419%3A0xb42eabdf63061be6!2sAnriyo%20-%20Best%20Web%20Design%20%26%20Development%20Company%20%7C%20Digital%20Marketing%20Services%20in%20Ahmedabad!5e0!3m2!1sen!2sin!4v1715411101620!5m2!1sen!2sin"></iframe>
+                <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117505.38239193049!2d72.42375654335942!3d23.022185999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8456022fa835%3A0xcb9ff4b30a115602!2sMadhuban%20Complex!5e0!3m2!1sen!2sin!4v1715600046066!5m2!1sen!2sin"></iframe>
 
                     <div className="text-center">
                         <span className="font-semibold">India:&nbsp;</span>
@@ -144,19 +144,19 @@ export const Locations = () => {
                     </div>
                 </div>
                 <div className="space-y-5">
-                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8151879657576!2d72.56884717524724!3d23.030557016030293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d59e1eb419%3A0xb42eabdf63061be6!2sAnriyo%20-%20Best%20Web%20Design%20%26%20Development%20Company%20%7C%20Digital%20Marketing%20Services%20in%20Ahmedabad!5e0!3m2!1sen!2sin!4v1715411101620!5m2!1sen!2sin"></iframe>
+                 <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.0450339588638!2d144.74364377479986!3d-37.83583157196994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689814ee7c77b%3A0x7d1841cf981be82e!2sUnit%20203%2F2%20Infinity%20Dr%2C%20Truganina%20VIC%203029%2C%20Australia!5e0!3m2!1sen!2sin!4v1715600120512!5m2!1sen!2sin"></iframe>
 
                     <div className="text-center">
                         <span className="font-semibold">USA:&nbsp;</span>
-                        G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
+                        203/2 Infinity Drive Truganina, VIC, Australia, 3029
                     </div>
                 </div>
                 <div className="space-y-5">
-                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8151879657576!2d72.56884717524724!3d23.030557016030293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84d59e1eb419%3A0xb42eabdf63061be6!2sAnriyo%20-%20Best%20Web%20Design%20%26%20Development%20Company%20%7C%20Digital%20Marketing%20Services%20in%20Ahmedabad!5e0!3m2!1sen!2sin!4v1715411101620!5m2!1sen!2sin"></iframe>
-
+                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1074568756853!2d-79.62782802482197!3d43.60430417110451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4714d753bc83%3A0x776e544375ebb2ca!2sDunmow%20Crescent%2C%20Mississauga%2C%20ON%20L4Z%201E1%2C%20Canada!5e0!3m2!1sen!2sin!4v1715600215752!5m2!1sen!2sin"></iframe>
+                   
                     <div className="text-center">
                         <span className="font-semibold">Canada:&nbsp;</span>
-                        G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
+                        1234051 Dunmow Crescent Mississauga Ontario L4Z1E1
                     </div>
                 </div>
             </div>

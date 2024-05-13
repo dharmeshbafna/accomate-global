@@ -20,7 +20,7 @@ export default function AboutPage() {
             <Whoweare />
             <MissionVision />
             <Director />
-            <Team />
+            {/* <Team /> */}
         </div>
     )
 }

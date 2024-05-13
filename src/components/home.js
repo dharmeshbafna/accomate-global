@@ -146,9 +146,8 @@ export const About = () => {
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#1B2D9F]">About Us</div>
                         <div className="font-semibold text-3xl">
-                            Born from experience, built for success
+                            About Us
                         </div>
                         <div className="my-4">
                             Accomate Global is the brainchild of seasoned
@@ -320,7 +319,7 @@ export const Services = () => {
             list: [
                 'Data entry',
                 'Payroll processing (T4 &T5)',
-                'Bank reconciliation'
+                'Accounts payable / receivable management'
             ]
         },
         {
@@ -350,7 +349,6 @@ export const Services = () => {
             list: [
                 'Payroll accounting and prompt processing and filing',
                 'Annual filing of T4 and T5 slips for all employees',
-                'Ordering property valuation',
                 'Payroll Tax management and compliance'
             ]
         },
@@ -517,9 +515,9 @@ export const Services = () => {
 
     return (
         <div className="px-8 py-10 bg-gray-100">
-            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div>
+            {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div> */}
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
-                We provide a wide range of services
+                Our Services
             </div>
 
             <div className="mt-10 ">
@@ -588,7 +586,7 @@ export const Services = () => {
                                                     />
                                                 </div>
 
-                                                <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
+                                                <div className="text-center font-semibold text-[#1B2D9F] text-xl flex justify-center mx-auto">
                                                     {i.head}
                                                 </div>
 
@@ -604,9 +602,9 @@ export const Services = () => {
                                                     ))}
                                                 </ul>
 
-                                                <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                <a href="/services/usa" className="w-fit hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                     Read More
-                                                </button>
+                                                </a>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -635,7 +633,7 @@ export const Services = () => {
                                                         />
                                                     </div>
 
-                                                    <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
+                                                    <div className="text-center font-semibold text-[#1B2D9F] text-xl flex justify-center mx-auto">
                                                         {i.head}
                                                     </div>
 
@@ -651,9 +649,9 @@ export const Services = () => {
                                                         ))}
                                                     </ul>
 
-                                                    <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                    <a href="/services/canada" className="w-fit hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                         Read More
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </blockquote>
                                         </div>
@@ -682,7 +680,7 @@ export const Services = () => {
                                                             />
                                                         </div>
 
-                                                        <div className="text-center font-semibold text-[#9F1B6F] text-xl flex justify-center mx-auto">
+                                                        <div className="text-center font-semibold text-[#1B2D9F] text-xl flex justify-center mx-auto">
                                                             {i.head}
                                                         </div>
 
@@ -698,9 +696,9 @@ export const Services = () => {
                                                             ))}
                                                         </ul>
 
-                                                        <button className="hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
+                                                        <a href="/services/australia" className="w-fit hover:bg-[#1B2D9F] duration-300 bg-[#9F8D1B] text-white px-5 py-2 rounded-full shadow-lg flex justify-center mx-auto">
                                                             Read More
-                                                        </button>
+                                                        </a>
                                                     </div>
                                                 </blockquote>
                                             </div>
@@ -735,9 +733,9 @@ export const Software = () => {
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#1B2D9F]">Software Expertise</div>
+                        {/* <div className="text-[#1B2D9F]">Software Expertise</div> */}
                         <div className="font-semibold text-3xl">
-                            We work with your choice of Accounting software
+                            Software Expertise
                         </div>
 
                         <div className="my-4">
@@ -993,9 +991,9 @@ export const Testimonial = () => {
 
     return (
         <div className="px-8 py-14">
-            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Testimonials</div>
+            {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Testimonials</div> */}
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
-                What Our Client Says
+                Testimonials
             </div>
 
             <div className="mt-10 pb-6 relative">

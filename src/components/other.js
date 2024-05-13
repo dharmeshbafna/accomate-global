@@ -20,6 +20,7 @@ export const Sidebar = ({ toogle, setToogle }) => {
     const navitems = [
         { name: "Home", link: "/" },
         { name: "About Us", link: "/about" },
+        { name: "Our Team", link: "/team" },
         {
             name: "Services", link: "/services",
             dropdown: [
@@ -51,6 +52,7 @@ export const Navbar = () => {
     const navitems = [
         { name: "Home", link: "/" },
         { name: "About Us", link: "/about" },
+        { name: "Our Team", link: "/team" },
         {
             name: "Services", link: "/services",
             dropdown: [
@@ -90,7 +92,7 @@ export const Navbar = () => {
                 <div className="flex items-center my-auto w-full">
 
                     {/* Logo */}
-                    <div className="flex items-center w-[80%] lg:w-[40%]">
+                    <div className="flex items-center w-[80%] lg:w-[35%]">
                         <a href="/">
                             <Image
                                 src={WhiteLogo}
@@ -101,7 +103,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Items */}
-                    <div className="hidden lg:flex items-center justify-end space-x-8 lg:w-[60%]">
+                    <div className="hidden lg:flex items-center justify-end space-x-8 lg:w-[65%]">
 
                         {navitems.map((i, index) => {
                             return (
@@ -153,7 +155,7 @@ export const Navbar = () => {
                 <div className="flex items-center my-auto w-full">
 
                     {/* Logo */}
-                    <div className="flex items-center w-[80%] lg:w-[40%]">
+                    <div className="flex items-center w-[80%] lg:w-[35%]">
                         <a href="/">
                             <Image
                                 src={Logo1}
@@ -164,7 +166,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Desktop Items */}
-                    <div className="hidden lg:flex items-center justify-end space-x-8 lg:w-[60%]">
+                    <div className="hidden lg:flex items-center justify-end space-x-8 lg:w-[65%]">
 
                         {navitems.map((i, index) => {
                             return (
@@ -289,19 +291,19 @@ export const Footer = () => {
                         </div>
 
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
-                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
-                                +91 XXXXXXXXXX
+                                +61-3991-77471
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="mailto:info@accomateglobal.com" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <MdOutlineEmail className="flex-shrink-0 mr-2 text-xl" />
                                 info@accomateglobal.com
                             </a>
-                            <a href="#" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
                                 <IoCallOutline className="flex-shrink-0 mr-2 text-xl" />
-                                +91 XXXXXXXXXX
+                                +61-3991-77471
                             </a>
-                            <a href="#" className="flex hover:text-[#9F8D1B] duration-300">
+                            <a href="https://maps.app.goo.gl/KUZCikfaVihuKuEx8" target="_blank" className="flex hover:text-[#9F8D1B] duration-300">
                                 <IoLocationOutline className="flex-shrink-0 mr-2 text-xl mt-1" />
                                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
                             </a>
@@ -355,25 +357,27 @@ export const Breadcrumb = () => {
                     <div className="text-white font-semibold text-[3.5rem] text-center">
                         {
                             path == '/about' ? 'About Us' :
-                                path == '/contact' ? 'Contact Us' :
-                                    path == '/infrastructure' ? 'Infrastructure' :
-                                        path == '/services' ? 'services' :
-                                            path == '/services/usa' ? 'USA' :
-                                                path == '/services/canada' ? 'Canada' :
-                                                    path == '/services/australia' ? 'Australia' :
-                                                        ''}
+                                path == '/team' ? 'Our Team' :
+                                    path == '/contact' ? 'Contact Us' :
+                                        path == '/infrastructure' ? 'Infrastructure' :
+                                            path == '/services' ? 'services' :
+                                                path == '/services/usa' ? 'USA' :
+                                                    path == '/services/canada' ? 'Canada' :
+                                                        path == '/services/australia' ? 'Australia' :
+                                                            ''}
                     </div>
                     <div className="text-white text-center text-lg">
                         Home
                         {
                             path == '/about' ? ' / about' :
-                                path == '/contact' ? ' / contact' :
-                                    path == '/infrastructure' ? ' / infrastructure' :
-                                        path == '/services' ? ' / services' :
-                                            path == '/services/usa' ? ' / services / USA' :
-                                                path == '/services/canada' ? ' / services / Canada' :
-                                                    path == '/services/australia' ? ' / services / Australia' :
-                                                        ''}
+                                path == '/team' ? ' / team' :
+                                    path == '/contact' ? ' / contact' :
+                                        path == '/infrastructure' ? ' / infrastructure' :
+                                            path == '/services' ? ' / services' :
+                                                path == '/services/usa' ? ' / services / USA' :
+                                                    path == '/services/canada' ? ' / services / Canada' :
+                                                        path == '/services/australia' ? ' / services / Australia' :
+                                                            ''}
                     </div>
                 </div>
             </div>

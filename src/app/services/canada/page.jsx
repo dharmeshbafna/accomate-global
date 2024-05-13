@@ -1,4 +1,5 @@
 import { Breadcrumb } from "@/components/other";
+import { Canada } from "@/components/services";
 
 export const metadata = {
     title: 'Canada | Services | Accomate Global',
@@ -11,6 +12,7 @@ export default function CANADA() {
     return (
         <div>
             <Breadcrumb />
+            <Canada />
         </div>
     )
 }

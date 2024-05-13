@@ -34,7 +34,7 @@ export const Whoweare = () => {
 
                 <div className="flex items-center my-auto">
                     <div>
-                        <div className="text-[#1B2D9F]">Who We Are</div>
+                        {/* <div className="text-[#1B2D9F]">Who We Are</div> */}
                         <div className="font-semibold text-3xl">
                             Born from experience, built for success
                         </div>
@@ -180,56 +180,214 @@ export const Team = () => {
     const [show, setShow] = useState('');
 
     return (
-        <div className="px-8 py-16 w-full">
+        <div className="px-8 py-16 w-full space-y-12">
 
-            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center w-full">Our Team</div>
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
-                Dedicated experts driving excellence and innovation
-            </div>
+            <div>
 
-            <div className="mt-10">
-
-                <div className="grid grid-cols-4 gap-10">
-                    {data.map((i, index) => {
-                        return (
-                            <div
-                                onMouseEnter={() => setShow(i.name)}
-                                onMouseLeave={() => setShow('')}
-                                className="rounded-lg w-full h-80 shadow-lg relative">
-                                <Image
-                                    src={i.img}
-                                    alt="Team"
-                                    objectFit="cover"
-                                    layout="fill"
-                                    className=""
-                                />
-                                <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                                    <div className="relative w-full h-full">
-                                        <div
-                                            onMouseEnter={() => setShow(i.name)}
-                                            onMouseLeave={() => setShow('')}
-                                            className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                            <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                {i.name}
-                                            </div>
-
-                                            <ul className="list-disc text-white pl-7 mt-5">
-                                                {i.list.map((j) => {
-                                                    return (
-                                                        <li>{j}</li>
-                                                    )
-                                                })}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
-                            </div>
-                        )
-                    })}
+                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                    Advisory Team
                 </div>
 
+                <div className="mt-10">
+
+                    <div className="grid grid-cols-4 gap-10">
+                        {data.slice(0, 4).map((i, index) => {
+                            return (
+                                <div
+                                    onMouseEnter={() => setShow(i.name)}
+                                    onMouseLeave={() => setShow('')}
+                                    className="rounded-lg w-full h-80 shadow-lg relative">
+                                    <Image
+                                        src={i.img}
+                                        alt="Team"
+                                        objectFit="cover"
+                                        layout="fill"
+                                        className=""
+                                    />
+                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                                        <div className="relative w-full h-full">
+                                            <div
+                                                onMouseEnter={() => setShow(i.name)}
+                                                onMouseLeave={() => setShow('')}
+                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                    {i.name}
+                                                </div>
+
+                                                <ul className="list-disc text-white pl-7 mt-5">
+                                                    {i.list.map((j) => {
+                                                        return (
+                                                            <li>{j}</li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                    KMP Accomate Global
+                </div>
+
+                <div className="mt-10">
+
+                    <div className="grid grid-cols-4 gap-10">
+                        {data.slice(4, 7).map((i, index) => {
+                            return (
+                                <div
+                                    onMouseEnter={() => setShow(i.name)}
+                                    onMouseLeave={() => setShow('')}
+                                    className="rounded-lg w-full h-80 shadow-lg relative">
+                                    <Image
+                                        src={i.img}
+                                        alt="Team"
+                                        objectFit="cover"
+                                        layout="fill"
+                                        className=""
+                                    />
+                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                                        <div className="relative w-full h-full">
+                                            <div
+                                                onMouseEnter={() => setShow(i.name)}
+                                                onMouseLeave={() => setShow('')}
+                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                    {i.name}
+                                                </div>
+
+                                                <ul className="list-disc text-white pl-7 mt-5">
+                                                    {i.list.map((j) => {
+                                                        return (
+                                                            <li>{j}</li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                    Country Head
+                </div>
+
+                <div className="mt-10">
+
+                    <div className="grid grid-cols-4 gap-10">
+                        {data.slice(7, 10).map((i, index) => {
+                            return (
+                                <div
+                                    onMouseEnter={() => setShow(i.name)}
+                                    onMouseLeave={() => setShow('')}
+                                    className="rounded-lg w-full h-80 shadow-lg relative">
+                                    <Image
+                                        src={i.img}
+                                        alt="Team"
+                                        objectFit="cover"
+                                        layout="fill"
+                                        className=""
+                                    />
+                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                                        <div className="relative w-full h-full">
+                                            <div
+                                                onMouseEnter={() => setShow(i.name)}
+                                                onMouseLeave={() => setShow('')}
+                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                    {i.name}
+                                                </div>
+
+                                                <ul className="list-disc text-white pl-7 mt-5">
+                                                    {i.list.map((j) => {
+                                                        return (
+                                                            <li>{j}</li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                    Country Operations
+                </div>
+
+                <div className="mt-10">
+
+                    <div className="grid grid-cols-4 gap-10">
+                        {data.slice(10, 13).map((i, index) => {
+                            return (
+                                <div
+                                    onMouseEnter={() => setShow(i.name)}
+                                    onMouseLeave={() => setShow('')}
+                                    className="rounded-lg w-full h-80 shadow-lg relative">
+                                    <Image
+                                        src={i.img}
+                                        alt="Team"
+                                        objectFit="cover"
+                                        layout="fill"
+                                        className=""
+                                    />
+                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                                        <div className="relative w-full h-full">
+                                            <div
+                                                onMouseEnter={() => setShow(i.name)}
+                                                onMouseLeave={() => setShow('')}
+                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                    {i.name}
+                                                </div>
+
+                                                <ul className="list-disc text-white pl-7 mt-5">
+                                                    {i.list.map((j) => {
+                                                        return (
+                                                            <li>{j}</li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                </div>
             </div>
         </div>
     )
