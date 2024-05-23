@@ -77,11 +77,11 @@ export const MissionVision = () => {
         <div className="pt-5 pb-10">
             <div className="grid grid-cols-2 gap-x-4">
                 <div className={`${jost.className} flex justify-center items-center mx-auto text-[140px] text-nowrap text-gray-200`}>
-                    <Image
+                    {/* <Image
                         src={CircleIcon}
                         alt="Icon"
                         className="h-36 w-auto opacity-20"
-                    />
+                    /> */}
                 </div>
 
                 <div className="bg-[#9F8D1B] px-5 py-8 rounded-l-full">
@@ -119,11 +119,11 @@ export const MissionVision = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <Image
+                    {/* <Image
                         src={TextLogo}
                         alt="TextLogo"
                         className="h-10 w-auto opacity-20"
-                    />
+                    /> */}
                 </div>
             </div>
         </div>
@@ -182,6 +182,7 @@ export const Team = () => {
     return (
         <div className="px-8 py-16 w-full space-y-12">
 
+            {/* Advisory */}
             <div>
 
                 <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
@@ -190,42 +191,49 @@ export const Team = () => {
 
                 <div className="mt-10">
 
-                    <div className="grid grid-cols-4 gap-10">
+                    <div className="flex justify-center mx-auto space-x-10">
                         {data.slice(0, 4).map((i, index) => {
                             return (
-                                <div
-                                    onMouseEnter={() => setShow(i.name)}
-                                    onMouseLeave={() => setShow('')}
-                                    className="rounded-lg w-full h-80 shadow-lg relative">
-                                    <Image
-                                        src={i.img}
-                                        alt="Team"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        className=""
-                                    />
-                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                                        <div className="relative w-full h-full">
-                                            <div
-                                                onMouseEnter={() => setShow(i.name)}
-                                                onMouseLeave={() => setShow('')}
-                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                    {i.name}
-                                                </div>
+                                <div className="w-[25%]">
+                                    <div
+                                        onMouseEnter={() => setShow(i.name)}
+                                        onMouseLeave={() => setShow('')}
+                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
+                                        <Image
+                                            src={i.img}
+                                            alt="Team"
+                                            objectFit="cover"
+                                            layout="fill"
+                                            objectPosition="top"
+                                            className="rounded-full"
+                                        />
+                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
+                                            <div className="relative w-full h-full">
+                                                <div
+                                                    onMouseEnter={() => setShow(i.name)}
+                                                    onMouseLeave={() => setShow('')}
+                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                        {i.name}
+                                                    </div> */}
 
-                                                <ul className="list-disc text-white pl-7 mt-5">
-                                                    {i.list.map((j) => {
-                                                        return (
-                                                            <li>{j}</li>
-                                                        )
-                                                    })}
-                                                </ul>
+                                                    <ul className="list-disc text-white pl-10 mt-6">
+                                                        {i.list.map((j) => {
+                                                            return (
+                                                                <li>{j}</li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
                                     </div>
 
-                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
+                                        {i.name}
+                                    </div>
                                 </div>
                             )
                         })}
@@ -233,7 +241,8 @@ export const Team = () => {
 
                 </div>
             </div>
-
+            
+            {/* KMP */}
             <div>
 
                 <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
@@ -242,42 +251,49 @@ export const Team = () => {
 
                 <div className="mt-10">
 
-                    <div className="grid grid-cols-4 gap-10">
+                    <div className="flex justify-center mx-auto space-x-10">
                         {data.slice(4, 7).map((i, index) => {
                             return (
-                                <div
-                                    onMouseEnter={() => setShow(i.name)}
-                                    onMouseLeave={() => setShow('')}
-                                    className="rounded-lg w-full h-80 shadow-lg relative">
-                                    <Image
-                                        src={i.img}
-                                        alt="Team"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        className=""
-                                    />
-                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                                        <div className="relative w-full h-full">
-                                            <div
-                                                onMouseEnter={() => setShow(i.name)}
-                                                onMouseLeave={() => setShow('')}
-                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                    {i.name}
-                                                </div>
+                                <div className="w-[25%]">
+                                    <div
+                                        onMouseEnter={() => setShow(i.name)}
+                                        onMouseLeave={() => setShow('')}
+                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
+                                        <Image
+                                            src={i.img}
+                                            alt="Team"
+                                            objectFit="cover"
+                                            layout="fill"
+                                            objectPosition="top"
+                                            className="rounded-full"
+                                        />
+                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
+                                            <div className="relative w-full h-full">
+                                                <div
+                                                    onMouseEnter={() => setShow(i.name)}
+                                                    onMouseLeave={() => setShow('')}
+                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                        {i.name}
+                                                    </div> */}
 
-                                                <ul className="list-disc text-white pl-7 mt-5">
-                                                    {i.list.map((j) => {
-                                                        return (
-                                                            <li>{j}</li>
-                                                        )
-                                                    })}
-                                                </ul>
+                                                    <ul className="list-disc text-white pl-10 mt-6">
+                                                        {i.list.map((j) => {
+                                                            return (
+                                                                <li>{j}</li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
                                     </div>
 
-                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
+                                        {i.name}
+                                    </div>
                                 </div>
                             )
                         })}
@@ -285,7 +301,8 @@ export const Team = () => {
 
                 </div>
             </div>
-
+            
+            {/* Country */}
             <div>
 
                 <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
@@ -294,42 +311,49 @@ export const Team = () => {
 
                 <div className="mt-10">
 
-                    <div className="grid grid-cols-4 gap-10">
+                    <div className="flex justify-center mx-auto space-x-10">
                         {data.slice(7, 10).map((i, index) => {
                             return (
-                                <div
-                                    onMouseEnter={() => setShow(i.name)}
-                                    onMouseLeave={() => setShow('')}
-                                    className="rounded-lg w-full h-80 shadow-lg relative">
-                                    <Image
-                                        src={i.img}
-                                        alt="Team"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        className=""
-                                    />
-                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                                        <div className="relative w-full h-full">
-                                            <div
-                                                onMouseEnter={() => setShow(i.name)}
-                                                onMouseLeave={() => setShow('')}
-                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                    {i.name}
-                                                </div>
+                                <div className="w-[25%]">
+                                    <div
+                                        onMouseEnter={() => setShow(i.name)}
+                                        onMouseLeave={() => setShow('')}
+                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
+                                        <Image
+                                            src={i.img}
+                                            alt="Team"
+                                            objectFit="cover"
+                                            layout="fill"
+                                            objectPosition="top"
+                                            className="rounded-full"
+                                        />
+                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
+                                            <div className="relative w-full h-full">
+                                                <div
+                                                    onMouseEnter={() => setShow(i.name)}
+                                                    onMouseLeave={() => setShow('')}
+                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                        {i.name}
+                                                    </div> */}
 
-                                                <ul className="list-disc text-white pl-7 mt-5">
-                                                    {i.list.map((j) => {
-                                                        return (
-                                                            <li>{j}</li>
-                                                        )
-                                                    })}
-                                                </ul>
+                                                    <ul className="list-disc text-white pl-10 mt-6">
+                                                        {i.list.map((j) => {
+                                                            return (
+                                                                <li>{j}</li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
                                     </div>
 
-                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
+                                        {i.name}
+                                    </div>
                                 </div>
                             )
                         })}
@@ -338,6 +362,7 @@ export const Team = () => {
                 </div>
             </div>
 
+{/* Country */}
             <div>
 
                 <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
@@ -346,42 +371,49 @@ export const Team = () => {
 
                 <div className="mt-10">
 
-                    <div className="grid grid-cols-4 gap-10">
+                    <div className="flex justify-center mx-auto space-x-10">
                         {data.slice(10, 13).map((i, index) => {
                             return (
-                                <div
-                                    onMouseEnter={() => setShow(i.name)}
-                                    onMouseLeave={() => setShow('')}
-                                    className="rounded-lg w-full h-80 shadow-lg relative">
-                                    <Image
-                                        src={i.img}
-                                        alt="Team"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        className=""
-                                    />
-                                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                                        <div className="relative w-full h-full">
-                                            <div
-                                                onMouseEnter={() => setShow(i.name)}
-                                                onMouseLeave={() => setShow('')}
-                                                className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                    {i.name}
-                                                </div>
+                                <div className="w-[25%]">
+                                    <div
+                                        onMouseEnter={() => setShow(i.name)}
+                                        onMouseLeave={() => setShow('')}
+                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
+                                        <Image
+                                            src={i.img}
+                                            alt="Team"
+                                            objectFit="cover"
+                                            layout="fill"
+                                            objectPosition="top"
+                                            className="rounded-full"
+                                        />
+                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
+                                            <div className="relative w-full h-full">
+                                                <div
+                                                    onMouseEnter={() => setShow(i.name)}
+                                                    onMouseLeave={() => setShow('')}
+                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
+                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
+                                                        {i.name}
+                                                    </div> */}
 
-                                                <ul className="list-disc text-white pl-7 mt-5">
-                                                    {i.list.map((j) => {
-                                                        return (
-                                                            <li>{j}</li>
-                                                        )
-                                                    })}
-                                                </ul>
+                                                    <ul className="list-disc text-white pl-10 mt-6">
+                                                        {i.list.map((j) => {
+                                                            return (
+                                                                <li>{j}</li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
                                     </div>
 
-                                    <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div>
+                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
+                                        {i.name}
+                                    </div>
                                 </div>
                             )
                         })}

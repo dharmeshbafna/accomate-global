@@ -754,9 +754,9 @@ export const Software = () => {
                 {/* Circular animate */}
                 <div className="flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%]">
 
-                    <div className="relative p-16 rounded-full">
+                    <div className="relative p-20 rounded-full">
 
-                        <div className="relative p-14 rounded-full">
+                        <div className="relative p-16 rounded-full">
 
                             <div className="relative p-12 rounded-full">
                                 {/* Main icon */}
@@ -771,14 +771,14 @@ export const Software = () => {
                                 {/* ====== First Circle ======= */}
                                 <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
                                     <div className="relative w-full h-full rounded-full rotate-animation">
-                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute top-0 left-0">
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute top-0 left-0">
                                             <Image
                                                 src={Myob}
                                                 alt="Main Icon"
                                                 className="h-auto w-auto bg-white flex items-center my-auto"
                                             />
                                         </div>
-                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-3 border border-gray-300 absolute bottom-0 right-0">
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-3 border border-gray-300 absolute bottom-0 right-0">
                                             <Image
                                                 src={CCH}
                                                 alt="Main Icon"
@@ -792,7 +792,7 @@ export const Software = () => {
                             {/* ======== Second Circle ======== */}
                             <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
                                 <div className="relative w-full h-full rotate-animation2">
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
+                                    <div className="rounded-full h-16 w-16 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
                                         <Image
                                             src={Drake}
                                             alt="Main Icon"
@@ -806,7 +806,7 @@ export const Software = () => {
                                             className="h-auto w-auto bg-white"
                                         />
                                     </div>
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
+                                    <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
                                         <Image
                                             src={Ultratax}
                                             alt="Main Icon"
@@ -842,14 +842,14 @@ export const Software = () => {
                                         className="h-auto w-auto  bg-white"
                                     />
                                 </div>
-                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute -bottom-5 right-[30%]">
+                                <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute -bottom-5 right-[30%]">
                                     <Image
                                         src={Xero}
                                         alt="Main Icon"
                                         className="h-auto w-auto bg-white"
                                     />
                                 </div>
-                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute -top-5 left-[30%]">
+                                <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute -top-5 left-[30%]">
                                     <Image
                                         src={Certified}
                                         alt="Main Icon"

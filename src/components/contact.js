@@ -25,7 +25,6 @@ export const Contact = () => {
 
     return (
         <div className="px-8 py-16">
-            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center w-full">Contact Us</div>
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join With Us, Now!
             </div>
@@ -128,7 +127,6 @@ export const Contact = () => {
 export const Locations = () => {
     return (
         <div className="px-8 py-16">
-            <div className="text-[#1B2D9F] flex justify-center mx-auto text-center w-full">Locations</div>
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Our Office Locations
             </div>
@@ -147,7 +145,7 @@ export const Locations = () => {
                  <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.0450339588638!2d144.74364377479986!3d-37.83583157196994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689814ee7c77b%3A0x7d1841cf981be82e!2sUnit%20203%2F2%20Infinity%20Dr%2C%20Truganina%20VIC%203029%2C%20Australia!5e0!3m2!1sen!2sin!4v1715600120512!5m2!1sen!2sin"></iframe>
 
                     <div className="text-center">
-                        <span className="font-semibold">USA:&nbsp;</span>
+                        <span className="font-semibold">Australia:&nbsp;</span>
                         203/2 Infinity Drive Truganina, VIC, Australia, 3029
                     </div>
                 </div>

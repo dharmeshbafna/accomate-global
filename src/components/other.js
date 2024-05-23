@@ -19,8 +19,15 @@ export const Sidebar = ({ toogle, setToogle }) => {
 
     const navitems = [
         { name: "Home", link: "/" },
-        { name: "About Us", link: "/about" },
-        { name: "Our Team", link: "/team" },
+        // { name: "About Us", link: "/about" },
+        // { name: "Our Team", link: "/team" },
+        {
+            name: "Company", link: "#",
+            dropdown: [
+                { name: 'About Us', link: '/about' },
+                { name: 'Our Team', link: '/team' },
+            ]
+        },
         {
             name: "Services", link: "/services",
             dropdown: [
@@ -48,11 +55,19 @@ export const Navbar = () => {
     const path = usePathname();
     const [sticky, setSticky] = useState(false);
     const [dropdown, setDropdown] = useState(false);
+    const [dropdown2, setDropdown2] = useState(false);
     const [toogle, setToogle] = useState(false);
     const navitems = [
         { name: "Home", link: "/" },
-        { name: "About Us", link: "/about" },
-        { name: "Our Team", link: "/team" },
+        // { name: "About Us", link: "/about" },
+        // { name: "Our Team", link: "/team" },
+        {
+            name: "Company", link: "#",
+            dropdown: [
+                { name: 'About Us', link: '/about' },
+                { name: 'Our Team', link: '/team' },
+            ]
+        },
         {
             name: "Services", link: "/services",
             dropdown: [
@@ -109,11 +124,11 @@ export const Navbar = () => {
                             return (
                                 <div className="w-fit text-lg relative">
                                     <a
-                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
-                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
-                                        href={i.link} className={`text-white hover:underline-animation text-nowrap`}>
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
+                                       href={i.link} className={`text-white hover:underline-animation text-nowrap`}>
                                         <span className="flex items-center my-auto">
-                                            {i.name} <FiChevronDown className={`ml-1 text-white ${i.name == "Services" ? '' : 'hidden'} flex-shrink-0`} />
+                                            {i.name} <FiChevronDown className={`ml-1 text-white ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
                                         </span>
                                     </a>
                                     <span
@@ -129,6 +144,20 @@ export const Navbar = () => {
                                             {i.dropdown.map((d, index) => {
                                                 return (
                                                     <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                        {d.name}
+                                                    </a>
+                                                )
+                                            })}
+                                        </div> : ''}
+                                    {dropdown2 && i.name == "Company" ?
+                                        <div
+                                            onMouseEnter={i.name == "Company" ? () => setDropdown2(true) : () => { }}
+                                            onMouseLeave={i.name == "Company" ? () => setDropdown2(false) : () => { }}
+                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+
+                                            {i.dropdown.map((d, index) => {
+                                                return (
+                                                    <a href={d.link} className="text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
                                                         {d.name}
                                                     </a>
                                                 )
@@ -172,12 +201,12 @@ export const Navbar = () => {
                             return (
                                 <div className="w-fit text-lg relative">
                                     <a
-                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
-                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
+                                        onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
+                                        onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
                                         href={i.link}
                                         className={`${isActive(i.link) ? 'text-[#1B2D9F]' : ''}  hover:underline-animation2 text-nowrap`}>
                                         <span className="flex items-center my-auto">
-                                            {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" ? '' : 'hidden'} flex-shrink-0`} />
+                                            {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
                                         </span>
                                     </a>
                                     <span
@@ -193,6 +222,20 @@ export const Navbar = () => {
                                             {i.dropdown.map((d, index) => {
                                                 return (
                                                     <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                        {d.name}
+                                                    </a>
+                                                )
+                                            })}
+                                        </div> : ''}
+                                    {dropdown2 && i.name == "Company" ?
+                                        <div
+                                            onMouseEnter={i.name == "Company" ? () => setDropdown2(true) : () => { }}
+                                            onMouseLeave={i.name == "Company" ? () => setDropdown2(false) : () => { }}
+                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+
+                                            {i.dropdown.map((d, index) => {
+                                                return (
+                                                    <a href={d.link} className="text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
                                                         {d.name}
                                                     </a>
                                                 )
