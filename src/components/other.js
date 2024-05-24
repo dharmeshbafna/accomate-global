@@ -143,7 +143,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className={`block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -157,7 +157,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className={`text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -221,7 +221,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : ''} block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -235,7 +235,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className="text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 border-b">
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : ''} text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )

@@ -1,6 +1,16 @@
 'use client'
 import { FaAngleRight } from "react-icons/fa6";
 import { useState, useEffect } from "react"
+import { SiTicktick } from "react-icons/si";
+import Image from "next/image";
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Button from '@mui/material/Button';
+import { FaChevronDown } from "react-icons/fa6";
+
+import AccountBanner from "../../public/account-banner.jpg"
 
 export const Usa = () => {
 
@@ -70,36 +80,150 @@ export const Usa = () => {
     ];
 
     return (
-        <div className="px-8 py-10">
-            <div className="grid grid-cols-2 gap-10">
-                {usaservices.map((i, index) => {
-                    return (
-                        <div key={index} className="p-3 md:p-5 shadow-lg rounded-lg">
-                            <div className="flex items-center my-auto space-x-3 pb-4 mb-4 border-b border-[#9F8D1B]">
-                                <div className="px-3 py-2 bg-[#9F8D1B] text-white rounded-lg">
-                                    0{index + 1}.
-                                </div>
-                                <div className="text-xl text-[#1B2D9F] font-semibold">
-                                    {i.head}
-                                </div>
-                            </div>
-                            <div className="font-semibold">
-                                {i.head2}
-                            </div>
+        <div className="py-10">
 
-                            <div className="space-y-2 mt-4">
-                                {i.list.map((j, index) => {
-                                    return (
-                                        <div key={index} className="flex space-x-2">
-                                            <FaAngleRight className="text-[#9F8D1B] mt-1 flex-shrink-0" />
-                                            <span>{j}</span>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    )
-                })}
+            {/* 1 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {usaservices[0].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {usaservices[0].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {usaservices[0].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 2 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {usaservices[1].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {usaservices[1].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {usaservices[1].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
+                <div></div>
+            </div>
+
+            {/* 3 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {usaservices[2].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {usaservices[2].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {usaservices[2].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 4 */}
+            <div className="grid grid-cols-1 gap-4 relative">
+
+
+                <div className="space-y-4 z-10 bg-[#00000048] py-16 px-8 w-full h-auto">
+                    <div className="text-4xl text-[#9F8D1B] font-semibold border-b border-white lg:w-1/2 pb-4">
+                        {usaservices[3].head}
+                    </div>
+
+                    <div className="text-lg text-white">
+                        {usaservices[3].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {usaservices[3].list.map((i) => {
+                            return (
+                                <li className="flex text-white">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
+                <Image
+                    src={AccountBanner}
+                    alt="banner"
+                    objectFit="cover"
+                    layout="fill"
+                />
+            </div>
+
+            {/* 5 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {usaservices[4].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {usaservices[4].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {usaservices[4].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
             </div>
         </div>
     )
@@ -165,35 +289,37 @@ export const Canada = () => {
     ];
     return (
         <div className="px-8 py-10">
-            <div className="grid grid-cols-2 gap-10">
-                {canadaservices.map((i, index) => {
-                    return (
-                        <div key={index} className="p-3 md:p-5 shadow-lg rounded-lg">
-                            <div className="flex items-center my-auto space-x-3 pb-4 mb-4 border-b border-[#9F8D1B]">
-                                <div className="px-3 py-2 bg-[#9F8D1B] text-white rounded-lg">
-                                    0{index + 1}.
-                                </div>
-                                <div className="text-xl text-[#1B2D9F] font-semibold">
+            <div className="grid grid-cols-2">
+                <div className="space-y-4">
+                    {canadaservices.map((i, index) => {
+                        return (
+                            <Accordion className="" key={index}>
+                                <AccordionSummary
+                                    aria-controls={`panel${index}-content`}
+                                    id={`panel${index}-header`}
+                                    expandIcon={<FaChevronDown className="text-white" />}
+                                    className="rounded bg-[#1B2D9F] text-white text-lg"
+                                >
                                     {i.head}
-                                </div>
-                            </div>
-                            <div className="font-semibold">
-                                {i.head2}
-                            </div>
-
-                            <div className="space-y-2 mt-4">
-                                {i.list.map((j, index) => {
-                                    return (
-                                        <div key={index} className="flex space-x-2">
-                                            <FaAngleRight className="text-[#9F8D1B] mt-1 flex-shrink-0" />
-                                            <span>{j}</span>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    )
-                })}
+                                </AccordionSummary>
+                                <AccordionDetails className="bg-white rounded pt-3">
+                                    <div className="font-semibold">
+                                        {i.head2}
+                                    </div>
+                                    <ul className="mt-4 space-y-2">
+                                        {i.list.map((j, ind) => {
+                                            return (
+                                                <li className="flex">
+                                                    <SiTicktick className="mt-1 mr-2 text-[#9F8D1B] flex shrink-0" /> {j}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </AccordionDetails>
+                            </Accordion>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
@@ -272,36 +398,36 @@ export const Australia = () => {
     ];
     return (
         <div className="px-8 py-10">
-        <div className="grid grid-cols-2 gap-10">
-            {australiaservices.map((i, index) => {
-                return (
-                    <div key={index} className="p-3 md:p-5 shadow-lg rounded-lg">
-                        <div className="flex items-center my-auto space-x-3 pb-4 mb-4 border-b border-[#9F8D1B]">
-                            <div className="px-3 py-2 bg-[#9F8D1B] text-white rounded-lg">
-                                0{index + 1}.
+            <div className="grid grid-cols-2 gap-10">
+                {australiaservices.map((i, index) => {
+                    return (
+                        <div key={index} className="p-3 md:p-5 shadow-lg rounded-lg">
+                            <div className="flex items-center my-auto space-x-3 pb-4 mb-4 border-b border-[#9F8D1B]">
+                                <div className="px-3 py-2 bg-[#9F8D1B] text-white rounded-lg">
+                                    0{index + 1}.
+                                </div>
+                                <div className="text-xl text-[#1B2D9F] font-semibold">
+                                    {i.head}
+                                </div>
                             </div>
-                            <div className="text-xl text-[#1B2D9F] font-semibold">
-                                {i.head}
+                            <div className="font-semibold">
+                                {i.head2}
                             </div>
-                        </div>
-                        <div className="font-semibold">
-                            {i.head2}
-                        </div>
 
-                        <div className="space-y-2 mt-4">
-                            {i.list.map((j, index) => {
-                                return (
-                                    <div key={index} className="flex space-x-2">
-                                        <FaAngleRight className="text-[#9F8D1B] mt-1 flex-shrink-0" />
-                                        <span>{j}</span>
-                                    </div>
-                                )
-                            })}
+                            <div className="space-y-2 mt-4">
+                                {i.list.map((j, index) => {
+                                    return (
+                                        <div key={index} className="flex space-x-2">
+                                            <FaAngleRight className="text-[#9F8D1B] mt-1 flex-shrink-0" />
+                                            <span>{j}</span>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </div>
-    </div>
     )
 }

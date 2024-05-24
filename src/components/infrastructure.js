@@ -48,7 +48,9 @@ export const Infrastructure = () => {
         },
         {
             title: 'IT Security Training',
-            desc: 'Our security partner, KnowBe4, conducts quarterly staff training on recognizing phishing emails.'
+            list: [
+                'Our security partner, KnowBe4, conducts quarterly staff training on recognizing phishing emails.'
+            ]
         },
         {
             title: 'Company Practice',
@@ -146,30 +148,30 @@ export const Infrastructure = () => {
 
                         {/* ======== Second Circle ======== */}
                         <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
-                                <div className="relative w-full h-full rotate-animation2">
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -top-5 left-1/2 ">
-                                        <Image
-                                            src={I3}
-                                            alt="Main Icon"
-                                            className="h-auto w-auto bg-white"
-                                        />
-                                    </div>
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -bottom-5 right-1/2 ">
-                                        <Image
-                                            src={I4}
-                                            alt="Main Icon"
-                                            className="h-auto w-auto bg-white"
-                                        />
-                                    </div>
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute bottom-1/2 -right-5 ">
-                                        <Image
-                                            src={I5}
-                                            alt="Main Icon"
-                                            className="h-auto w-auto bg-white"
-                                        />
-                                    </div>
+                            <div className="relative w-full h-full rotate-animation2">
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -top-5 left-1/2 ">
+                                    <Image
+                                        src={I3}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -bottom-5 right-1/2 ">
+                                    <Image
+                                        src={I4}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute bottom-1/2 -right-5 ">
+                                    <Image
+                                        src={I5}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
 
