@@ -69,21 +69,36 @@ export const Infrastructure = () => {
     ];
 
     return (
-        <div className="px-8 py-16">
-            <div className="font-semibold text-3xl flex justify-center mx-auto">
-                Infrastructure & Security
-            </div>
+        <div className="px-8 py-16 space-y-8">
+            <div className='grid grid-cols-2 gap-3'>
+                <div>
+                    <div className="font-semibold text-3xl text-[#1B2D9F]">
+                        Infrastructure & Security
+                    </div>
 
-            <div className="my-10">
+                    <div className="my-10">
 
-                <div className='flex items-center my-auto'>
-                    As a leading outsourcing partner for tax, audit, and assurance firms, we prioritize the privacy and
-                    security of our clients' sensitive financial information. We deeply understand the critical need to
-                    protect this data from theft and cyber threats.
-                    <br /><br />
-                    Our comprehensive security program aligns with
-                    rigorous industry standards, as evidenced by our ISO 27001:2013 certification. Clients can rest
-                    assured that their data is in safe hands with Accomate.
+                        <div className='flex items-center my-auto'>
+                            As a leading outsourcing partner for tax, audit, and assurance firms, we prioritize the privacy and
+                            security of our clients' sensitive financial information. We deeply understand the critical need to
+                            protect this data from theft and cyber threats.
+                            <br /><br />
+                            Our comprehensive security program aligns with
+                            rigorous industry standards, as evidenced by our ISO 27001:2013 certification. Clients can rest
+                            assured that their data is in safe hands with Accomate.
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+
+                <div className='flex justify-center items-center m-auto'>
+                <iframe 
+                src="https://lottie.host/embed/d9ea6eb8-b288-484a-a662-1f2199dd7f54/9W9PWV516R.json"
+                className='h-72 w-auto'
+                ></iframe>
                 </div>
             </div>
 
