@@ -60,7 +60,6 @@ export const Whoweare = () => {
                             Our experts are proficient in various financial software, such as Intacct, Sage
                             One, QuickBooks, Xero, Myob, Salestrekker, and many more, ensuring
                             seamless integration and accurate financial reporting.
-                            <br /><br />
                             Clients' trust is our valuable asset and so we've invested in world-class
                             infrastructure with state-of-the-art data security to safeguard your sensitive
                             data.
