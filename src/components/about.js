@@ -137,8 +137,12 @@ export const Director = () => {
                 <div className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
-                <div className="my-5">
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                <div className="my-5 text-sm">
+                    Hello! Thank you for visiting our website. as the director of Accomate Global I want to give you a warm welcome. As you learn about our company, I hope you will see the dedication we have to our customers. We are not just another financial services company – we are a team of passionate individuals dedicated to helping your business thrive.
+                    <br /><br />
+                    Imagine having a trusted partner in your corner! We offer a comprehensive suite of outsourcing services including accounting, bookkeeping, payroll, tax preparation, and other financial services designed to empower your growth. We will handle your backend work, freeing you up to focus on what you do best, running your business and chasing those big dreams. But it's not just about you—it's about all of us growing together.
+                    {/* <br /><br />
+                    Here at Accomate, we believe in investing in our people. That means offering a supportive work environment and ample opportunities for professional development. We want our employees to be just as excited about growth as we are because a happy and thriving team leads to happy and thriving clients – that's you! So, are you ready to join the journey? Let's grow together and unlock the potential of your business! */}
                 </div>
                 <div className="flex justify-end w-full pt-5">
                     <div className="text-right">

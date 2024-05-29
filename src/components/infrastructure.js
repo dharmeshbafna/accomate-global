@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { FaAngleRight } from "react-icons/fa6";
 
 import CircleIcon from "../../public/n_accomate_circle.png"
-import Infra1 from '../../public/infra1.png'
+import Infra1 from '../../public/data.jpg'
 import Infra2 from '../../public/infra2.png'
 import Infra3 from '../../public/infra3.png'
 
@@ -95,10 +95,19 @@ export const Infrastructure = () => {
                 </div>
 
                 <div className='flex justify-center items-center m-auto'>
-                <iframe 
+                    {/* <iframe 
                 src="https://lottie.host/embed/d9ea6eb8-b288-484a-a662-1f2199dd7f54/9W9PWV516R.json"
                 className='h-72 w-auto'
-                ></iframe>
+                ></iframe> */}
+
+                    <div className='relative w-fit'>
+                        <Image
+                            src={Infra1}
+                            alt='data security image'
+                            className='h-60 w-auto shadow-lg flex justify-center mx-auto'
+                        />
+                        <div className="absolute -bottom-6 -right-5 w-full h-full bg-[#9f8e1b5c] -z-10"></div>
+                    </div>
                 </div>
             </div>
 
