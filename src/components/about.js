@@ -221,14 +221,14 @@ export const Team = () => {
                     return (
                         <div className="grid grid-cols-2 rounded-lg shadow border-2 border-[#9F8D1B]">
                             <div className="flex justify-center mx-auto p-5">
-                                <div className="relative w-60 h-60 bg-gray-200 rounded-full">
+                                <div className="relative w-60 h-60 bg-gray-200 rounded-full shadow-lg">
                                     <Image
                                         src={i.img}
                                         alt={i.name}
                                         objectFit="cover"
                                         layout="fill"
                                         objectPosition="top"
-                                        className="rounded-full border border-[#1B2D9F]"
+                                        className="rounded-full"
                                     />
                                 </div>
                             </div>
