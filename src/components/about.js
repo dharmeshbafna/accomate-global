@@ -138,11 +138,11 @@ export const Director = () => {
                     Accomate Director’s vision
                 </div>
                 <div className="my-5 text-sm">
-                    Hello! Thank you for visiting our website. as the director of Accomate Global I want to give you a warm welcome. As you learn about our company, I hope you will see the dedication we have to our customers. We are not just another financial services company – we are a team of passionate individuals dedicated to helping your business thrive.
-                    <br /><br />
-                    Imagine having a trusted partner in your corner! We offer a comprehensive suite of outsourcing services including accounting, bookkeeping, payroll, tax preparation, and other financial services designed to empower your growth. We will handle your backend work, freeing you up to focus on what you do best, running your business and chasing those big dreams. But it's not just about you—it's about all of us growing together.
-                    {/* <br /><br />
-                    Here at Accomate, we believe in investing in our people. That means offering a supportive work environment and ample opportunities for professional development. We want our employees to be just as excited about growth as we are because a happy and thriving team leads to happy and thriving clients – that's you! So, are you ready to join the journey? Let's grow together and unlock the potential of your business! */}
+                    Welcome to Accomate Global!
+                    As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive.
+                    Imagine having a trusted partner in your corner! We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services.
+                    We will handle your backend work, freeing you up to focus on what you do best: running your business and chasing those big dreams. Here at Accomate, we believe in investing in our people. That means offering a supportive work environment and ample opportunities for professional development, because a happy and thriving team leads to happy and thriving clients – that's you!
+                    So, are you ready to join the journey? Let's grow together and unlock the potential of your business!
                 </div>
                 <div className="flex justify-end w-full pt-5">
                     <div className="text-right">
@@ -151,11 +151,11 @@ export const Director = () => {
                     </div>
                 </div>
             </div>
-            <div className="px-4 lg:w-[40%] relative">
+            <div className="px-3 lg:w-[40%] relative">
                 <Image
                     src={Dummy}
                     alt="Director"
-                    className="w-full h-auto"
+                    className="w-full h-auto flex items-center my-auto"
                 />
                 <div className="absolute bottom-0 left-0 bg-[#9f8e1b5c] w-[70%] h-[70%] -z-10"></div>
             </div>
