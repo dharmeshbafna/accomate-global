@@ -76,7 +76,7 @@ export const Navbar = () => {
                 { name: 'Australia', link: '/services/australia' },
             ]
         },
-        { name: "Infrastructure", link: "/infrastructure" },
+        { name: "Data Security", link: "/data-security" },
     ];
 
     const isActive = (href) => {
@@ -402,7 +402,7 @@ export const Breadcrumb = () => {
                             path == '/about' ? 'About Us' :
                                 path == '/team' ? 'Our Team' :
                                     path == '/contact' ? 'Contact Us' :
-                                        path == '/infrastructure' ? 'Infrastructure' :
+                                        path == '/data-security' ? 'Data Security' :
                                             path == '/services' ? 'services' :
                                                 path == '/services/usa' ? 'USA' :
                                                     path == '/services/canada' ? 'Canada' :
@@ -415,7 +415,7 @@ export const Breadcrumb = () => {
                             path == '/about' ? ' / about' :
                                 path == '/team' ? ' / team' :
                                     path == '/contact' ? ' / contact' :
-                                        path == '/infrastructure' ? ' / infrastructure' :
+                                        path == '/data-security' ? ' / data-security' :
                                             path == '/services' ? ' / services' :
                                                 path == '/services/usa' ? ' / services / USA' :
                                                     path == '/services/canada' ? ' / services / Canada' :

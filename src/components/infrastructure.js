@@ -73,7 +73,7 @@ export const Infrastructure = () => {
             <div className='grid grid-cols-2 gap-3'>
                 <div>
                     <div className="font-semibold text-3xl text-[#1B2D9F]">
-                        Infrastructure & Security
+                        Data Security
                     </div>
 
                     <div className="my-10">

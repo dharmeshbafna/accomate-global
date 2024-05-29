@@ -199,7 +199,7 @@ export const Team = () => {
                 <button
                     onClick={() => setShow('kmp')}
                     className={`${show == "kmp" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
-                    KMP Accomate Global
+                    Core Team
                 </button>
 
                 <button
