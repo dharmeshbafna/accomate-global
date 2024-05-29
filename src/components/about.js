@@ -219,32 +219,36 @@ export const Team = () => {
             <div className="grid grid-cols-2 gap-8 container mx-auto">
                 {data.slice(...sliced).map((i, index) => {
                     return (
-                        <div className="grid grid-cols-2 rounded-lg shadow-lg">
-                            <div className="relative w-full h-72 bg-gray-200 rounded-l-lg">
-                                <Image
-                                    src={i.img}
-                                    alt={i.name}
-                                    objectFit="cover"
-                                    layout="fill"
-                                    objectPosition="top"
-                                    className="rounded-l-lg"
-                                />
+                        <div className="grid grid-cols-2 rounded-lg shadow border-2 border-[#9F8D1B]">
+                            <div className="flex justify-center mx-auto p-5">
+                                <div className="relative w-60 h-60 bg-gray-200 rounded-full">
+                                    <Image
+                                        src={i.img}
+                                        alt={i.name}
+                                        objectFit="cover"
+                                        layout="fill"
+                                        objectPosition="top"
+                                        className="rounded-full border border-[#1B2D9F]"
+                                    />
+                                </div>
                             </div>
 
-                            <div className="px-5 py-2">
-                                <div className="text-2xl font-semibold text-[#1B2D9F] pb-2 border-b border-[#9F8D1B] mb-4">
-                                    {i.name}
-                                </div>
+                            <div className="flex items-center my-auto">
+                                <div className="px-5 py-2">
+                                    <div className="text-2xl font-semibold text-[#1B2D9F] mb-4">
+                                        {i.name}
+                                    </div>
 
-                                <ul className="list-disc pl-5 text-lg">
-                                    {i.list.map((j) => {
-                                        return (
-                                            <li>
-                                                {j}
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
+                                    <ul className="list-disc pl-5 text-lg">
+                                        {i.list.map((j) => {
+                                            return (
+                                                <li>
+                                                    {j}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     )
