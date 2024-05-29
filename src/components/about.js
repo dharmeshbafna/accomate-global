@@ -177,249 +177,78 @@ export const Team = () => {
         { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['CA, EA, CPA (US)', '9 Yrs Exp in US Taxation', 'Leading Team of Tax managers & Associates'] },
         { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['CPA (Canada)', '8 Yrs. exp. in Audit and Tax', 'Leading team of Audit/Tax managers & Associates'] },
     ];
-    const [show, setShow] = useState('');
+    const [show, setShow] = useState('advisory');
+    const sliced =
+        show == 'advisory' ? [0, 4] :
+            show == 'kmp' ? [4, 7] :
+                show == 'country' ? [7, 10] :
+                    show == 'op' ? [10, 13] :
+                        [0, data.length];
 
     return (
         <div className="px-8 py-16 w-full space-y-12">
 
-            {/* Advisory */}
-            <div>
+            <div className="flex justify-center mx-auto space-x-5">
 
-                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                <button
+                    onClick={() => setShow('advisory')}
+                    className={`${show == "advisory" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Advisory Team
-                </div>
+                </button>
 
-                <div className="mt-10">
-
-                    <div className="flex justify-center mx-auto space-x-10">
-                        {data.slice(0, 4).map((i, index) => {
-                            return (
-                                <div className="w-[25%]">
-                                    <div
-                                        onMouseEnter={() => setShow(i.name)}
-                                        onMouseLeave={() => setShow('')}
-                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
-                                        <Image
-                                            src={i.img}
-                                            alt="Team"
-                                            objectFit="cover"
-                                            layout="fill"
-                                            objectPosition="top"
-                                            className="rounded-full"
-                                        />
-                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
-                                            <div className="relative w-full h-full">
-                                                <div
-                                                    onMouseEnter={() => setShow(i.name)}
-                                                    onMouseLeave={() => setShow('')}
-                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                        {i.name}
-                                                    </div> */}
-
-                                                    <ul className="list-disc text-white pl-10 mt-6">
-                                                        {i.list.map((j) => {
-                                                            return (
-                                                                <li>{j}</li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
-                                    </div>
-
-                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
-                                        {i.name}
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-
-                </div>
-            </div>
-            
-            {/* KMP */}
-            <div>
-
-                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                <button
+                    onClick={() => setShow('kmp')}
+                    className={`${show == "kmp" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     KMP Accomate Global
-                </div>
+                </button>
 
-                <div className="mt-10">
-
-                    <div className="flex justify-center mx-auto space-x-10">
-                        {data.slice(4, 7).map((i, index) => {
-                            return (
-                                <div className="w-[25%]">
-                                    <div
-                                        onMouseEnter={() => setShow(i.name)}
-                                        onMouseLeave={() => setShow('')}
-                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
-                                        <Image
-                                            src={i.img}
-                                            alt="Team"
-                                            objectFit="cover"
-                                            layout="fill"
-                                            objectPosition="top"
-                                            className="rounded-full"
-                                        />
-                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
-                                            <div className="relative w-full h-full">
-                                                <div
-                                                    onMouseEnter={() => setShow(i.name)}
-                                                    onMouseLeave={() => setShow('')}
-                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                        {i.name}
-                                                    </div> */}
-
-                                                    <ul className="list-disc text-white pl-10 mt-6">
-                                                        {i.list.map((j) => {
-                                                            return (
-                                                                <li>{j}</li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
-                                    </div>
-
-                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
-                                        {i.name}
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-
-                </div>
-            </div>
-            
-            {/* Country */}
-            <div>
-
-                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+                <button
+                    onClick={() => setShow('country')}
+                    className={`${show == "country" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Country Head
-                </div>
+                </button>
 
-                <div className="mt-10">
+                <button
+                    onClick={() => setShow('op')}
+                    className={`${show == "op" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
+                    Country Operations
+                </button>
 
-                    <div className="flex justify-center mx-auto space-x-10">
-                        {data.slice(7, 10).map((i, index) => {
-                            return (
-                                <div className="w-[25%]">
-                                    <div
-                                        onMouseEnter={() => setShow(i.name)}
-                                        onMouseLeave={() => setShow('')}
-                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
-                                        <Image
-                                            src={i.img}
-                                            alt="Team"
-                                            objectFit="cover"
-                                            layout="fill"
-                                            objectPosition="top"
-                                            className="rounded-full"
-                                        />
-                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
-                                            <div className="relative w-full h-full">
-                                                <div
-                                                    onMouseEnter={() => setShow(i.name)}
-                                                    onMouseLeave={() => setShow('')}
-                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                        {i.name}
-                                                    </div> */}
-
-                                                    <ul className="list-disc text-white pl-10 mt-6">
-                                                        {i.list.map((j) => {
-                                                            return (
-                                                                <li>{j}</li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
-                                    </div>
-
-                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
-                                        {i.name}
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-
-                </div>
             </div>
 
-{/* Country */}
-            <div>
+            <div className="grid grid-cols-2 gap-8 container mx-auto">
+                {data.slice(...sliced).map((i, index) => {
+                    return (
+                        <div className="grid grid-cols-2 rounded-lg shadow-lg">
+                            <div className="relative w-full h-72 bg-gray-200 rounded-l-lg">
+                                <Image
+                                    src={i.img}
+                                    alt={i.name}
+                                    objectFit="cover"
+                                    layout="fill"
+                                    objectPosition="top"
+                                    className="rounded-l-lg"
+                                />
+                            </div>
 
-                <div className="text-[#1B2D9F] font-semibold text-3xl flex justify-center mx-auto text-center w-full">
-                    Country Operations
-                </div>
-
-                <div className="mt-10">
-
-                    <div className="flex justify-center mx-auto space-x-10">
-                        {data.slice(10, 13).map((i, index) => {
-                            return (
-                                <div className="w-[25%]">
-                                    <div
-                                        onMouseEnter={() => setShow(i.name)}
-                                        onMouseLeave={() => setShow('')}
-                                        className="rounded-full w-60 h-60 shadow-lg relative flex justify-center mx-auto">
-                                        <Image
-                                            src={i.img}
-                                            alt="Team"
-                                            objectFit="cover"
-                                            layout="fill"
-                                            objectPosition="top"
-                                            className="rounded-full"
-                                        />
-                                        <div className="rounded-full absolute top-0 left-0 w-full h-full overflow-hidden">
-                                            <div className="relative w-full h-full">
-                                                <div
-                                                    onMouseEnter={() => setShow(i.name)}
-                                                    onMouseLeave={() => setShow('')}
-                                                    className={`p-3 absolute top-0 left-0 rounded-lg bg-[#000000ac] w-full h-full ${show == i.name ? 'translate-y-0' : 'translate-y-full'} transition-transform duration-700 ease-in-out transform`}>
-                                                    {/* <div className="flex justify-center mx-auto text-center text-white font-semibold text-xl">
-                                                        {i.name}
-                                                    </div> */}
-
-                                                    <ul className="list-disc text-white pl-10 mt-6">
-                                                        {i.list.map((j) => {
-                                                            return (
-                                                                <li>{j}</li>
-                                                            )
-                                                        })}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* <div className="absolute w-[70%] h-[70%] bg-[#9f8e1b5c] -bottom-3 -left-3 -z-10"></div> */}
-                                    </div>
-
-                                    <div className="text-center flex justify-center mx-auto text-center font-semibold text-xl my-3">
-                                        {i.name}
-                                    </div>
+                            <div className="px-5 py-2">
+                                <div className="text-2xl font-semibold text-[#1B2D9F] pb-2 border-b border-[#9F8D1B] mb-4">
+                                    {i.name}
                                 </div>
-                            )
-                        })}
-                    </div>
 
-                </div>
+                                <ul className="list-disc pl-5 text-lg">
+                                    {i.list.map((j) => {
+                                        return (
+                                            <li>
+                                                {j}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

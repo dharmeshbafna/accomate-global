@@ -284,19 +284,19 @@ export const Footer = () => {
 
                     <div className="flex items-center my-auto space-x-5">
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaFacebookF className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaInstagram className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaLinkedinIn className="text-lg" />
                         </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-[#9F8D1B] shadow text-[#9F8D1B] hover:bg-[#9F8D1B] hover:text-white duration-300">
+                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaXTwitter className="text-lg" />
                         </a>
                     </div>
@@ -310,16 +310,16 @@ export const Footer = () => {
                         </div>
 
                         <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
-                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
+                            <a href="#" className="hover:text-blue-500 duration-300">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
+                            <a href="#" className="hover:text-blue-500 duration-300">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
+                            <a href="#" className="hover:text-blue-500 duration-300">
                                 Disclaimer
                             </a>
-                            <a href="#" className="hover:text-[#9F8D1B] duration-300">
+                            <a href="#" className="hover:text-blue-500 duration-300">
                                 Support
                             </a>
                         </div>
@@ -334,19 +334,19 @@ export const Footer = () => {
                         </div>
 
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
-                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
                                 +61-3991-77471
                             </a>
-                            <a href="mailto:info@accomateglobal.com" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="mailto:info@accomateglobal.com" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <MdOutlineEmail className="flex-shrink-0 mr-2 text-xl" />
                                 info@accomateglobal.com
                             </a>
-                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-[#9F8D1B] duration-300">
+                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <IoCallOutline className="flex-shrink-0 mr-2 text-xl" />
                                 +61-3991-77471
                             </a>
-                            <a href="https://maps.app.goo.gl/KUZCikfaVihuKuEx8" target="_blank" className="flex hover:text-[#9F8D1B] duration-300">
+                            <a href="https://maps.app.goo.gl/KUZCikfaVihuKuEx8" target="_blank" className="flex hover:text-blue-500 duration-300">
                                 <IoLocationOutline className="flex-shrink-0 mr-2 text-xl mt-1" />
                                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006
                             </a>

@@ -166,22 +166,22 @@ export const Usa = () => {
             </div>
 
             {/* 4 */}
-            <div className="grid grid-cols-1 gap-4 relative">
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
 
 
-                <div className="space-y-4 z-10 bg-[#00000048] py-16 px-8 w-full h-auto">
-                    <div className="text-4xl text-[#9F8D1B] font-semibold border-b border-white lg:w-1/2 pb-4">
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
                         {usaservices[3].head}
                     </div>
 
-                    <div className="text-lg text-white">
+                    <div className="text-lg">
                         {usaservices[3].head2}
                     </div>
 
                     <ul className="list-none space-y-3">
                         {usaservices[3].list.map((i) => {
                             return (
-                                <li className="flex text-white">
+                                <li className="flex">
                                     <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
                                     {i}
                                 </li>
@@ -189,13 +189,6 @@ export const Usa = () => {
                         })}
                     </ul>
                 </div>
-
-                <Image
-                    src={AccountBanner}
-                    alt="banner"
-                    objectFit="cover"
-                    layout="fill"
-                />
             </div>
 
             {/* 5 */}
@@ -288,37 +281,142 @@ export const Canada = () => {
         },
     ];
     return (
-        <div className="px-8 py-10">
-            <div className="grid grid-cols-2">
+        <div className="py-10">
+
+            {/* 1 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
                 <div className="space-y-4">
-                    {canadaservices.map((i, index) => {
-                        return (
-                            <Accordion className="" key={index}>
-                                <AccordionSummary
-                                    aria-controls={`panel${index}-content`}
-                                    id={`panel${index}-header`}
-                                    expandIcon={<FaChevronDown className="text-white" />}
-                                    className="rounded bg-[#1B2D9F] text-white text-lg"
-                                >
-                                    {i.head}
-                                </AccordionSummary>
-                                <AccordionDetails className="bg-white rounded pt-3">
-                                    <div className="font-semibold">
-                                        {i.head2}
-                                    </div>
-                                    <ul className="mt-4 space-y-2">
-                                        {i.list.map((j, ind) => {
-                                            return (
-                                                <li className="flex">
-                                                    <SiTicktick className="mt-1 mr-2 text-[#9F8D1B] flex shrink-0" /> {j}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </AccordionDetails>
-                            </Accordion>
-                        )
-                    })}
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {canadaservices[0].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {canadaservices[0].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {canadaservices[0].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 2 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {canadaservices[1].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {canadaservices[1].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {canadaservices[1].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
+                <div></div>
+            </div>
+
+            {/* 3 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {canadaservices[2].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {canadaservices[2].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {canadaservices[2].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 4 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {canadaservices[3].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {canadaservices[3].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {canadaservices[3].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 5 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {canadaservices[4].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {canadaservices[4].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {canadaservices[4].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         </div>
@@ -397,36 +495,169 @@ export const Australia = () => {
         },
     ];
     return (
-        <div className="px-8 py-10">
-            <div className="grid grid-cols-2 gap-10">
-                {australiaservices.map((i, index) => {
-                    return (
-                        <div key={index} className="p-3 md:p-5 shadow-lg rounded-lg">
-                            <div className="flex items-center my-auto space-x-3 pb-4 mb-4 border-b border-[#9F8D1B]">
-                                <div className="px-3 py-2 bg-[#9F8D1B] text-white rounded-lg">
-                                    0{index + 1}.
-                                </div>
-                                <div className="text-xl text-[#1B2D9F] font-semibold">
-                                    {i.head}
-                                </div>
-                            </div>
-                            <div className="font-semibold">
-                                {i.head2}
-                            </div>
+        <div className="pt-10">
 
-                            <div className="space-y-2 mt-4">
-                                {i.list.map((j, index) => {
-                                    return (
-                                        <div key={index} className="flex space-x-2">
-                                            <FaAngleRight className="text-[#9F8D1B] mt-1 flex-shrink-0" />
-                                            <span>{j}</span>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    )
-                })}
+            {/* 1 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[0].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[0].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[0].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 2 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[1].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[1].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[1].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+
+                <div></div>
+            </div>
+
+            {/* 3 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[2].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[2].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[2].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 4 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[3].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[3].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[3].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 5 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8">
+                <div>
+
+                </div>
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[4].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[4].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[4].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+
+            {/* 6 */}
+            <div className="grid grid-cols-2 gap-4 py-16 px-8 bg-gray-200">
+
+
+                <div className="space-y-4">
+                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                        {australiaservices[5].head}
+                    </div>
+
+                    <div className="text-lg">
+                        {australiaservices[5].head2}
+                    </div>
+
+                    <ul className="list-none space-y-3">
+                        {australiaservices[5].list.map((i) => {
+                            return (
+                                <li className="flex">
+                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
+                                    {i}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
             </div>
         </div>
     )
