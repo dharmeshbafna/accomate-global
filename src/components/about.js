@@ -9,7 +9,7 @@ import About3 from "../../public/about3.png"
 import Icon from "../../public/n_icon.png"
 import CircleIcon from "../../public/n_accomate_circle.png"
 import TextLogo from "../../public/n_text_logo.png"
-import Dummy from "../../public/team/dummy.jpg"
+import DirectorImg from "../../public/director.jpg"
 
 import { GoGoal } from "react-icons/go";
 import { FaRegLightbulb } from "react-icons/fa"
@@ -133,29 +133,31 @@ export const MissionVision = () => {
 export const Director = () => {
     return (
         <div className="px-8 py-16 flex">
-            <div className="lg:w-[70%] border border-[#9F8D1B] p-10 rounded-bl-3xl">
+            <div className="lg:w-[70%] border border-[#9F8D1B] p-10 rounded-bl-3xl flex flex-col justify-between">
                 <div className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
-                <div className="my-5 text-sm">
+                <div className="my-5">
                     Welcome to Accomate Global!
+                    <br /><br />
                     As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive.
                     Imagine having a trusted partner in your corner! We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services.
+                    <br /><br />
                     We will handle your backend work, freeing you up to focus on what you do best: running your business and chasing those big dreams. Here at Accomate, we believe in investing in our people. That means offering a supportive work environment and ample opportunities for professional development, because a happy and thriving team leads to happy and thriving clients – that's you!
                     So, are you ready to join the journey? Let's grow together and unlock the potential of your business!
                 </div>
                 <div className="flex justify-end w-full pt-5">
                     <div className="text-right">
-                        <div className="font-semibold text-lg">Abc Xyz (CA)</div>
+                        <div className="font-semibold text-lg">Beena Mulani</div>
                         <div>Director of Accomate Global</div>
                     </div>
                 </div>
             </div>
             <div className="px-3 lg:w-[40%] relative">
                 <Image
-                    src={Dummy}
+                    src={DirectorImg}
                     alt="Director"
-                    className="w-full h-auto flex items-center my-auto"
+                    className="w-auto h-[98%] flex items-center my-auto"
                 />
                 <div className="absolute bottom-0 left-0 bg-[#9f8e1b5c] w-[70%] h-[70%] -z-10"></div>
             </div>
