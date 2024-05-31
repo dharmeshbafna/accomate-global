@@ -197,6 +197,14 @@ export const Team = () => {
     return (
         <div className="px-8 py-16 w-full space-y-12">
 
+            <div className="text-center flex justify-center mx-auto lg:w-[85%] text-xl">
+                We boast a team of self-driven, reliable, and qualified 30+ skilled professionals.
+                Their goal is to deliver exceptional outcomes to our partners. Despite
+                possessing substantial technical and industrial knowledge, our team is
+                committed to advancing its expertise by participating in regular training
+                sessions in diverse areas to keep abreast of continual compliance changes.
+            </div>
+
             <div className="flex justify-center mx-auto space-x-5">
 
                 <button

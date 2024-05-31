@@ -83,6 +83,7 @@ export const Navbar = () => {
             ]
         },
         { name: "Data Security", link: "/data-security" },
+        { name: "Career", link: "/career" },
     ];
 
     const isActive = (href) => {
@@ -419,6 +420,7 @@ export const Breadcrumb = () => {
                 alt="Banner"
                 layout="fill"
                 objectFit="cover"
+                objectPosition="center"
             />
             <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 flex justify-center items-center m-auto">
 
@@ -429,6 +431,7 @@ export const Breadcrumb = () => {
                                 path == '/team' ? 'Our Team' :
                                     path == '/contact' ? 'Contact Us' :
                                         path == '/data-security' ? 'Data Security' :
+                                        path == '/career' ? 'Career' :
                                             path == '/services' ? 'services' :
                                                 path == '/services/usa' ? 'USA' :
                                                     path == '/services/canada' ? 'Canada' :
@@ -438,10 +441,11 @@ export const Breadcrumb = () => {
                     <div className="text-white text-center text-lg">
                         Home
                         {
-                            path == '/about' ? ' / about' :
-                                path == '/team' ? ' / team' :
+                            path == '/about' ? ' / company / about' :
+                                path == '/team' ? ' / company / team' :
                                     path == '/contact' ? ' / contact' :
                                         path == '/data-security' ? ' / data-security' :
+                                        path == '/career' ? ' / career' :
                                             path == '/services' ? ' / services' :
                                                 path == '/services/usa' ? ' / services / USA' :
                                                     path == '/services/canada' ? ' / services / Canada' :
