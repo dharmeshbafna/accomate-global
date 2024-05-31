@@ -139,11 +139,15 @@ export const Director = () => {
                 <div className="my-5">
                     Welcome to Accomate Global!
                     <br /><br />
-                    As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive.
-                    Imagine having a trusted partner in your corner! We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services.
+                    As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive. Imagine having a trusted partner in your corner!
+
+                    We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services. Partner with us and discover how our outsourced services can enhance your business operations, drive growth, and increase profitability
+
+                    Here at Accomate, we believe in investing in our team, our greatest asset, because a happy and thriving team leads to happy and thriving clients – that's you! Are you ready to join the journey?
                     <br /><br />
-                    We will handle your backend work, freeing you up to focus on what you do best: running your business and chasing those big dreams. Here at Accomate, we believe in investing in our people. That means offering a supportive work environment and ample opportunities for professional development, because a happy and thriving team leads to happy and thriving clients – that's you!
-                    So, are you ready to join the journey? Let's grow together and unlock the potential of your business!
+                    <span className="font-semibold">
+                        Let's grow together and unlock the potential of your business!
+                    </span>
                 </div>
                 <div className="flex justify-end w-full pt-5">
                     <div className="text-right">

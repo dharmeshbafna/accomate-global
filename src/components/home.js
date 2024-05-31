@@ -36,6 +36,11 @@ import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from "react-icons/fa"
 import { BsFileEarmarkFont, BsFileEarmarkCheck } from "react-icons/bs";
 import { PiUsersThree } from "react-icons/pi";
+import { MdGroups } from "react-icons/md";
+import { CgOrganisation } from "react-icons/cg";
+import { FaHandshakeAngle } from "react-icons/fa6";
+import { TbMoneybag } from "react-icons/tb";
+import { HiBuildingStorefront } from "react-icons/hi2";
 
 import { Lordicon } from "./other"
 
@@ -735,19 +740,18 @@ export const Software = () => {
                     <div>
                         {/* <div className="text-[#1B2D9F]">Software Expertise</div> */}
                         <div className="font-semibold text-3xl">
-                            Software Expertise
+                            We prioritize adaptability, agility, and unwavering reliability.
                         </div>
 
                         <div className="my-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id arcu elementum, vehicula lacus sit amet, elementum odio.
-                            Donec aliquam vitae nibh vel tempus. Sed imperdiet, neque sit amet dictum bibendum, mauris nibh consectetur risus, sed vehicula odio nisi nec erat.
+                            This means we can handle any accounting software you use. At Accomate Global, our team is fluent in all leading accounting software. No matter your current system, we seamlessly adapt to become your financial partner.
                             <br /><br />
-                            Nulla a porta justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique urna at ex tincidunt, ac cursus ipsum fermentum. In sagittis eu orci accumsan rutrum.
+                            Ready to simplify your finances and empower your success? Contact us today for a free consultation!
                         </div>
 
-                        <button className="hover:bg-[#1B2D9F] duration-300 text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
+                        {/* <button className="hover:bg-[#1B2D9F] duration-300 text-lg flex px-5 py-2 rounded-full text-white bg-[#9F8D1B] shadow-lg">
                             Read More
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 
@@ -1019,6 +1023,71 @@ export const Testimonial = () => {
                         )
                     })}
                 </Slider>
+            </div>
+        </div>
+    )
+}
+
+export const Clients = () => {
+    return (
+        <div className="px-8 py-16 bg-gray-100 space-y-12">
+
+            <div className="flex w-full space-x-4">
+
+                <div className="lg:w-[35%] flex items-center justify-center m-auto text-center">
+                    <div className="space-y-5">
+                        <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+                            Clients We Help Thrive
+                        </div>
+                        <div>
+                            Accomate Global is dedicated to providing outsourcing services to various clientele
+                            and then in horizontal line add above clientel  with different icons if possible.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="lg:w-[65%] px-4 grid grid-cols-2 gap-6">
+                    <div className="flex items-center my-auto space-x-4">
+                        <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
+                            <MdGroups className="h-14 w-14" />
+                        </div>
+                        <div className="font-semibold text-2xl text-[#9F8D1B]">
+                            Individual
+                        </div>
+                    </div>
+                    <div className="flex items-center my-auto space-x-4">
+                        <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
+                            <CgOrganisation className="h-14 w-14" />
+                        </div>
+                        <div className="font-semibold text-2xl text-[#9F8D1B]">
+                            Company
+                        </div>
+                    </div>
+                    <div className="flex items-center my-auto space-x-4">
+                        <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
+                            <FaHandshakeAngle className="h-14 w-14" />
+                        </div>
+                        <div className="font-semibold text-2xl text-[#9F8D1B]">
+                            Trust
+                        </div>
+                    </div>
+                    <div className="flex items-center my-auto space-x-4">
+                        <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
+                            <TbMoneybag className="h-14 w-14" />
+                        </div>
+                        <div className="font-semibold text-2xl text-[#9F8D1B]">
+                            SMSF
+                        </div>
+                    </div>
+                    <div className="flex items-center my-auto space-x-4">
+                        <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
+                            <HiBuildingStorefront className="h-14 w-14" />
+                        </div>
+                        <div className="font-semibold text-2xl text-[#9F8D1B]">
+                            Small Businesses
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
