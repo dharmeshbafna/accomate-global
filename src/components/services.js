@@ -83,9 +83,11 @@ export const Usa = () => {
         <div className="py-10">
 
             {/* 1 */}
-            <div className="grid grid-cols-2 gap-4 py-16 px-8">
-                <div className="flex items-center my-auto">
-                    Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
+            <div className="grid grid-cols-2 gap-8 py-16 px-8">
+                <div className="flex">
+                    <div className="h-full flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
+                        Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
+                    </div>
                 </div>
 
                 <div className="space-y-4">
@@ -134,15 +136,19 @@ export const Usa = () => {
                     </ul>
                 </div>
 
-                <div className="flex items-center my-auto">
-                    Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.
+                <div className="flex">
+                    <div className="h-full flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
+                        Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.
+                    </div>
                 </div>
             </div>
 
             {/* 3 */}
             <div className="grid grid-cols-2 gap-4 py-16 px-8">
-                <div className="flex items-center my-auto">
-                    Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain your financial transparency, meet stringent regulatory requirements Partner with us for peace of mind and a successful financial journey
+                <div className="flex">
+                    <div className="h-full flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
+                        Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain your financial transparency, meet stringent regulatory requirements Partner with us for peace of mind and a successful financial journey
+                    </div>
                 </div>
 
                 <div className="space-y-4">
@@ -191,17 +197,23 @@ export const Usa = () => {
                         })}
                     </ul>
                 </div>
-                <div className="flex items-center my-auto">
-                    Grow your mortgage book faster and more efficiently
-                    Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
-                    Reduce costs and gain experienced loan processors
+                <div className="flex">
+                    <div className="h-full flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
+                        Grow your mortgage book faster and more efficiently
+                        Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
+                        Reduce costs and gain experienced loan processors
+                    </div>
                 </div>
             </div>
 
             {/* 5 */}
             <div className="grid grid-cols-2 gap-4 py-16 px-8">
-                <div className="flex items-center my-auto">
-                    Overwhelmed by tax deadlines? by outsourcing tax preparation to Accomate Global, you gain. the freedom to focus on core business activities. Our team of tax experts. knows all the nitty-gritty of US tax rules and stays up-to-date with IRS changes.
+                <div className="flex">
+                    <div className="h-full flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
+                        Overwhelmed by tax deadlines? by outsourcing tax preparation to Accomate Global, you gain. the freedom to focus on core business activities.
+                        <br /><br />
+                        Our team of tax experts knows all the nitty-gritty of US tax rules and stays up-to-date with IRS changes.
+                    </div>
                 </div>
 
                 <div className="space-y-4">

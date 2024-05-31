@@ -34,20 +34,7 @@ export const Contact = () => {
                         Contact Details
                     </div>
 
-                    <div className="mt-6 space-y-5">
-                        <div className="flex items-center my-auto pb-4 border-b border-gray-300 text-white">
-                            <IoCallOutline className="font-semibold text-2xl" />
-                            <span className="ml-2">+61-3991-77471</span>
-                        </div>
-                        <div className="flex items-center my-auto pb-4 border-b border-gray-300 text-white">
-                            <MdOutlineEmail className="font-semibold text-2xl" />
-                            <span className="ml-2">info@accomateglobal.com</span>
-                        </div>
-                        <div className="flex pb-4 border-b border-gray-300 text-white">
-                            <IoLocationOutline className="flex-shrink-0 font-semibold text-2xl" />
-                            <span className="ml-2">G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006</span>
-                        </div>
-                    </div>
+                    
                     <div className="flex items-center my-auto space-x-5">
 
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white duration-300">
