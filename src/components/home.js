@@ -1046,7 +1046,7 @@ export const Clients = () => {
                     </div>
                 </div>
 
-                <div className="lg:w-[65%] px-4 grid grid-cols-2 gap-6">
+                <div className="lg:w-[65%] px-4 grid grid-cols-2 gap-x-6 gap-y-10">
                     <div className="flex items-center my-auto space-x-4">
                         <div className="p-4 rounded-full text-white bg-[#1B2D9F] shadow-lg">
                             <MdGroups className="h-14 w-14" />
