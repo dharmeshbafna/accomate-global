@@ -15,6 +15,12 @@ import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
+import { MdGroups } from "react-icons/md";
+import { CgOrganisation } from "react-icons/cg";
+import { FaHandshakeAngle } from "react-icons/fa6";
+import { TbMoneybag } from "react-icons/tb";
+import { HiBuildingStorefront } from "react-icons/hi2";
+
 export const Sidebar = ({ toogle, setToogle }) => {
 
     const navitems = [
@@ -126,7 +132,7 @@ export const Navbar = () => {
                                     <a
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
-                                       href={i.link} className={`text-white hover:underline-animation text-nowrap`}>
+                                        href={i.link} className={`text-white hover:underline-animation text-nowrap`}>
                                         <span className="flex items-center my-auto">
                                             {i.name} <FiChevronDown className={`ml-1 text-white ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
                                         </span>
@@ -267,7 +273,7 @@ export const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:flex w-full space-x-3">
 
                 {/* About */}
-                <div className="lg:w-[40%] space-y-4">
+                <div className="lg:w-[35%] space-y-4">
                     <Image
                         src={WhiteLogo2}
                         alt="Accomate Logo"
@@ -302,26 +308,46 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                {/* Useful Links */}
-                <div className="w-full lg:w-[30%] md:flex md:justify-center md:mx-auto">
-                    <div className="">
+                {/* Clients */}
+                <div className="w-full lg:w-[35%] md:flex md:justify-center md:mx-auto">
+                    <div className="w-full space-y-3">
                         <div className="font-semibold text-xl text-[#9F8D1B]">
-                            Useful Links
+                            Clients We Help Thrive
                         </div>
-
-                        <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
-                            <a href="#" className="hover:text-blue-500 duration-300">
-                                Privacy Policy
-                            </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
-                                Terms & Conditions
-                            </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
-                                Disclaimer
-                            </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
-                                Support
-                            </a>
+                        <div className="text-white">
+                            Accomate Global is dedicated to providing outsourcing services to various clientele and then in horizontal line add above clientel with different icons if possible.
+                        </div>
+                        <div className="grid grid-cols-2 gap-3 text-white pt-3">
+                            <div className="flex items-center my-auto space-x-4">
+                                <MdGroups className="h-10 w-10" />
+                                <div className="font-semibold">
+                                    Individual
+                                </div>
+                            </div>
+                            <div className="flex items-center my-auto space-x-4">
+                                <CgOrganisation className="h-10 w-10" />
+                                <div className="font-semibold">
+                                    Company
+                                </div>
+                            </div>
+                            <div className="flex items-center my-auto space-x-4">
+                                <FaHandshakeAngle className="h-10 w-10" />
+                                <div className="font-semibold">
+                                    Trust
+                                </div>
+                            </div>
+                            <div className="flex items-center my-auto space-x-4">
+                                <TbMoneybag className="h-10 w-10" />
+                                <div className="font-semibold">
+                                    SMSF
+                                </div>
+                            </div>
+                            <div className="flex items-center my-auto space-x-4">
+                                <HiBuildingStorefront className="h-10 w-10" />
+                                <div className="font-semibold">
+                                    Small Businesses
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
