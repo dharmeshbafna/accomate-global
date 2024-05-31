@@ -136,13 +136,13 @@ export const Director = () => {
                 <div className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
-                <div className="my-5">
+                <div className="my-5 text-sm">
                     Welcome to Accomate Global!
                     <br /><br />
                     As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive. Imagine having a trusted partner in your corner!
-
+                    <br /><br />
                     We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services. Partner with us and discover how our outsourced services can enhance your business operations, drive growth, and increase profitability
-
+                    <br /><br />
                     Here at Accomate, we believe in investing in our team, our greatest asset, because a happy and thriving team leads to happy and thriving clients – that's you! Are you ready to join the journey?
                     <br /><br />
                     <span className="font-semibold">
