@@ -519,7 +519,7 @@ export const Services = () => {
     }, [slider2, hoverd]);
 
     return (
-        <div className="px-8 py-10 bg-gray-100">
+        <div className="px-8 py-16 bg-gray-100">
             {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div> */}
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Our Services
@@ -733,7 +733,7 @@ export const Services = () => {
 
 export const Software = () => {
     return (
-        <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full">
+        <div className="px-8 py-16 min-h-[100vh] flex items-center my-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
 
                 <div className="flex items-center my-auto">
