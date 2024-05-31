@@ -1,12 +1,20 @@
 'use client'
 
 import { useState } from "react"
+import Image from "next/image"
+
+import USA from "../../public/usa.webp"
+import Canada from "../../public/circular_canada.jpg"
+import Australia from "../../public/circular_australia.jpg"
+import India from "../../public/india.jpg"
+import ContactImg from "../../public/contact.jpg"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
+import { LuMapPin } from "react-icons/lu";
 
 export const Contact = () => {
 
@@ -17,6 +25,11 @@ export const Contact = () => {
         sub: '',
         phone: ''
     });
+    const contactdetails = [
+        { country: 'India', phone: '+91 XXXXXXXXXXX', email: 'india@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006' },
+        { country: 'Australia', phone: '+91 XXXXXXXXXXX', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
+        { country: 'Canada', phone: '+91 XXXXXXXXXXX', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
+    ];
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,34 +41,66 @@ export const Contact = () => {
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join With Us, Now!
             </div>
-            <div className="lg:w-[90%] flex justify-center mx-auto mt-10">
-                <div className="lg:w-[40%] p-5 bg-[#1B2D9F] flex flex-col justify-between items-center">
-                    <div className="font-semibold text-2xl text-white">
-                        Contact Details
-                    </div>
 
-                    
-                    <div className="flex items-center my-auto space-x-5">
+            <div className="mt-10 grid grid-cols-3 gap-8">
+                {contactdetails.map((i, index) => {
+                    return (
+                        <div className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
+                            <div className="flex items-center my-auto space-x-3 pb-4 border-b border-gray-300">
+                                <Image
+                                    src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : ''}
+                                    className="h-10 w-10 rounded-full"
+                                    alt="country"
+                                />
+                                <div className="pl-3 border-l border-gray-300 font-semibold text-lg text-[#1B2D9F]">{i.country}</div>
+                            </div>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white duration-300">
-                            <FaFacebookF className="text-lg" />
-                        </a>
+                            <div className="space-y-4">
+                                <div className="pb-2 border-b flex items-center my-auto space-x-2">
+                                    <IoCallOutline className="text-xl font-semibold" />
+                                    <div>
+                                        {i.phone}
+                                    </div>
+                                </div>
+                                <div className="pb-2 border-b flex items-center my-auto space-x-2">
+                                    <MdOutlineEmail className="text-xl font-semibold" />
+                                    <div>
+                                        {i.email}
+                                    </div>
+                                </div>
+                                <div className="pb-2 flex space-x-2">
+                                    <LuMapPin className="text-xl font-semibold mt-1 flex shrink-0" />
+                                    <div>
+                                        {i.add}
+                                    </div>
+                                </div>
+                            </div>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white duration-300">
-                            <FaInstagram className="text-lg" />
-                        </a>
+                        </div>
+                    )
+                })}
+            </div>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white duration-300">
-                            <FaLinkedinIn className="text-lg" />
-                        </a>
 
-                        <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white duration-300">
-                            <FaXTwitter className="text-lg" />
-                        </a>
+            <div className="flex w-full mt-10">
+                <div className="lg:w-[35%]">
+                    <div className="relative h-full w-full flex justify-center mx-auto">
+                        <Image
+                            src={ContactImg}
+                            alt="img"
+                            objectFit="cover"
+                            layout="fill"
+                            className="rounded-tl-3xl border-t border-b border-l border-[#9F8D1B]"
+                        />
                     </div>
                 </div>
-                <div className="lg:w-[60%]">
-                    <form onSubmit={handleSubmit} className="p-8 border border-[#9F8D1B] rounded-br-2xl">
+
+                <div className="lg:w-[75%] space-y-10 border-b border-t border-r border-[#9F8D1B] p-10 rounded-br-3xl">
+                    <div className="font-semibold text-3xl">
+                        Ready to Get Started?
+                    </div>
+
+                    <form className="" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-2 gap-4">
                             <input
                                 type="name"
@@ -121,7 +166,7 @@ export const Locations = () => {
             <div className="grid grid-cols-3 gap-6 mt-10">
 
                 <div className="space-y-5">
-                <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117505.38239193049!2d72.42375654335942!3d23.022185999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8456022fa835%3A0xcb9ff4b30a115602!2sMadhuban%20Complex!5e0!3m2!1sen!2sin!4v1715600046066!5m2!1sen!2sin"></iframe>
+                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117505.38239193049!2d72.42375654335942!3d23.022185999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8456022fa835%3A0xcb9ff4b30a115602!2sMadhuban%20Complex!5e0!3m2!1sen!2sin!4v1715600046066!5m2!1sen!2sin"></iframe>
 
                     <div className="text-center">
                         <span className="font-semibold">India:&nbsp;</span>
@@ -129,7 +174,7 @@ export const Locations = () => {
                     </div>
                 </div>
                 <div className="space-y-5">
-                 <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.0450339588638!2d144.74364377479986!3d-37.83583157196994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689814ee7c77b%3A0x7d1841cf981be82e!2sUnit%20203%2F2%20Infinity%20Dr%2C%20Truganina%20VIC%203029%2C%20Australia!5e0!3m2!1sen!2sin!4v1715600120512!5m2!1sen!2sin"></iframe>
+                    <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.0450339588638!2d144.74364377479986!3d-37.83583157196994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad689814ee7c77b%3A0x7d1841cf981be82e!2sUnit%20203%2F2%20Infinity%20Dr%2C%20Truganina%20VIC%203029%2C%20Australia!5e0!3m2!1sen!2sin!4v1715600120512!5m2!1sen!2sin"></iframe>
 
                     <div className="text-center">
                         <span className="font-semibold">Australia:&nbsp;</span>
@@ -138,7 +183,7 @@ export const Locations = () => {
                 </div>
                 <div className="space-y-5">
                     <iframe className="w-[80%] flex justify-center mx-auto h-72 rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1074568756853!2d-79.62782802482197!3d43.60430417110451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4714d753bc83%3A0x776e544375ebb2ca!2sDunmow%20Crescent%2C%20Mississauga%2C%20ON%20L4Z%201E1%2C%20Canada!5e0!3m2!1sen!2sin!4v1715600215752!5m2!1sen!2sin"></iframe>
-                   
+
                     <div className="text-center">
                         <span className="font-semibold">Canada:&nbsp;</span>
                         1234051 Dunmow Crescent Mississauga Ontario L4Z1E1

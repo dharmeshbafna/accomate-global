@@ -14,7 +14,7 @@ export default function CONTACT() {
         <div>
             <Breadcrumb />
             <Contact />
-            <Locations />
+            {/* <Locations /> */}
             {/* <WorldMap /> */}
         </div>
     )
