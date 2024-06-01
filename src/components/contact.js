@@ -150,11 +150,24 @@ export const Contact = () => {
                             <button type="submit" className="hover:bg-[#1B2D9F] duration-300 text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
                                 Send Message
                             </button>
-                            <a href="/Brochure 5.pdf" target="_blank" className="hover:bg-[#9F8D1B] duration-300 text-lg px-5 py-2 bg-[#1B2D9F] text-white rounded-full shadow-lg">
-                                Download Brochure
-                            </a>
                         </div>
                     </form>
+                </div>
+
+
+            </div>
+
+
+            {/* CTA */}
+            <div className="mt-16 mb-10 space-y-10">
+                <div className="font-semibold text-center flex justify-center mx-auto text-4xl lg:w-1/2">
+                    Want to Know More About Us?
+                </div>
+
+                <div className="flex justify-center mx-auto w-full">
+                    <a href="/Brochure 5.pdf" target="_blank" className="hover:bg-[#9F8D1B] duration-300 px-5 py-2 bg-[#1B2D9F] text-white rounded-full shadow-lg text-2xl">
+                        Download Brochure
+                    </a>
                 </div>
             </div>
         </div>
