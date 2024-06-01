@@ -272,15 +272,13 @@ export const Footer = () => {
     return (
         <div className="px-5 lg:px-8 pt-14 pb-10 bg-gray-900 text-white">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:flex w-full space-x-3">
-
                 {/* About */}
-                <div className="lg:w-[35%] space-y-4">
+                <div className="lg:w-[40%] space-y-4">
                     <Image
                         src={WhiteLogo2}
                         alt="Accomate Logo"
                         className="h-28 w-auto"
                     />
-
                     <div className="">
                         Accomate Global is a powerhouse of skilled
                         CAs & CPAs with diverse industry expertise
@@ -288,78 +286,49 @@ export const Footer = () => {
                         Technology, Financial Service, Real Estate,
                         Insurance, Healthcare, and Manufacturing.
                     </div>
-
                     <div className="flex items-center my-auto space-x-5">
-
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaFacebookF className="text-lg" />
                         </a>
-
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaInstagram className="text-lg" />
                         </a>
-
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaLinkedinIn className="text-lg" />
                         </a>
-
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
                             <FaXTwitter className="text-lg" />
                         </a>
                     </div>
                 </div>
-
-                {/* Clients */}
-                <div className="w-full lg:w-[35%] md:flex md:justify-center md:mx-auto">
-                    <div className="w-full space-y-3">
+                {/* Useful Links */}
+                <div className="w-full lg:w-[30%] md:flex md:justify-center md:mx-auto">
+                    <div className="">
                         <div className="font-semibold text-xl text-[#9F8D1B]">
-                            Clients We Help Thrive
+                            Useful Links
                         </div>
-                        <div className="text-white">
-                            Accomate Global is dedicated to providing outsourcing services to various clientele and then in horizontal line add above clientel with different icons if possible.
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 text-white pt-3">
-                            <div className="flex items-center my-auto space-x-4">
-                                <MdGroups className="h-10 w-10" />
-                                <div className="font-semibold">
-                                    Individual
-                                </div>
-                            </div>
-                            <div className="flex items-center my-auto space-x-4">
-                                <CgOrganisation className="h-10 w-10" />
-                                <div className="font-semibold">
-                                    Company
-                                </div>
-                            </div>
-                            <div className="flex items-center my-auto space-x-4">
-                                <FaHandshakeAngle className="h-10 w-10" />
-                                <div className="font-semibold">
-                                    Trust
-                                </div>
-                            </div>
-                            <div className="flex items-center my-auto space-x-4">
-                                <TbMoneybag className="h-10 w-10" />
-                                <div className="font-semibold">
-                                    SMSF
-                                </div>
-                            </div>
-                            <div className="flex items-center my-auto space-x-4">
-                                <HiBuildingStorefront className="h-10 w-10" />
-                                <div className="font-semibold">
-                                    Small Businesses
-                                </div>
-                            </div>
+                        <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
+                            <a href="#" className="hover:text-blue-500 duration-300">
+                                Privacy Policy
+                            </a>
+                            <a href="#" className="hover:text-blue-500 duration-300">
+                                Terms & Conditions
+                            </a>
+                            <a href="#" className="hover:text-blue-500 duration-300">
+                                Disclaimer
+                            </a>
+                            <a href="#" className="hover:text-blue-500 duration-300">
+                                Support
+                            </a>
                         </div>
                     </div>
                 </div>
-
                 {/* Contact Us */}
                 <div className="w-full lg:w-[30%] lg:flex lg:justify-center lg:mx-auto">
                     <div className="w-full">
                         <div className="font-semibold text-xl text-[#9F8D1B]">
                             Contact Us
                         </div>
-
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
                             <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
@@ -381,11 +350,72 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
-
-
             {/* Copyright */}
             <div className="flex justify-center mx-auto border-t border-gray-500 pt-10 text-center mt-6">
                 © 2024 Accomate Global. All Rights Reserved.
+            </div>
+        </div>
+    )
+}
+
+export const Clients = () => {
+    return (
+        <div className="bg-gray-200 px-8 py-14">
+            <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+                Clients We Help Thrive
+            </div>
+
+            <div className="flex justify-center mx-auto text-center lg:w-[80%] mt-6 mb-10">
+                Accomate Global is dedicated to providing outsourcing services to various clientele and then in horizontal line add above clientel with different icons if possible.
+            </div>
+
+            <div className="grid grid-cols-5 gap-5">
+
+                <div className="space-y-4 hover:scale-[110%] duration-300">
+                    <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
+                        <MdGroups className="flex justify-center mx-auto h-10 w-auto" />
+                    </div>
+                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                        Individual
+                    </div>
+                </div>
+
+                <div className="space-y-4 hover:scale-[110%] duration-300">
+                    <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
+                        <CgOrganisation className="flex justify-center mx-auto h-10 w-auto" />
+                    </div>
+                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                        Company
+                    </div>
+                </div>
+
+                <div className="space-y-4 hover:scale-[110%] duration-300">
+                    <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
+                        <FaHandshakeAngle className="flex justify-center mx-auto h-10 w-auto" />
+                    </div>
+                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                        Trust
+                    </div>
+                </div>
+
+                <div className="space-y-4 hover:scale-[110%] duration-300">
+                    <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
+                        <TbMoneybag className="flex justify-center mx-auto h-10 w-auto" />
+                    </div>
+                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                        SMSF
+                    </div>
+                </div>
+
+                <div className="space-y-4 hover:scale-[110%] duration-300">
+                    <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
+                        <HiBuildingStorefront className="flex justify-center mx-auto h-10 w-auto" />
+                    </div>
+                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                        Small Businesses
+                    </div>
+                </div>
+
             </div>
         </div>
     )
@@ -431,12 +461,12 @@ export const Breadcrumb = () => {
                                 path == '/team' ? 'Our Team' :
                                     path == '/contact' ? 'Contact Us' :
                                         path == '/data-security' ? 'Data Security' :
-                                        path == '/career' ? 'Career' :
-                                            path == '/services' ? 'services' :
-                                                path == '/services/usa' ? 'USA' :
-                                                    path == '/services/canada' ? 'Canada' :
-                                                        path == '/services/australia' ? 'Australia' :
-                                                            ''}
+                                            path == '/career' ? 'Career' :
+                                                path == '/services' ? 'services' :
+                                                    path == '/services/usa' ? 'USA' :
+                                                        path == '/services/canada' ? 'Canada' :
+                                                            path == '/services/australia' ? 'Australia' :
+                                                                ''}
                     </div>
                     <div className="text-white text-center text-lg">
                         Home
@@ -445,12 +475,12 @@ export const Breadcrumb = () => {
                                 path == '/team' ? ' / company / team' :
                                     path == '/contact' ? ' / contact' :
                                         path == '/data-security' ? ' / data-security' :
-                                        path == '/career' ? ' / career' :
-                                            path == '/services' ? ' / services' :
-                                                path == '/services/usa' ? ' / services / USA' :
-                                                    path == '/services/canada' ? ' / services / Canada' :
-                                                        path == '/services/australia' ? ' / services / Australia' :
-                                                            ''}
+                                            path == '/career' ? ' / career' :
+                                                path == '/services' ? ' / services' :
+                                                    path == '/services/usa' ? ' / services / USA' :
+                                                        path == '/services/canada' ? ' / services / Canada' :
+                                                            path == '/services/australia' ? ' / services / Australia' :
+                                                                ''}
                     </div>
                 </div>
             </div>
