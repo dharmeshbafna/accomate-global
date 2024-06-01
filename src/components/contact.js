@@ -146,9 +146,14 @@ export const Contact = () => {
                         >
                         </textarea>
 
-                        <button type="submit" className="hover:bg-[#1B2D9F] duration-300 text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
-                            Send Message
-                        </button>
+                        <div className="flex items-center my-auto space-x-4">
+                            <button type="submit" className="hover:bg-[#1B2D9F] duration-300 text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
+                                Send Message
+                            </button>
+                            <a href="/Brochure 5.pdf" target="_blank" className="hover:bg-[#9F8D1B] duration-300 text-lg px-5 py-2 bg-[#1B2D9F] text-white rounded-full shadow-lg">
+                                Download Brochure
+                            </a>
+                        </div>
                     </form>
                 </div>
             </div>

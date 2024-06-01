@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import { FaChevronDown } from "react-icons/fa6";
 
 import AccountBanner from "../../public/account-banner.jpg"
+import { m } from "framer-motion";
 
 export const Usa = () => {
 
@@ -677,6 +678,52 @@ export const Australia = () => {
                         })}
                     </ul>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+export const Softwares = () => {
+
+    const usaimages = [
+        '/download.jpeg',
+        '/drake.png',
+        '/intuit lacrete.png',
+        '/intuit pro connect.png',
+        '/maestro.png',
+        '/quick books destok.png',
+        '/quick books online.png',
+        '/taxwise.png',
+        '/thomson.png',
+        '/ultra tax.jpeg',
+        '/walter.png',
+        '/xero.webp',
+    ];
+
+    return (
+        <div className="px-8 py-14">
+            <div className="font-semibold text-4xl flex justify-center mx-auto">
+                Softwares
+            </div>
+
+            <div className="mt-10">
+                <marquee>
+                    <div className="flex justify-center items-center m-auto space-x-14">
+                        {usaimages.map((i, index) => {
+                            return (
+                                <div className="flex shrink-0 justify-center mx-auto">
+                                    <Image
+                                        src={`/USA${i}`}
+                                        alt="software"
+                                        width={200}
+                                        height={200}
+                                        className="h-20 w-auto flex justify-center items-center m-auto"
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </marquee>
             </div>
         </div>
     )
