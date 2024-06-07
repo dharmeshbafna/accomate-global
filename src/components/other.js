@@ -65,8 +65,6 @@ export const Navbar = () => {
     const [toogle, setToogle] = useState(false);
     const navitems = [
         { name: "Home", link: "/" },
-        // { name: "About Us", link: "/about" },
-        // { name: "Our Team", link: "/team" },
         {
             name: "Company", link: "#",
             dropdown: [
