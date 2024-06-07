@@ -51,13 +51,18 @@ export const Banner = () => {
     const slides = [
         {
             image: "/banner1.jpg",
-            title: "Lore ipsum dolor sit amet",
-            description: "Accomate Global is the brainchild of seasoned CAs and CPAs. It is backed by industry titans “CA Rohit K Choksi”(Co-Founder) and “CA, CPA (US) Vartik R Choksi (Partner) of G K Choksi & Co., a leading taxation, audit & assurance firm in India with a 50-year legacy since 1972."
+            title: "Let's grow together",
+            description: `Accomate Global serves as a seamless extension of our client's team. When our clients outsource their 
+            work to us, they benefit from the expertise of highly experienced CPAs while saving on operational costs, 
+            leading to increased efficiency and profitability.`
         },
         {
             image: "/banner2.jpg",
-            title: "Second Slide Title",
-            description: "Accomate Global is the brainchild of seasoned CAs and CPAs. It is backed by industry titans “CA Rohit K Choksi”(Co-Founder) and “CA, CPA (US) Vartik R Choksi (Partner) of G K Choksi & Co., a leading taxation, audit & assurance firm in India with a 50-year legacy since 1972."
+            title: "Empowering small business owners to maximise their business potentia",
+            description: `Is the burden of accounting and taxation slowing down your business growth?​
+            With Accomate Global's Outsourcing Solutions, you can focus on your core business. Our team of 
+            experienced professionals will save you time, money, and stress while ensuring compliance with financial 
+            regulations.`
         }
     ];
 
@@ -581,7 +586,7 @@ export const Services = () => {
                                         onMouseLeave={() => setHovered(true)}
                                         className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
                                         <blockquote className="bg-white w-full border border-gray-400 rounded-lg shadow-lg px-3 py-5 h-full flex ">
-                                            <div className="space-y-4 flex flex-col justify-between items-center relative">
+                                            <div className="space-y-4 flex flex-col justify-between items-center relative w-full">
 
                                                 <div className="flex justify-center mx-auto">
                                                     <Lordicon
@@ -595,7 +600,7 @@ export const Services = () => {
                                                     {i.head}
                                                 </div>
 
-                                                <div className="font-semibold">
+                                                <div className="font-semibold flex justify-start">
                                                     {i.head2}
                                                 </div>
 
@@ -628,7 +633,7 @@ export const Services = () => {
                                             onMouseLeave={() => setHovered(true)}
                                             className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
                                             <blockquote className="bg-white w-full border border-gray-400 rounded-lg shadow-lg px-3 py-5 h-full flex ">
-                                                <div className="space-y-4 flex flex-col justify-between items-center relative">
+                                                <div className="space-y-4 flex flex-col justify-between items-center relative w-full">
 
                                                     <div className="flex justify-center mx-auto">
                                                         <Lordicon
@@ -642,7 +647,7 @@ export const Services = () => {
                                                         {i.head}
                                                     </div>
 
-                                                    <div className="font-semibold">
+                                                    <div className="font-semibold flex justify-start">
                                                         {i.head2}
                                                     </div>
 
@@ -675,7 +680,7 @@ export const Services = () => {
                                                 onMouseLeave={() => setHovered(true)}
                                                 className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
                                                 <blockquote className="bg-white w-full border border-gray-400 rounded-lg shadow-lg px-3 py-5 h-full flex ">
-                                                    <div className="space-y-4 flex flex-col justify-between items-center relative">
+                                                    <div className="space-y-4 flex flex-col justify-between items-center relative w-full">
 
                                                         <div className="flex justify-center mx-auto">
                                                             <Lordicon
@@ -689,7 +694,7 @@ export const Services = () => {
                                                             {i.head}
                                                         </div>
 
-                                                        <div className="font-semibold">
+                                                        <div className="font-semibold flex justify-start">
                                                             {i.head2}
                                                         </div>
 

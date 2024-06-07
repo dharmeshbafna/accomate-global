@@ -75,7 +75,7 @@ export const Navbar = () => {
             ]
         },
         {
-            name: "Services", link: "/services",
+            name: "Services", link: "#",
             dropdown: [
                 { name: 'USA', link: '/services/usa' },
                 { name: 'Canada', link: '/services/canada' },
@@ -444,7 +444,7 @@ export const Breadcrumb = () => {
     const path = usePathname();
 
     return (
-        <div className="h-[45vh] relative w-full">
+        <div className="h-[45vh] w-full hidden">
             <Image
                 src={'/banner1.jpg'}
                 alt="Banner"

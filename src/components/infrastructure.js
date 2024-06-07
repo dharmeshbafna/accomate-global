@@ -69,23 +69,23 @@ export const Infrastructure = () => {
     ];
 
     return (
-        <div className="px-8 py-16 space-y-8">
+        <div className="px-8 py-16 space-y-16">
             <div className='grid grid-cols-2 gap-3'>
                 <div>
                     <div className="font-semibold text-3xl text-[#1B2D9F]">
                         Data Security
                     </div>
 
-                    <div className="my-10">
+                    <div className="my-6">
 
                         <div className='flex items-center my-auto'>
-                            As a leading outsourcing partner for tax, audit, and assurance firms, we prioritize the privacy and
-                            security of our clients' sensitive financial information. We deeply understand the critical need to
-                            protect this data from theft and cyber threats.
+                            Safeguarding clients' sensitive financial information is paramount in today's digital
+                            landscape. We deeply understand the critical need to protect this data from theft and
+                            cyber threats.
                             <br /><br />
-                            Our comprehensive security program aligns with
-                            rigorous industry standards, as evidenced by our ISO 27001:2013 certification. Clients can rest
-                            assured that their data is in safe hands with Accomate.
+                            As your trusted outsourcing partner, we prioritize data security and have a
+                            comprehensive security program that aligns with rigorous industry standards.
+                            Clients can rest assured that their data is in safe hands with Accomate.
                         </div>
                     </div>
 

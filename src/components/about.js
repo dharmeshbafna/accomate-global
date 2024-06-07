@@ -131,22 +131,27 @@ export const MissionVision = () => {
 
 export const Director = () => {
     return (
-        <div className="px-8 py-16 flex">
+        <div className="px-8 py-16 flex space-x-4 w-full h-fit">
             <div className="lg:w-[70%] border border-[#9F8D1B] p-10 rounded-bl-3xl flex flex-col justify-between">
                 <div className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
-                <div className="my-5 text-sm">
+                <div className="my-5">
                     Welcome to Accomate Global!
                     <br /><br />
-                    As you learn about our company, I hope you will see that we are not just another financial services company. We are a team of passionate individuals dedicated to helping your business thrive. Imagine having a trusted partner in your corner!
+                    As you learn about our company, I hope you will see that we are not just another financial services company.
+                    We are a team of passionate individuals dedicated to helping your business thrive. Imagine having a trusted
+                    partner in your corner!
                     <br /><br />
-                    We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax preparation, and other financial services. Partner with us and discover how our outsourced services can enhance your business operations, drive growth, and increase profitability
+                    We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax
+                    preparation, and other financial services. Partner with us and discover how our services can enhance your
+                    business operations, drive growth, and increase profitability
                     <br /><br />
-                    Here at Accomate, we believe in investing in our team, our greatest asset, because a happy and thriving team leads to happy and thriving clients – that's you! Are you ready to join the journey?
+                    Here at Accomate, we believe in investing in our team—our greatest asset. A happy and thriving team leads to
+                    happy and thriving clients—that's you! Are you ready to join the journey?
                     <br /><br />
                     <span className="font-semibold">
-                        Let's grow together and unlock the potential of your business!
+                        Let's grow together and unlock the potential of your business!
                     </span>
                 </div>
                 <div className="flex justify-end w-full pt-5">
@@ -156,13 +161,16 @@ export const Director = () => {
                     </div>
                 </div>
             </div>
-            <div className="px-3 lg:w-[40%] relative">
+
+            <div className="lg:w-[30%] h-auto relative border border-black">
                 <Image
                     src={DirectorImg}
-                    alt="Director"
-                    className="w-auto h-[98%] flex items-center my-auto"
+                    objectFit="cover"
+                    layout="fill"
+                    alt="director"
+                    className=""
                 />
-                <div className="absolute bottom-0 left-0 bg-[#9f8e1b5c] w-[70%] h-[70%] -z-10"></div>
+                <div className="absolute -bottom-3 -left-3 bg-[#9f8e1b5c] w-full h-[70%] -z-10"></div>
             </div>
         </div>
     )
@@ -198,11 +206,12 @@ export const Team = () => {
         <div className="px-8 py-16 w-full space-y-12">
 
             <div className="text-center flex justify-center mx-auto lg:w-[85%] text-xl">
-                We boast a team of self-driven, reliable, and qualified 30+ skilled professionals.
-                Their goal is to deliver exceptional outcomes to our partners. Despite
-                possessing substantial technical and industrial knowledge, our team is
-                committed to advancing its expertise by participating in regular training
-                sessions in diverse areas to keep abreast of continual compliance changes.
+                We boast a team of self-driven, reliable, and qualified 30+ skilled
+                professionals. Their goal is to deliver exceptional outcomes to our partners.
+                Despite possessing substantial technical and industrial knowledge, our team
+                participates in regular training sessions across various disciplines. This
+                ensures they stay ahead of the curve on compliance changes and deliver
+                exceptional results for our partners.
             </div>
 
             <div className="flex justify-center mx-auto space-x-5">
