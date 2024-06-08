@@ -144,7 +144,7 @@ export const Navbar = () => {
                                         <div
                                             onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                             onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
-                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+                                            className="w-32 -left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
@@ -158,7 +158,7 @@ export const Navbar = () => {
                                         <div
                                             onMouseEnter={i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                             onMouseLeave={i.name == "Company" ? () => setDropdown2(false) : () => { }}
-                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+                                            className="w-32 -left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
@@ -204,7 +204,7 @@ export const Navbar = () => {
 
                         {navitems.map((i, index) => {
                             return (
-                                <div className="w-fit text-lg relative">
+                                <div className="w-fit text-lg relative overflow-x-visible">
                                     <a
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
@@ -217,12 +217,15 @@ export const Navbar = () => {
                                     <span
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
-                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}></span>
+                                        className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}>
+                                            
+                                        </span>
+
                                     {dropdown && i.name == "Services" ?
                                         <div
                                             onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                             onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
-                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+                                            className="w-32 -left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
@@ -236,7 +239,7 @@ export const Navbar = () => {
                                         <div
                                             onMouseEnter={i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                             onMouseLeave={i.name == "Company" ? () => setDropdown2(false) : () => { }}
-                                            className="-left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
+                                            className="w-32 -left-1 border border-gray-300 absolute top-7 bg-white px-4 py-2 shadow-lg z-50 rounded-lg">
 
                                             {i.dropdown.map((d, index) => {
                                                 return (

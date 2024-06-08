@@ -182,7 +182,7 @@ export const Team = () => {
     const data = [
         { name: 'Rohit Choksi', img: '/team/rohit.jpeg', list: ['CA, BCOM', 'Co Founder GK Choksi & CO.', '50 Yrs. Exp. in taxation'] },
         { name: 'Vartik Choksi', img: '/team/vartik.jpeg', list: ['CA, CPA (USA)', 'Partner GK Choksi & CO.', '15 Yrs. Exp. in International taxation'] },
-        { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['CA, BCOM', 'President , GK Choski & Co.', '30 Yrs. Exp Audit & Assurance'] },
+        { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['CA, BCOM', 'President , GK Choksi & Co.', '30 Yrs. Exp Audit & Assurance'] },
         { name: 'Dr. Ashutosh Bharadwaj', img: '/team/ashutosh.jpg', list: ['Growth strategist', '20 Yrs. Industry Exp'] },
         { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['EGMP (IIM-L), HRM (XLRI-J)', '20 Yrs. Industry Exp.'] },
         { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['CA, CPA (Aus), DISA, FAFD (ICAI)', '8 Yrs. Exp. in Audit and Tax'] },
@@ -237,7 +237,7 @@ export const Team = () => {
                 <button
                     onClick={() => setShow('op')}
                     className={`${show == "op" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
-                    Country Operations
+                    Global Operation Head
                 </button>
 
             </div>
