@@ -445,7 +445,7 @@ export const Breadcrumb = () => {
     const path = usePathname();
 
     return (
-        <div className="h-[45vh] w-full hidden">
+        <div className="h-[45vh] w-full relative">
             <Image
                 src={'/banner1.jpg'}
                 alt="Banner"
@@ -469,7 +469,7 @@ export const Breadcrumb = () => {
                                                             path == '/services/australia' ? 'Australia' :
                                                                 ''}
                     </div>
-                    <div className="text-white text-center text-lg">
+                    {/* <div className="text-white text-center text-lg">
                         Home
                         {
                             path == '/about' ? ' / company / about' :
@@ -482,7 +482,7 @@ export const Breadcrumb = () => {
                                                         path == '/services/canada' ? ' / services / Canada' :
                                                             path == '/services/australia' ? ' / services / Australia' :
                                                                 ''}
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
