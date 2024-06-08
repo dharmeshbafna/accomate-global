@@ -29,6 +29,7 @@ export const Contact = () => {
         { country: 'India', phone: '+91 XXXXXXXXXXX', email: 'india@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006' },
         { country: 'Australia', phone: '+91 XXXXXXXXXXX', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
         { country: 'Canada', phone: '+91 XXXXXXXXXXX', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
+        { country: 'USA', phone: '+91 XXXXXXXXXXX', email: 'usa@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
     ];
 
     const handleSubmit = (e) => {
@@ -42,14 +43,14 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-            <div className="mt-10 grid grid-cols-3 gap-8">
+            <div className="mt-10 grid grid-cols-4 gap-4">
                 {contactdetails.map((i, index) => {
                     return (
                         <div className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
                             <div className="flex items-center my-auto space-x-3 pb-4 border-b border-gray-300">
                                 <Image
-                                    src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : ''}
-                                    className="h-10 w-10 rounded-full"
+                                    src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : i.country == 'USA' ? USA : ''}
+                                    className="h-10 w-10 rounded-full drop-shadow-md"
                                     alt="country"
                                 />
                                 <div className="pl-3 border-l border-gray-300 font-semibold text-lg text-[#1B2D9F]">{i.country}</div>
@@ -57,20 +58,20 @@ export const Contact = () => {
 
                             <div className="space-y-4">
                                 <div className="pb-2 border-b flex items-center my-auto space-x-2">
-                                    <IoCallOutline className="text-xl font-semibold" />
-                                    <div>
+                                    <IoCallOutline className="text-lg font-semibold flex shrink-0" />
+                                    <div className="text-sm">
                                         {i.phone}
                                     </div>
                                 </div>
                                 <div className="pb-2 border-b flex items-center my-auto space-x-2">
-                                    <MdOutlineEmail className="text-xl font-semibold" />
-                                    <div>
+                                    <MdOutlineEmail className="text-lg font-semibold flex shrink-0" />
+                                    <div className="text-sm">
                                         {i.email}
                                     </div>
                                 </div>
                                 <div className="pb-2 flex space-x-2">
-                                    <LuMapPin className="text-xl font-semibold mt-1 flex shrink-0" />
-                                    <div>
+                                    <LuMapPin className="text-lg font-semibold mt-1 flex shrink-0" />
+                                    <div className="text-sm">
                                         {i.add}
                                     </div>
                                 </div>
