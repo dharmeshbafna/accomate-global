@@ -12,10 +12,13 @@ import { FaChevronDown } from "react-icons/fa6";
 
 import AccountBanner from "../../public/banner1.jpg"
 import ReactCardFlip from "react-card-flip";
+import { usePathname } from "next/navigation";
 
 export const Usa = () => {
 
     const [flip, setFlip] = useState(false);
+    const [f2, setf2] = useState(false);
+    const [f3, setf3] = useState(false);
     const usaservices = [
         {
             icon: '/book.json',
@@ -135,6 +138,63 @@ export const Usa = () => {
                         </div>
                     </div>
                 </ReactCardFlip>
+            </div>
+
+            {/* 2 cards */}
+            <div className="grid grid-cols-2 gap-6 w-full mt-10 px-5">
+
+                <div>
+                    <ReactCardFlip isFlipped={f2}>
+                        <div onMouseEnter={() => setf2(true)} className="relative min-h-[50vh] w-full rounded-lg shadow-lg">
+                            <Image
+                                src={AccountBanner}
+                                alt="img"
+                                objectFit="cover"
+                                layout="fill"
+                                className="rounded-lg"
+                            />
+                        </div>
+
+                        <div onMouseLeave={() => setf2(false)} className="p-5 relative min-h-[50vh] w-full rounded-lg shadow-lg bg-white text-lg flex items-center my-auto border border-[#9F8D1B]">
+                            Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
+                        </div>
+                    </ReactCardFlip>
+                </div>
+
+                <div>
+                    <ReactCardFlip isFlipped={f3}>
+                        <div onMouseEnter={() => setf3(true)} className="relative min-h-[50vh] w-full rounded-lg shadow-lg">
+                            <Image
+                                src={AccountBanner}
+                                alt="img"
+                                objectFit="cover"
+                                layout="fill"
+                                className="rounded-lg"
+                            />
+                        </div>
+
+                        <div onMouseLeave={() => setf3(false)} className="p-5 relative min-h-[50vh] w-full rounded-lg shadow-lg bg-white text-lg border border-[#9F8D1B] space-y-4">
+                            <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
+                                {usaservices[0].head}
+                            </div>
+
+                            <div className="text-lg">
+                                {usaservices[0].head2}
+                            </div>
+
+                            <ul className="list-none space-y-3">
+                                {usaservices[0].list.map((i) => {
+                                    return (
+                                        <li className="flex">
+                                            <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                            {i}
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </ReactCardFlip>
+                </div>
             </div>
 
             {/* 1 */}
@@ -739,6 +799,8 @@ export const Australia = () => {
 
 export const Softwares = () => {
 
+    const path = usePathname();
+
     const usaimages = [
         '/download.jpeg',
         '/drake.png',
@@ -754,6 +816,26 @@ export const Softwares = () => {
         '/xero.webp',
     ];
 
+    const ausimgs = [
+        '/be-logo-plain.png',
+        '/BGL.png',
+        '/cropped-afg_social_profile.png',
+        '/download.png',
+        '/salestrekker.jpg',
+        '/xodo.jpeg',
+        '/download.png',
+        '/xero.webp',
+    ];
+
+    const canadaimgs = [
+        '/dolphin.jpeg',
+        '/intuit profile.jpeg',
+        '/myob.jpg',
+        '/quick books destok.png',
+        '/quick books online.png',
+        '/tax cycle.png'
+    ];
+
     return (
         <div className="px-8 py-14">
             <div className="font-semibold text-4xl flex justify-center mx-auto">
@@ -763,19 +845,55 @@ export const Softwares = () => {
             <div className="mt-10">
                 <marquee>
                     <div className="flex justify-center items-center m-auto space-x-14">
-                        {usaimages.map((i, index) => {
-                            return (
-                                <div className="flex shrink-0 justify-center mx-auto">
-                                    <Image
-                                        src={`/USA${i}`}
-                                        alt="software"
-                                        width={200}
-                                        height={200}
-                                        className="h-20 w-auto flex justify-center items-center m-auto"
-                                    />
-                                </div>
-                            )
-                        })}
+                        {path == '/services/usa' ?
+                            <>
+                                {usaimages.map((i, index) => {
+                                    return (
+                                        <div className="flex shrink-0 justify-center mx-auto">
+                                            <Image
+                                                src={`/USA${i}`}
+                                                alt="software"
+                                                width={200}
+                                                height={200}
+                                                className="h-20 w-auto flex justify-center items-center m-auto"
+                                            />
+                                        </div>
+                                    )
+                                })}
+                            </>
+                            :
+                            path == '/services/australia' ?
+                                <>
+                                    {ausimgs.map((i, index) => {
+                                        return (
+                                            <div className="flex shrink-0 justify-center mx-auto">
+                                                <Image
+                                                    src={`/Australia${i}`}
+                                                    alt="software"
+                                                    width={200}
+                                                    height={200}
+                                                    className="h-20 w-auto flex justify-center items-center m-auto"
+                                                />
+                                            </div>
+                                        )
+                                    })}
+                                </> :
+                                path == '/services/canada' ?
+                                    <>
+                                        {canadaimgs.map((i, index) => {
+                                            return (
+                                                <div className="flex shrink-0 justify-center mx-auto">
+                                                    <Image
+                                                        src={`/Canada${i}`}
+                                                        alt="software"
+                                                        width={200}
+                                                        height={200}
+                                                        className="h-20 w-auto flex justify-center items-center m-auto"
+                                                    />
+                                                </div>
+                                            )
+                                        })}
+                                    </> : ''}
                     </div>
                 </marquee>
             </div>

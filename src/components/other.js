@@ -361,20 +361,20 @@ export const Footer = () => {
 
 export const Clients = () => {
     return (
-        <div className="bg-gray-200 px-8 py-14">
+        <div className="bg-gray-200 px-8 py-14 space-y-12">
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Clients We Help Thrive
             </div>
 
-            <div className="flex justify-center mx-auto text-center lg:w-[80%] mt-6 mb-10">
+            {/* <div className="flex justify-center mx-auto text-center lg:w-[80%] mt-6 mb-10">
                 Accomate Global is dedicated to providing outsourcing services to various clientele and then in horizontal line add above clientel with different icons if possible.
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-5 gap-5">
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <MdGroups className="flex justify-center mx-auto h-10 w-auto" />
+                        <MdGroups className="flex justify-center mx-auto h-12 w-auto" />
                     </div>
                     <div className="text-center flex justify-center mx-auto font-semibold text-xl">
                         Individual
@@ -383,7 +383,7 @@ export const Clients = () => {
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <CgOrganisation className="flex justify-center mx-auto h-10 w-auto" />
+                        <CgOrganisation className="flex justify-center mx-auto h-12 w-auto" />
                     </div>
                     <div className="text-center flex justify-center mx-auto font-semibold text-xl">
                         Company
@@ -392,7 +392,7 @@ export const Clients = () => {
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <FaHandshakeAngle className="flex justify-center mx-auto h-10 w-auto" />
+                        <FaHandshakeAngle className="flex justify-center mx-auto h-12 w-auto" />
                     </div>
                     <div className="text-center flex justify-center mx-auto font-semibold text-xl">
                         Trust
@@ -401,7 +401,7 @@ export const Clients = () => {
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <TbMoneybag className="flex justify-center mx-auto h-10 w-auto" />
+                        <TbMoneybag className="flex justify-center mx-auto h-12 w-auto" />
                     </div>
                     <div className="text-center flex justify-center mx-auto font-semibold text-xl">
                         SMSF
@@ -410,7 +410,7 @@ export const Clients = () => {
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <HiBuildingStorefront className="flex justify-center mx-auto h-10 w-auto" />
+                        <HiBuildingStorefront className="flex justify-center mx-auto h-12 w-auto" />
                     </div>
                     <div className="text-center flex justify-center mx-auto font-semibold text-xl">
                         Small Businesses

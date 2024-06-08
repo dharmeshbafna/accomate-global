@@ -1,5 +1,5 @@
 import { Breadcrumb } from "@/components/other";
-import { Canada } from "@/components/services";
+import { Canada, Softwares } from "@/components/services";
 
 export const metadata = {
     title: 'Canada | Services | Accomate Global',
@@ -13,6 +13,7 @@ export default function CANADA() {
         <div>
             <Breadcrumb />
             <Canada />
+            <Softwares />
         </div>
     )
 }
