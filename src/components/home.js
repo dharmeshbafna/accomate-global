@@ -57,7 +57,7 @@ export const Banner = () => {
             leading to increased efficiency and profitability.`
         },
         {
-            image: "/banner2.jpg",
+            image: "/banner1.jpg",
             title: "Empowering small business owners to maximise their business potentia",
             description: `Is the burden of accounting and taxation slowing down your business growth?​
             With Accomate Global's Outsourcing Solutions, you can focus on your core business. Our team of 
