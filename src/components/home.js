@@ -50,7 +50,7 @@ export const Banner = () => {
 
     const slides = [
         {
-            image: "/banner1.jpg",
+            image: "/banner3.jpg",
             title: "Let's grow together",
             description: `Accomate Global serves as a seamless extension of our client's team. When our clients outsource their 
             work to us, they benefit from the expertise of highly experienced CPAs while saving on operational costs, 
@@ -63,7 +63,14 @@ export const Banner = () => {
             With Accomate Global's Outsourcing Solutions, you can focus on your core business. Our team of 
             experienced professionals will save you time, money, and stress while ensuring compliance with financial 
             regulations.`
-        }
+        },
+        {
+            image: "/banner2.jpg",
+            title: "Collaborate with us and transform your mortgage business",
+            description: `Rip the benefit of an experienced loan processor at 40-50% of your staffing cost.​
+            Mortgage processing usually demands efficiency, accuracy, and compliance. Let us handle 
+            the complex and tedious task while you concentrate on your business growth.`
+        },
     ];
 
     const settings = {
@@ -121,17 +128,14 @@ export const Banner = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-[#0000005d]"></div>
 
                         {/* Text */}
-                        <div className={`absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                            <div className="text-[50px] font-semibold text-white">
+                        <div className={`space-y-4 absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                           <div className="font-semibold text-white text-3xl leading-10">
                                 {slide.title}
-                            </div>
-                            <div className="my-5 text-white">
+                           </div>
+
+                           <div className="text-lg text-white leading-relaxed">
                                 {slide.description}
                             </div>
-
-                            <button className="hover:bg-[#1B2D9F] duration-300 text-lg px-5 py-2 bg-[#9F8D1B] text-white rounded-full shadow-lg">
-                                Read More
-                            </button>
                         </div>
                     </div>
                 ))}
