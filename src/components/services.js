@@ -10,11 +10,12 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Button from '@mui/material/Button';
 import { FaChevronDown } from "react-icons/fa6";
 
-import AccountBanner from "../../public/account-banner.jpg"
-import { m } from "framer-motion";
+import AccountBanner from "../../public/banner1.jpg"
+import ReactCardFlip from "react-card-flip";
 
 export const Usa = () => {
 
+    const [flip, setFlip] = useState(false);
     const usaservices = [
         {
             icon: '/book.json',
@@ -82,6 +83,59 @@ export const Usa = () => {
 
     return (
         <div className="py-10">
+
+            {/* Card */}
+            <div className="flex justify-center mx-auto w-full">
+                <ReactCardFlip isFlipped={flip} className="w-full">
+
+                    <div className="relative bg-white w-[800px] h-80 shadow-lg rounded-lg" onMouseEnter={() => setFlip(true)}>
+                        <Image
+                            src={AccountBanner}
+                            alt="img"
+                            objectFit="cover"
+                            layout="fill"
+                            priority={true}
+                            className="w-full rounded-lg"
+                        />
+                        <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] flex justify-center items-center m-auto">
+
+                            <div className="font-semibold text-white text-4xl">
+                                Accounting
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-white w-[800px] h-80 shadow-lg rounded-lg p-5 space-y-8 border border-[#1B2D9F]" onMouseLeave={() => setFlip(false)}>
+
+                        <div className="font-semibold text-[#1B2D9F] text-4xl pb-2 border-b border-[#9F8D1B]">
+                            Accounting
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-7 h-full">
+                            <div className="flex">
+                                Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
+                            </div>
+
+                            <div className="space-y-3">
+                                <div className="text-lg">
+                                    {usaservices[0].head2}
+                                </div>
+
+                                <ul className="list-none space-y-3">
+                                    {usaservices[0].list.map((i) => {
+                                        return (
+                                            <li className="flex">
+                                                <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                                {i}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ReactCardFlip>
+            </div>
 
             {/* 1 */}
             <div className="grid grid-cols-2 gap-8 py-16 px-8">
