@@ -108,7 +108,7 @@ export const Usa = () => {
                                         priority
                                     />
 
-                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] p-4 text-white space-y-8">
+                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#00000077] p-4 text-white space-y-8">
                                         <div className="text-2xl font-semibold pb-3 border-b border-white">
                                             {i.head}
                                         </div>
