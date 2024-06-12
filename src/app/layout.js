@@ -1,6 +1,6 @@
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { Navbar, Footer, Clients } from "@/components/other";
+import { Navbar, Footer, Clients, Fixbtn } from "@/components/other";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ subsets: ["latin"], weight: '400' });
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         {children}
         <Clients />
         <Footer />
+        <Fixbtn />
       </body>
     </html>
   );

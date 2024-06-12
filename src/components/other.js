@@ -6,8 +6,8 @@ import Logo2 from "../../public/n_logo2.png"
 import WhiteLogo from "../../public/accomate_logo_white.png"
 import WhiteLogo2 from "../../public/n_accomate_white.png"
 
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { FaBars } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaBars, FaWhatsapp } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
@@ -487,5 +487,36 @@ export const Breadcrumb = () => {
             </div>
 
         </div>
+    )
+}
+
+
+export const Fixbtn = () => {
+
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+
+        const check = () => {
+            if (window.scrollY > 200) {
+                setShow(true);
+            } else {
+                setShow(false);
+            }
+        };
+
+        window.addEventListener("scroll", check);
+
+        return () => {
+            window.removeEventListener("scroll", check);
+        }
+    }, []);
+
+    return (
+        <a href="#" target="_blank">
+            <button className={`z-50 fixed bottom-4 right-6 shadow-lg rounded-full bg-green-500 text-white p-3 text-3xl hover:scale-[110%] duration-300`}>
+                <FaWhatsapp className="" />
+            </button>
+        </a>
     )
 }
