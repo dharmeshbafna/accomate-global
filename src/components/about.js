@@ -108,7 +108,7 @@ export const MissionVision = () => {
 
                         <div className="text-white ml-4 space-y-4">
                             <div className="font-semibold text-3xl pt-3">
-                                Purpose
+                                Our Goal
                             </div>
                             <div>
                                 We elevate CPAs and Financial Firms, allowing them to focus on core competencies while we handle time-consuming tasks. By streamlining operations, cutting overhead, and ensuring compliance, we create a sustainable advantage for our clients in today's competitive landscape.
@@ -139,9 +139,9 @@ export const Director = () => {
                 <div className="my-5">
                     Welcome to Accomate Global!
                     <br /><br />
-                    As you learn about our company, I hope you will see that we are not just another financial services company.
-                    We are a team of passionate individuals dedicated to helping your business thrive. Imagine having a trusted
-                    partner in your corner!
+                    As you learn about our company, I hope you will see that we're more than just a financial
+                    services company. We're a passionate team dedicated to your business success. Think of us as
+                    your trusted partner, by your side every step of the way.
                     <br /><br />
                     We offer a comprehensive suite of outsourcing services, including accounting, bookkeeping, payroll, tax
                     preparation, and other financial services. Partner with us and discover how our services can enhance your
@@ -180,26 +180,32 @@ export const Team = () => {
 
 
     const data = [
+        // advisory
         { name: 'Rohit Choksi', img: '/team/rohit.jpeg', list: ['CA, BCOM', 'Co Founder GK Choksi & CO.', '50 Yrs. Exp. in taxation'] },
         { name: 'Vartik Choksi', img: '/team/vartik.jpeg', list: ['CA, CPA (USA)', 'Partner GK Choksi & CO.', '15 Yrs. Exp. in International taxation'] },
         { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['CA, BCOM', 'President , GK Choksi & Co.', '30 Yrs. Exp Audit & Assurance'] },
         { name: 'Dr. Ashutosh Bharadwaj', img: '/team/ashutosh.jpg', list: ['Growth strategist', '20 Yrs. Industry Exp'] },
-        { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['EGMP (IIM-L), HRM (XLRI-J)', '20 Yrs. Industry Exp.'] },
-        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['CA, CPA (Aus), DISA, FAFD (ICAI)', '8 Yrs. Exp. in Audit and Tax'] },
-        { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing', '8 Yrs. Exp. in Audit and Tax'] },
-        { name: 'Yogesh Rawat', img: '/team/dummy.jpg', list: ['CPA (AUS)', '10 Yrs Exp in AUS Taxation'] },
-        { name: 'Ankit Sudrania', img: '/team/dummy.jpg', list: ['CA,CAIIB,MDP (MDI-Gurgaon)', '11 Yrs. Exp. in corporate finance'] },
-        { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['CA, CPA (Can)', '8 Yrs. Exp. in Audit and Tax'] },
-        { name: 'Hemant Chandak', img: '/team/hemant.jpg', list: ['CPA (Australia)', '8 Yrs. Exp. in Audit and Tax', 'Leading team of Audit/Tax managers & Associates'] },
+        // core
+        { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['Director', 'EGMP (IIM-L), HRM (XLRI-J)', '20 Yrs. Industry Exp.'] },
+        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['CA, CPA (Aus), DISA, FAFD (ICAI)','Business Development Head', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing', 'Non Executive Director', '8 Yrs. Exp. in Audit and Tax'] },
+        // Country Representative
+        { name: 'Meet Thakkar', img: '/team/meet.jpeg', list: ['BDM Australia', '7 Years of Industry Experience', 'MBA (Marketing)​'] },
+        { name: 'Mitva Patel', img: '/team/mitva.jpeg', list: ['BDM - USA', '3 Years of Industry Experience', 'MBA (Finance)'] },
+        { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['BDM - Canada, Ontario', 'CA, CPA (Can)', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['BDM - Canada, British Columbia', '8 Yrs. Exp. in Audit and Tax', 'CPA (Can)'] },
+        // Global Operations
+        { name: 'Hemant Chandak', img: '/team/hemant.jpg', list: ['Operation Head - Australia', 'CA', '8 Yrs. Exp. in Audit and Tax', 'Leading team of 3 Audit/Tax managers & Associates'] },
         { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['CA, EA, CPA (US)', '9 Yrs Exp in US Taxation', 'Leading Team of Tax managers & Associates'] },
-        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['CPA (Canada)', '8 Yrs. exp. in Audit and Tax', 'Leading team of Audit/Tax managers & Associates'] },
+        { name: 'Pratik Samdani', img: '/team/pratik.jpg', list: ['Operation Head – Canada', '6 Years Experience in Audit and Tax', 'Leading team of 2 Audit/Tax managers & Associates', 'CA'] },
+        { name: 'Ankit Sudrania', img: '/team/dummy.jpg', list: ['CA,CAIIB,MDP (MDI-Gurgaon)', '11 Yrs. Exp. in corporate finance'] },
     ];
     const [show, setShow] = useState('advisory');
     const sliced =
         show == 'advisory' ? [0, 4] :
             show == 'kmp' ? [4, 7] :
-                show == 'country' ? [7, 10] :
-                    show == 'op' ? [10, 13] :
+                show == 'country' ? [7, 11] :
+                    show == 'op' ? [11, 14] :
                         [0, data.length];
 
     return (
@@ -231,7 +237,7 @@ export const Team = () => {
                 <button
                     onClick={() => setShow('country')}
                     className={`${show == "country" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
-                    Country Head
+                    Country Representative
                 </button>
 
                 <button

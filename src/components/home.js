@@ -58,7 +58,7 @@ export const Banner = () => {
         },
         {
             image: "/banner1.jpg",
-            title: "Empowering small business owners to maximise their business potentia",
+            title: "Small Business Potential Unleashed",
             description: `Is the burden of accounting and taxation slowing down your business growth?​
             With Accomate Global's Outsourcing Solutions, you can focus on your core business. Our team of 
             experienced professionals will save you time, money, and stress while ensuring compliance with financial 
@@ -66,7 +66,7 @@ export const Banner = () => {
         },
         {
             image: "/banner2.jpg",
-            title: "Collaborate with us and transform your mortgage business",
+            title: "Transform your mortgage broking business",
             description: `Rip the benefit of an experienced loan processor at 40-50% of your staffing cost.​
             Mortgage processing usually demands efficiency, accuracy, and compliance. Let us handle 
             the complex and tedious task while you concentrate on your business growth.`
@@ -129,7 +129,7 @@ export const Banner = () => {
 
                         {/* Text */}
                         <div className={`space-y-4 absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                           <div className="font-semibold text-white text-3xl leading-10">
+                           <div className="font-semibold text-white text-4xl leading-10">
                                 {slide.title}
                            </div>
 

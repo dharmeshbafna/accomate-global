@@ -16,14 +16,15 @@ import { usePathname } from "next/navigation";
 
 export const Usa = () => {
 
-    const [flip, setFlip] = useState(false);
+    const [flip, setFlip] = useState('');
     const [f2, setf2] = useState(false);
     const [f3, setf3] = useState(false);
     const usaservices = [
         {
-            icon: '/book.json',
+            img: '/accounts.png',
             head: 'Accounting',
             head2: 'Our accounting services include:',
+            desc: 'Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date',
             list: [
                 'Bookkeeping and bank reconciliations',
                 'Payroll processing (T4 &T5)',
@@ -31,9 +32,10 @@ export const Usa = () => {
             ]
         },
         {
-            icon: '/doc.json',
+            img: '/accounts.png',
             head: 'Financial Statement Compilation',
             head2: 'Our financial statements compilation services include:',
+            desc: 'Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.',
             list: [
                 'Balance sheets',
                 'Income statements',
@@ -41,9 +43,10 @@ export const Usa = () => {
             ]
         },
         {
-            icon: '/zoom.json',
+            img: '/payroll.png',
             head: 'Audit & Assurance',
             head2: 'Our audit & assurance services encompass a wide range of areas, including but not limited to:',
+            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain your financial transparency, meet stringent regulatory requirements Partner with us for peace of mind and a successful financial journey',
             list: [
                 'Financial statement audits',
                 'Internal control assessment and evaluations',
@@ -52,9 +55,10 @@ export const Usa = () => {
             ]
         },
         {
-            icon: '/home.json',
+            img: '/payroll.png',
             head: 'Mortgage Broking',
             head2: 'Our mortgage broking services include:',
+            desc: 'Grow your mortgage book faster and more efficiently Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority. Reduce costs and gain experienced loan processors',
             list: [
                 'Data entry and document verification',
                 'Serviceability analysis',
@@ -63,9 +67,10 @@ export const Usa = () => {
             ]
         },
         {
-            icon: '/privacy-policy.json',
+            img: '/taxation.png',
             head: 'Tax Compilation',
             head2: 'Our comprehensive tax services include:',
+            desc: 'Overwhelmed by tax deadlines? by outsourcing tax preparation to Accomate Global, you gain. the freedom to focus on core business activities. Our team of tax experts knows all the nitty-gritty of US tax rules and stays up-to-date with IRS changes.',
             list: [
                 'Preparation of U.S. federal returns and state tax returns including composite tax returns, state tax returns, PTE state tax returns',
                 'Business returns such as Form 1065 (pass through), 1120S (pass through), 1120 (corp)',
@@ -85,272 +90,49 @@ export const Usa = () => {
     ];
 
     return (
-        <div className="py-10">
+        <div className="px-8 py-10 overflow-x-hidden">
 
-            {/* Card */}
-            <div className="flex justify-center mx-auto w-full">
-                <ReactCardFlip isFlipped={flip} className="w-full">
+            <div className="grid grid-cols-2 gap-6 overflow-hidden">
+                {usaservices.map((i, index) => {
+                    return (
+                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-72">
+                                <div className="relative w-full rounded-lg shadow min-h-72">
+                                    <Image
+                                        src={i.img}
+                                        alt="img"
+                                        objectFit="cover"
+                                        layout="fill"
+                                        objectPosition="center"
+                                        className="rounded-lg"
+                                        priority
+                                    />
 
-                    <div className="relative bg-white w-[800px] h-80 shadow-lg rounded-lg" onMouseEnter={() => setFlip(true)}>
-                        <Image
-                            src={AccountBanner}
-                            alt="img"
-                            objectFit="cover"
-                            layout="fill"
-                            priority={true}
-                            className="w-full rounded-lg"
-                        />
-                        <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] flex justify-center items-center m-auto">
-
-                            <div className="font-semibold text-white text-4xl">
-                                Accounting
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="bg-white w-[800px] h-80 shadow-lg rounded-lg p-5 space-y-8 border border-[#1B2D9F]" onMouseLeave={() => setFlip(false)}>
-
-                        <div className="font-semibold text-[#1B2D9F] text-4xl pb-2 border-b border-[#9F8D1B]">
-                            Accounting
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-7 h-full">
-                            <div className="flex">
-                                Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
-                            </div>
-
-                            <div className="space-y-3">
-                                <div className="text-lg">
-                                    {usaservices[0].head2}
+                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] flex items-center justify-center m-auto text-3xl p-5 text-white font-semibold">
+                                        {i.head}
+                                    </div>
                                 </div>
 
-                                <ul className="list-none space-y-3">
-                                    {usaservices[0].list.map((i) => {
-                                        return (
-                                            <li className="flex">
-                                                <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                                {i}
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
+                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-72 h-full">
+                                    <div>
+                                        {i.desc}
+                                    </div>
+
+                                    <ul className="list-none space-y-3">
+                                        {i.list.map((j, ind) => {
+                                            return (
+                                                <li key={ind} className="flex">
+                                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                                    {j}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            </ReactCardFlip>
                         </div>
-                    </div>
-                </ReactCardFlip>
-            </div>
-
-            {/* 2 cards */}
-            <div className="grid grid-cols-2 gap-6 w-full mt-10 px-5">
-
-                <div>
-                    <ReactCardFlip isFlipped={f2}>
-                        <div onMouseEnter={() => setf2(true)} className="relative min-h-[50vh] w-full rounded-lg shadow-lg">
-                            <Image
-                                src={AccountBanner}
-                                alt="img"
-                                objectFit="cover"
-                                layout="fill"
-                                className="rounded-lg"
-                            />
-                        </div>
-
-                        <div onMouseLeave={() => setf2(false)} className="p-5 relative min-h-[50vh] w-full rounded-lg shadow-lg bg-white text-lg flex items-center my-auto border border-[#9F8D1B]">
-                            Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
-                        </div>
-                    </ReactCardFlip>
-                </div>
-
-                <div>
-                    <ReactCardFlip isFlipped={f3}>
-                        <div onMouseEnter={() => setf3(true)} className="relative min-h-[50vh] w-full rounded-lg shadow-lg">
-                            <Image
-                                src={AccountBanner}
-                                alt="img"
-                                objectFit="cover"
-                                layout="fill"
-                                className="rounded-lg"
-                            />
-                        </div>
-
-                        <div onMouseLeave={() => setf3(false)} className="p-5 relative min-h-[50vh] w-full rounded-lg shadow-lg bg-white text-lg border border-[#9F8D1B] space-y-4">
-                            <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                                {usaservices[0].head}
-                            </div>
-
-                            <div className="text-lg">
-                                {usaservices[0].head2}
-                            </div>
-
-                            <ul className="list-none space-y-3">
-                                {usaservices[0].list.map((i) => {
-                                    return (
-                                        <li className="flex">
-                                            <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                            {i}
-                                        </li>
-                                    )
-                                })}
-                            </ul>
-                        </div>
-                    </ReactCardFlip>
-                </div>
-            </div>
-
-            {/* 1 */}
-            <div className="grid grid-cols-2 gap-8 py-16 px-8">
-                <div className="flex items-center my-auto h-full">
-                    <div className="h-fit p-5 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
-                        Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date
-                    </div>
-                </div>
-
-                <div className="space-y-4">
-                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                        {usaservices[0].head}
-                    </div>
-
-                    <div className="text-lg">
-                        {usaservices[0].head2}
-                    </div>
-
-                    <ul className="list-none space-y-3">
-                        {usaservices[0].list.map((i) => {
-                            return (
-                                <li className="flex">
-                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                    {i}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-
-            {/* 2 */}
-            <div className="grid grid-cols-2 gap-8 py-16 px-8 bg-gray-200">
-
-                <div className="space-y-4">
-                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                        {usaservices[1].head}
-                    </div>
-
-                    <div className="text-lg">
-                        {usaservices[1].head2}
-                    </div>
-
-                    <ul className="list-none space-y-3">
-                        {usaservices[1].list.map((i) => {
-                            return (
-                                <li className="flex">
-                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
-                                    {i}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-
-                <div className="flex items-center my-auto h-full">
-                    <div className="h-fit p-5 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
-                        Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.
-                    </div>
-                </div>
-            </div>
-
-            {/* 3 */}
-            <div className="grid grid-cols-2 gap-8 py-16 px-8">
-                <div className="flex items-center my-auto h-full">
-                    <div className="h-fit p-5 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
-                        Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain your financial transparency, meet stringent regulatory requirements Partner with us for peace of mind and a successful financial journey
-                    </div>
-                </div>
-
-                <div className="space-y-4">
-                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                        {usaservices[2].head}
-                    </div>
-
-                    <div className="text-lg">
-                        {usaservices[2].head2}
-                    </div>
-
-                    <ul className="list-none space-y-3">
-                        {usaservices[2].list.map((i) => {
-                            return (
-                                <li className="flex">
-                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                    {i}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-
-            {/* 4 */}
-            <div className="grid grid-cols-2 gap-8 py-16 px-8 bg-gray-200">
-
-
-                <div className="space-y-4">
-                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                        {usaservices[3].head}
-                    </div>
-
-                    <div className="text-lg">
-                        {usaservices[3].head2}
-                    </div>
-
-                    <ul className="list-none space-y-3">
-                        {usaservices[3].list.map((i) => {
-                            return (
-                                <li className="flex">
-                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2" />
-                                    {i}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
-                <div className="flex items-center my-auto h-full">
-                    <div className="h-fit flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
-                        Grow your mortgage book faster and more efficiently
-                        Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
-                        Reduce costs and gain experienced loan processors
-                    </div>
-                </div>
-            </div>
-
-            {/* 5 */}
-            <div className="grid grid-cols-2 gap-8 py-16 px-8">
-                <div className="flex items-center my-auto h-full">
-                    <div className="h-fit flex items-center my-auto p-3 rounded-lg text-white bg-[#1B2D9F] text-xl shadow-lg">
-                        Overwhelmed by tax deadlines? by outsourcing tax preparation to Accomate Global, you gain. the freedom to focus on core business activities.
-                        <br /><br />
-                        Our team of tax experts knows all the nitty-gritty of US tax rules and stays up-to-date with IRS changes.
-                    </div>
-                </div>
-
-                <div className="space-y-4">
-                    <div className="text-4xl text-[#1B2D9F] font-semibold border-b border-[#9F8D1B] pb-4">
-                        {usaservices[4].head}
-                    </div>
-
-                    <div className="text-lg">
-                        {usaservices[4].head2}
-                    </div>
-
-                    <ul className="list-none space-y-3">
-                        {usaservices[4].list.map((i) => {
-                            return (
-                                <li className="flex">
-                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                    {i}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
+                    )
+                })}
             </div>
         </div>
     )
