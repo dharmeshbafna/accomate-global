@@ -108,15 +108,17 @@ export const Usa = () => {
                                         priority
                                     />
 
-                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] flex items-center justify-center m-auto text-3xl p-5 text-white font-semibold">
-                                        {i.head}
+                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] p-4 text-white space-y-8">
+                                        <div className="text-2xl font-semibold">
+                                            {i.head}
+                                        </div>
+                                        <div className="text-lg">
+                                            {i.desc}
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-72 h-full">
-                                    <div>
-                                        {i.desc}
-                                    </div>
 
                                     <ul className="list-none space-y-3">
                                         {i.list.map((j, ind) => {
