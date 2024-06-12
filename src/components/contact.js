@@ -26,10 +26,10 @@ export const Contact = () => {
         phone: ''
     });
     const contactdetails = [
-        { country: 'India', phone: '+91 XXXXXXXXXXX', email: 'india@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006' },
-        { country: 'Australia', phone: '+91 XXXXXXXXXXX', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
-        { country: 'Canada', phone: '+91 XXXXXXXXXXX', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
-        { country: 'USA', phone: '+91 XXXXXXXXXXX', email: 'usa@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
+        { country: 'India', phone: '+91-8000494669', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
+        { country: 'Australia', phone: '+61 4  3319  7164', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
+        { country: 'Canada', phone: '+1 647 512 0026', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
+        { country: 'USA', phone: '+1 917 744 7835', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
     ];
 
     const handleSubmit = (e) => {
