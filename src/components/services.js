@@ -109,7 +109,7 @@ export const Usa = () => {
                                     />
 
                                     <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#0000005d] p-4 text-white space-y-8">
-                                        <div className="text-2xl font-semibold">
+                                        <div className="text-2xl font-semibold pb-3 border-b border-white">
                                             {i.head}
                                         </div>
                                         <div className="text-lg">
@@ -120,10 +120,10 @@ export const Usa = () => {
 
                                 <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-72 h-full">
 
-                                    <ul className="list-none space-y-3">
+                                    <ul className="list-none">
                                         {i.list.map((j, ind) => {
                                             return (
-                                                <li key={ind} className="flex">
+                                                <li key={ind} className="flex border-b border-gray-300 p-2 mb-2">
                                                     <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
                                                     {j}
                                                 </li>
