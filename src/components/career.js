@@ -39,8 +39,7 @@ export const CareerComp = () => {
                 environment where your skills are valued and your career aspirations are supported. Together, let's
                 achieve new heights and make a difference.
                 <br /><br />
-                Below are the designations available at our organization. To join, please fill out the form and upload your
-                resume.
+                We invite you to explore the exciting career opportunities at our organization. The designations are as per listed below. To apply, please complete the online form and upload your resume.
             </div>
 
             <div className="grid grid-cols-3 gap-5">

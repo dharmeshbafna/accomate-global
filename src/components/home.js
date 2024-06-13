@@ -128,12 +128,12 @@ export const Banner = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-[#0000005d]"></div>
 
                         {/* Text */}
-                        <div className={`space-y-4 absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                           <div className="font-semibold text-white text-4xl leading-10">
+                        <div className={`space-y-6 absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                            <div className="font-semibold text-white text-4xl leading-[3rem]">
                                 {slide.title}
-                           </div>
+                            </div>
 
-                           <div className="text-lg text-white leading-relaxed">
+                            <div className="text-lg text-white leading-relaxed">
                                 {slide.description}
                             </div>
                         </div>
@@ -275,6 +275,9 @@ export const Services = () => {
         {
             icon: '/book.json',
             head: 'Accounting',
+            desc: `At Accomate, we pride ourselves on offering offshore accountancy services tailored to meet the unique needs of each 
+            client. Offshore bookkeeping services can save your business valuable time and money compared to hiring an in-house 
+            bookkeeper.`,
             head2: 'Our accounting services include:',
             list: [
                 'Bookkeeping and bank reconciliations',
@@ -285,6 +288,7 @@ export const Services = () => {
         {
             icon: '/doc.json',
             head: 'Financial Statement Compilation',
+            desc: 'Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.',
             head2: 'Our financial statements compilation services include:',
             list: [
                 'Balance sheets',
@@ -295,6 +299,7 @@ export const Services = () => {
         {
             icon: '/zoom.json',
             head: 'Audit & Assurance',
+            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain financial transparency and meet stringent regulatory requirements. Partner with our team of skilled auditors, for your peace of mind and a successful financial journey',
             head2: 'Our audit & assurance services including but not limited to:',
             list: [
                 'Financial statement audits',
@@ -303,8 +308,23 @@ export const Services = () => {
             ]
         },
         {
+            icon: '/privacy-policy.json',
+            head: 'Tax Compilation',
+            desc: `When tax filing deadlines approach, the rush can leave business owners and CPAs feeling overwhelmed. That's where Accomate steps in to shoulder the pressure. Our team of tax experts is well-versed in all the nitty-gritty details of US tax rules and stays up-to-date with IRS changes. By outsourcing your tax preparation, you can focus on your core business activities.`,
+            head2: 'Our comprehensive tax services include:',
+            list: [
+                'Individual returns such as Form 1040, 1040NR, 1041',
+                'Foreign investments compliances (Form 5471, 8865)',
+                'Preparation of federal and state schedule K-1 reporting for investors',
+            ]
+        },
+        {
             icon: '/home.json',
             head: 'Mortgage Broking',
+            desc: `Grow your mortgage book faster and more efficiently 
+            Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
+            Reduce costs and gain experienced loan processors
+            `,
             head2: 'Our mortgage broking services include:',
             list: [
                 'Data entry and document verification',
@@ -313,22 +333,15 @@ export const Services = () => {
                 'Online Application and lodgment'
             ]
         },
-        {
-            icon: '/privacy-policy.json',
-            head: 'Tax Compilation',
-            head2: 'Our comprehensive tax services include:',
-            list: [
-                'Individual returns such as Form 1040, 1040NR, 1041',
-                'Foreign investments compliances (Form 5471, 8865)',
-                'Preparation of federal and state schedule K-1 reporting for investors',
-            ]
-        },
     ];
 
     const canadaservices = [
         {
             icon: '/book.json',
             head: 'Accounting',
+            desc: `At Accomate, we pride ourselves on offering offshore accountancy services tailored to meet the unique needs of each 
+            client. Offshore bookkeeping services can save your business valuable time and money compared to hiring an in-house 
+            bookkeeper.`,
             head2: 'Our accounting services include:',
             list: [
                 'Data entry',
@@ -337,8 +350,20 @@ export const Services = () => {
             ]
         },
         {
+            icon: '/home.json',
+            head: 'Payroll Processing',
+            desc: 'Our services are designed to meet the various needs of businesses and accounting professionals. By outsourcing payroll preparation to Accomate, you can focus on your business while we handle inefficiencies, reporting, and cost-cutting.',
+            head2: 'Our payroll services include:',
+            list: [
+                'Payroll accounting and prompt processing and filing',
+                'Annual filing of T4 and T5 slips for all employees',
+                'Payroll Tax management and compliance'
+            ]
+        },
+        {
             icon: '/doc.json',
             head: 'Financial Statement Compilation',
+            desc: 'Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.',
             head2: 'Our financial statements compilation services for corporates and trusts includes preparation of:',
             list: [
                 'Balance sheets',
@@ -349,6 +374,7 @@ export const Services = () => {
         {
             icon: '/zoom.json',
             head: 'Audit & Assurance',
+            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain financial transparency and meet stringent regulatory requirements. Partner with our team of skilled auditors, for your peace of mind and a successful financial journey',
             head2: 'Our audit & assurance services including but not limited to:',
             list: [
                 'Preparation of audit schedules',
@@ -357,18 +383,9 @@ export const Services = () => {
             ]
         },
         {
-            icon: '/home.json',
-            head: 'Payroll Processing',
-            head2: 'Our payroll services include:',
-            list: [
-                'Payroll accounting and prompt processing and filing',
-                'Annual filing of T4 and T5 slips for all employees',
-                'Payroll Tax management and compliance'
-            ]
-        },
-        {
             icon: '/privacy-policy.json',
             head: 'Tax Compilation',
+            desc: `When tax filing deadlines approach, the rush can leave business owners and CPAs feeling overwhelmed. That's where Accomate steps in to shoulder the pressure. Our team of tax experts is well-versed in all the nitty-gritty details of US tax rules and stays up-to-date with IRS changes. By outsourcing your tax preparation, you can focus on your core business activities.`,
             head2: 'Our comprehensive tax services include:',
             list: [
                 'Preparation and filing of GST returns',
@@ -382,6 +399,9 @@ export const Services = () => {
         {
             icon: '/book.json',
             head: 'Accounting',
+            desc: `At Accomate, we pride ourselves on offering offshore accountancy services tailored to meet the unique needs of each 
+            client. Offshore bookkeeping services can save your business valuable time and money compared to hiring an in-house 
+            bookkeeper.`,
             head2: 'Our accounting services include:',
             list: [
                 'Data entry',
@@ -392,6 +412,7 @@ export const Services = () => {
         {
             icon: '/doc.json',
             head: 'Financial Statement Compilation',
+            desc: 'Our team of qualified professionals is dedicated to delivering comprehensive Financial Statement compilation services designed to instill confidence in your financial statements. Focus on your core operations while our experts ensure accurate and timely financial reporting.',
             head2: 'Our financial statements compilation services for corporates and trusts includes preparation of:',
             list: [
                 'Balance sheets',
@@ -402,6 +423,7 @@ export const Services = () => {
         {
             icon: '/zoom.json',
             head: 'Audit & Assurance',
+            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain financial transparency and meet stringent regulatory requirements. Partner with our team of skilled auditors, for your peace of mind and a successful financial journey',
             head2: 'Our audit & assurance services including but not limited to:',
             list: [
                 'Preparation of audit schedules',
@@ -410,19 +432,9 @@ export const Services = () => {
             ]
         },
         {
-            icon: '/home.json',
-            head: 'Mortgage Broking',
-            head2: 'Our mortgage broking services include:',
-            list: [
-                'Data entry and document verification',
-                'Serviceability analysis',
-                'Ordering property valuation',
-                'Online Application and lodgment'
-            ]
-        },
-        {
             icon: '/privacy-policy.json',
             head: 'Tax Compilation',
+            desc: `When tax filing deadlines approach, the rush can leave business owners and CPAs feeling overwhelmed. That's where Accomate steps in to shoulder the pressure. Our team of tax experts is well-versed in all the nitty-gritty details of US tax rules and stays up-to-date with IRS changes. By outsourcing your tax preparation, you can focus on your core business activities.`,
             head2: 'Our comprehensive tax services include:',
             list: [
                 'Tax guidance and Tax Planning',
@@ -433,12 +445,30 @@ export const Services = () => {
         {
             icon: '/commodity.json',
             head: 'Managing SMSF',
+            desc: `Even though, SMSF provides excellent control of funds transfer after retirement, developing and managing SMSF compliance requirements is not only challenging but also time-consuming. 
+            However, Our highly experienced fund advisors work closely with you to help you with end-to-end SMSF administration services
+            `,
             head2: 'Below are the services we provide for SMSF:',
             list: [
                 'SMSF accounting',
                 'Ensuring Compliance with regulations',
                 'Preparation of SMSF Tax Returns',
                 'Preparation of audit workpapers',
+            ]
+        },
+        {
+            icon: '/home.json',
+            head: 'Mortgage Broking',
+            desc: `Grow your mortgage book faster and more efficiently 
+            Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
+            Reduce costs and gain experienced loan processors
+            `,
+            head2: 'Our mortgage broking services include:',
+            list: [
+                'Data entry and document verification',
+                'Serviceability analysis',
+                'Ordering property valuation',
+                'Online Application and lodgment'
             ]
         },
     ];
@@ -584,6 +614,11 @@ export const Services = () => {
                         <div ref={sliderRef} className="keen-slider">
 
                             {usaservices.map((i, index) => {
+
+                                const truncateText = (text, maxLength) => {
+                                    if (text.length <= maxLength) return text;
+                                    return text.substring(0, maxLength) + ' ...';
+                                };
                                 return (
                                     <div
                                         onMouseEnter={() => setHovered(false)}
@@ -604,14 +639,18 @@ export const Services = () => {
                                                     {i.head}
                                                 </div>
 
-                                                <div className="font-semibold flex justify-start">
+                                                {/* <div className="font-semibold flex justify-start">
                                                     {i.head2}
+                                                </div> */}
+
+                                                <div className="flex">
+                                                    {truncateText(i.desc, 100)}
                                                 </div>
 
                                                 <ul className="w-full list-disc pl-4">
-                                                    {i.list.map((j) => (
+                                                    {i.list.slice(0, 3).map((j) => (
                                                         <li>
-                                                            {j}
+                                                            {truncateText(j, 15)}
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -631,6 +670,11 @@ export const Services = () => {
                             <div ref={sliderRef1} className="keen-slider">
 
                                 {canadaservices.map((i, index) => {
+
+                                    const truncateText = (text, maxLength) => {
+                                        if (text.length <= maxLength) return text;
+                                        return text.substring(0, maxLength) + ' ...';
+                                    };
                                     return (
                                         <div
                                             onMouseEnter={() => setHovered(false)}
@@ -651,7 +695,7 @@ export const Services = () => {
                                                         {i.head}
                                                     </div>
 
-                                                    <div className="font-semibold flex justify-start">
+                                                    {/* <div className="font-semibold flex justify-start">
                                                         {i.head2}
                                                     </div>
 
@@ -659,6 +703,18 @@ export const Services = () => {
                                                         {i.list.map((j) => (
                                                             <li>
                                                                 {j}
+                                                            </li>
+                                                        ))}
+                                                    </ul> */}
+
+                                                    <div className="flex">
+                                                        {truncateText(i.desc, 100)}
+                                                    </div>
+
+                                                    <ul className="w-full list-disc pl-4">
+                                                        {i.list.slice(0, 3).map((j) => (
+                                                            <li>
+                                                                {truncateText(j, 15)}
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -678,6 +734,12 @@ export const Services = () => {
                                 <div ref={sliderRef2} className="keen-slider">
 
                                     {australiaservices.map((i, index) => {
+
+                                        const truncateText = (text, maxLength) => {
+                                            if (text.length <= maxLength) return text;
+                                            return text.substring(0, maxLength) + ' ...';
+                                        };
+
                                         return (
                                             <div
                                                 onMouseEnter={() => setHovered(false)}
@@ -698,7 +760,7 @@ export const Services = () => {
                                                             {i.head}
                                                         </div>
 
-                                                        <div className="font-semibold flex justify-start">
+                                                        {/* <div className="font-semibold flex justify-start">
                                                             {i.head2}
                                                         </div>
 
@@ -706,6 +768,18 @@ export const Services = () => {
                                                             {i.list.map((j) => (
                                                                 <li>
                                                                     {j}
+                                                                </li>
+                                                            ))}
+                                                        </ul> */}
+
+                                                        <div className="flex">
+                                                            {truncateText(i.desc, 100)}
+                                                        </div>
+
+                                                        <ul className="w-full list-disc pl-4">
+                                                            {i.list.slice(0, 3).map((j) => (
+                                                                <li>
+                                                                    {truncateText(j, 15)}
                                                                 </li>
                                                             ))}
                                                         </ul>

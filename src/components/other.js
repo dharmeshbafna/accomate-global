@@ -513,7 +513,7 @@ export const Fixbtn = () => {
     }, []);
 
     return (
-        <a href="#" target="_blank">
+        <a href="https://api.whatsapp.com/send/?phone=919016200968&text&type=phone_number&app_absent=0" target="_blank">
             <button className={`z-50 fixed bottom-4 right-6 shadow-lg rounded-full bg-green-500 text-white p-3 text-3xl hover:scale-[110%] duration-300`}>
                 <FaWhatsapp className="" />
             </button>

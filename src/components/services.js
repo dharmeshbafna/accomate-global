@@ -24,7 +24,9 @@ export const Usa = () => {
             img: '/accounts.png',
             head: 'Accounting',
             head2: 'Our accounting services include:',
-            desc: 'Outsourcing bookkeeping services to Accomate can provide your business with a reliable and cost-effective Our team of experienced professionals will handle tasks such as maintaining ledgers, preparing financial statements, and reconciling bank accounts, ensuring your financial records are accurate and up-to-date',
+            desc: `At Accomate, we pride ourselves on offering offshore accountancy services tailored to meet the unique needs of each 
+            client. Offshore bookkeeping services can save your business valuable time and money compared to hiring an in-house 
+            bookkeeper.`,
             list: [
                 'Bookkeeping and bank reconciliations',
                 'Payroll processing (T4 &T5)',
@@ -46,7 +48,7 @@ export const Usa = () => {
             img: '/payroll.png',
             head: 'Audit & Assurance',
             head2: 'Our audit & assurance services encompass a wide range of areas, including but not limited to:',
-            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain your financial transparency, meet stringent regulatory requirements Partner with us for peace of mind and a successful financial journey',
+            desc: 'Our qualified professionals deliver comprehensive audit, review, and compilation services, designed to maintain financial transparency and meet stringent regulatory requirements. Partner with our team of skilled auditors, for your peace of mind and a successful financial journey',
             list: [
                 'Financial statement audits',
                 'Internal control assessment and evaluations',
@@ -58,7 +60,10 @@ export const Usa = () => {
             img: '/payroll.png',
             head: 'Mortgage Broking',
             head2: 'Our mortgage broking services include:',
-            desc: 'Grow your mortgage book faster and more efficiently Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority. Reduce costs and gain experienced loan processors',
+            desc: `Grow your mortgage book faster and more efficiently 
+            Accomte Global works with mortgage brokers, to support their operations, from processing the initial application through to mortgage discharge from the relevant authority.
+            Reduce costs and gain experienced loan processors
+            `,
             list: [
                 'Data entry and document verification',
                 'Serviceability analysis',
@@ -70,7 +75,7 @@ export const Usa = () => {
             img: '/taxation.png',
             head: 'Tax Compilation',
             head2: 'Our comprehensive tax services include:',
-            desc: 'Overwhelmed by tax deadlines? by outsourcing tax preparation to Accomate Global, you gain. the freedom to focus on core business activities. Our team of tax experts knows all the nitty-gritty of US tax rules and stays up-to-date with IRS changes.',
+            desc: `When tax filing deadlines approach, the rush can leave business owners and CPAs feeling overwhelmed. That's where Accomate steps in to shoulder the pressure. Our team of tax experts is well-versed in all the nitty-gritty details of US tax rules and stays up-to-date with IRS changes. By outsourcing your tax preparation, you can focus on your core business activities.`,
             list: [
                 'Preparation of U.S. federal returns and state tax returns including composite tax returns, state tax returns, PTE state tax returns',
                 'Business returns such as Form 1065 (pass through), 1120S (pass through), 1120 (corp)',
@@ -96,8 +101,8 @@ export const Usa = () => {
                 {usaservices.map((i, index) => {
                     return (
                         <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-72">
-                                <div className="relative w-full rounded-lg shadow min-h-72">
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-80">
+                                <div className="relative w-full rounded-lg shadow min-h-80">
                                     <Image
                                         src={i.img}
                                         alt="img"
@@ -118,7 +123,12 @@ export const Usa = () => {
                                     </div>
                                 </div>
 
-                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-72 h-full">
+                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-80 h-full">
+
+
+                                    <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
+                                        {i.head}
+                                    </div>
 
                                     <ul className="list-none">
                                         {i.list.map((j, ind) => {
