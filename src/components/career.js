@@ -1,17 +1,30 @@
 'use client'
 import { useState, useEffect } from "react"
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
 
 export const CareerComp = () => {
 
+    const [modal, setModal] = useState(false);
+    const [fd, setFd] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        msg: '',
+        desig: '',
+    });
+    const [success, setSuccess] = useState('');
+    const [err, setErr] = useState('');
+    const [load, setLoad] = useState(false);
     const fields = [
-        { name : 'USA Accounts & Tax Analyst' },
-        { name : 'Australian Accounts & Tax Analyst​' },
-        { name : 'Canadian Accounts & Tax Analyst' },
-        { name : 'USA Accounts Executive' },
-        { name : 'Australian Accounts Executive' },
-        { name : 'Canadian Accounts Executive' },
-        { name : 'USA Mortgage Loan Processor' },
-        { name : 'Australian Mortgage Loan Processor' },
+        { name: 'USA Accounts & Tax Analyst' },
+        { name: 'Australian Accounts & Tax Analyst​' },
+        { name: 'Canadian Accounts & Tax Analyst' },
+        { name: 'USA Accounts Executive' },
+        { name: 'Australian Accounts Executive' },
+        { name: 'Canadian Accounts Executive' },
+        { name: 'USA Mortgage Loan Processor' },
+        { name: 'Australian Mortgage Loan Processor' },
     ];
 
     return (
@@ -31,20 +44,115 @@ export const CareerComp = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-5">
-                    {fields.map((i, index) => {
-                        return (
-                            <div className="p-4 rounded-lg shadow border border-[#9F8D1B]">
-                                <div className="font-semibold text-[#1B2D9F] text-center border-b pb-4 mb-4 text-lg">
-                                    {i.name}
-                                </div>
-
-                                <button className="flex justify-center mx-auto px-4 py-2 rounded-full bg-[#9F8D1B] text-white hover:bg-[#1B2D9F] duration-300">
-                                    Apply Now
-                                </button>
+                {fields.map((i, index) => {
+                    return (
+                        <div className="p-4 rounded-lg shadow border border-[#9F8D1B]">
+                            <div className="font-semibold text-[#1B2D9F] text-center border-b pb-4 mb-4 text-lg">
+                                {i.name}
                             </div>
-                        )
-                    })}
+
+                            <button onClick={() => { setModal(true); setFd({ ...fd, desig: i.name }) }} className="flex justify-center mx-auto px-4 py-2 rounded-full bg-[#9F8D1B] text-white hover:bg-[#1B2D9F] duration-300">
+                                Apply Now
+                            </button>
+                        </div>
+                    )
+                })}
             </div>
+
+            <Modal
+                open={modal}
+                onClose={() => setModal(false)}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box className="absolute top-1/2 left-1/2 bg-white rounded-lg shadow-lg p-3 focus:outline-none -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[65%] lg:w-auto md:max-w-[80%]">
+                    {success ?
+                        <div className="text-center text-green-500">
+                            {success}
+                        </div> :
+                        err ?
+                            <div className="text-center text-red-500">
+                                {error}
+                            </div> :
+                            load ?
+                                <div className="flex justify-center mx-auto">
+                                    <Oval
+                                        visible={true}
+                                        height="80"
+                                        width="80"
+                                        color="#274A94"
+                                        ariaLabel="oval-loading"
+                                        wrapperStyle={{}}
+                                        wrapperClass=""
+                                    />
+                                </div> :
+                                <form className="space-y-4 overflow-y-auto">
+                                    <div className="font-semibold text-xl flex justify-center mx-auto text-center">
+                                        Apply Now
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+
+                                        <input
+                                            type="name"
+                                            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
+                                            placeholder="Your Name*"
+                                            required
+                                        />
+
+                                        <input
+                                            type="email"
+                                            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
+                                            placeholder="Your Email*"
+                                            required
+                                        />
+
+                                        <input
+                                            type="tel"
+                                            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
+                                            placeholder="Your Phone*"
+                                            required
+                                        />
+
+                                        <select
+                                            value={fd.desig}
+                                            onChange={(e) => setFd({ ...fd, desig: e.target.value })}
+                                            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]">
+
+                                            {fields.map((i, index) => {
+                                                return (
+                                                    <option value={i.name} key={index}>
+                                                        {i.name}
+                                                    </option>
+                                                )
+                                            })}
+                                        </select>
+                                    </div>
+
+                                    <textarea
+                                        className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
+                                        placeholder="Additional Message"
+                                        rows={5}
+                                    >
+                                    </textarea>
+
+                                    <div className="flex items-center my-auto space-x-3">
+                                        <span className="">
+                                            Upload Your CV :
+                                        </span>
+                                        <input
+                                            type="file"
+                                            required
+                                        />
+                                    </div>
+
+                                    <button className="px-6 py-2 bg-[#1B2D9F] text-white rounded-full shadow">
+                                        Apply
+                                    </button>
+                                </form>
+                    }
+                </Box>
+            </Modal>
         </div>
     )
 }
