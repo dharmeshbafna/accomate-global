@@ -181,23 +181,23 @@ export const Team = () => {
 
     const data = [
         // advisory
-        { name: 'Rohit Choksi', img: '/team/rohit.jpeg', list: ['CA, BCOM', 'Co Founder GK Choksi & CO.', '50 Yrs. Exp. in taxation'] },
-        { name: 'Vartik Choksi', img: '/team/vartik.jpeg', list: ['CA, CPA (USA)', 'Partner GK Choksi & CO.', '15 Yrs. Exp. in International taxation'] },
-        { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['CA, BCOM', 'President , GK Choksi & Co.', '30 Yrs. Exp Audit & Assurance'] },
-        { name: 'Dr. Ashutosh Bharadwaj', img: '/team/ashutosh.jpg', list: ['Growth strategist', '20 Yrs. Industry Exp'] },
+        { name: 'Rohit Choksi', img: '/team/rohit.jpeg', list: ['Co Founder ,GK Choksi & CO.', '50 Years Experience in Taxation', 'CA, BCOM'] },
+        { name: 'Vartik Choksi', img: '/team/vartik.jpeg', list: ['Partner, GK Choksi & CO.', '15 Years Experience in International Taxation', 'CA, CPA (USA)'] },
+        { name: 'Rajendra Mulani', img: '/team/rajendra.jpeg', list: ['President , GK Choksi & Co.', '30 Years Experience in Audit & Assurance', 'CA, BCOM'] },
+        { name: 'Dr. Ashutosh Bharadwaj', img: '/team/ashutosh.jpg', list: ['Growth strategist', '20 Years of Industry Experience'] },
         // core
-        { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['Director', 'EGMP (IIM-L), HRM (XLRI-J)', '20 Yrs. Industry Exp.'] },
-        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['CA, CPA (Aus), DISA, FAFD (ICAI)','Business Development Head', '8 Yrs. Exp. in Audit and Tax'] },
-        { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing', 'Non Executive Director', '8 Yrs. Exp. in Audit and Tax'] },
+        { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['Director', '20 Years of Industry Experience', 'EGMP (IIM-L), HRM (XLRI-J)'] },
+        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['Business Development Head','8 Years Experience in Audit and Taxation', 'CA, CPA (Aus), DISA, FAFD (ICAI)'] },
+        { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['Non Executive Director', '8 Years Experience in Audit and Taxation', 'CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing'] },
         // Country Representative
         { name: 'Meet Thakkar', img: '/team/meet.jpeg', list: ['BDM Australia', '7 Years of Industry Experience', 'MBA (Marketing)​'] },
         { name: 'Mitva Patel', img: '/team/mitva.jpeg', list: ['BDM - USA', '3 Years of Industry Experience', 'MBA (Finance)'] },
-        { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['BDM - Canada, Ontario', 'CA, CPA (Can)', '8 Yrs. Exp. in Audit and Tax'] },
-        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['BDM - Canada, British Columbia', '8 Yrs. Exp. in Audit and Tax', 'CPA (Can)'] },
+        { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['BDM - Canada, Ontario', '8 Years Experience in Audit & Taxation', 'CA, CPA (CAN)'] },
+        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['BDM - Canada, British Columbia', '8 Years Experience in Audit and Tax', 'CPA (Can)'] },
         // Global Operations
-        { name: 'Hemant Chandak', img: '/team/hemant.jpg', list: ['Operation Head - Australia', 'CA', '8 Yrs. Exp. in Audit and Tax', 'Leading team of 3 Audit/Tax managers & Associates'] },
-        { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['CA, EA, CPA (US)', '9 Yrs Exp in US Taxation', 'Leading Team of Tax managers & Associates'] },
-        { name: 'Pratik Samdani', img: '/team/pratik.jpg', list: ['Operation Head – Canada', '6 Years Experience in Audit and Tax', 'Leading team of 2 Audit/Tax managers & Associates', 'CA'] },
+        { name: 'Hemant Chandak', img: '/team/hemant.jpg', list: ['Operation Head - Australia', '8 Years Experience in Audit and Taxation', 'Leading team of 3 Audit/Tax managers & Associates', 'CA'] },
+        { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['Operation Head – USA', '9 Years Experience in US Taxation', 'Leading team of 5 Tax managers & Associates', 'CA, EA, CPA (US)'] },
+        { name: 'Pratik Samdani', img: '/team/pratik.JPG', list: ['Operation Head – Canada', '6 Years Experience in Audit and Tax', 'Leading team of 2 Audit/Tax managers & Associates', 'CA'] },
         { name: 'Ankit Sudrania', img: '/team/dummy.jpg', list: ['CA,CAIIB,MDP (MDI-Gurgaon)', '11 Yrs. Exp. in corporate finance'] },
     ];
     const [show, setShow] = useState('advisory');
