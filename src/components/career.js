@@ -138,7 +138,7 @@ export const CareerComp = () => {
 
                                     <div className="flex items-center my-auto space-x-3">
                                         <span className="">
-                                            Upload Your CV :
+                                            Upload Your Resume :
                                         </span>
                                         <input
                                             type="file"
