@@ -331,9 +331,9 @@ export const Footer = () => {
                             Contact Us
                         </div>
                         <div className="mt-4 pl-2 grid grid-cols-1 gap-2">
-                            <a href="tel:+61-3991-77471" className="flex items-center my-auto hover:text-blue-500 duration-300">
+                            <a href="https://api.whatsapp.com/send/?phone=919016200968&text&type=phone_number&app_absent=0" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <FaWhatsapp className="flex-shrink-0 mr-2 text-xl" />
-                                +61-3991-77471
+                                +91 9016200968
                             </a>
                             <a href="mailto:info@accomateglobal.com" className="flex items-center my-auto hover:text-blue-500 duration-300">
                                 <MdOutlineEmail className="flex-shrink-0 mr-2 text-xl" />
