@@ -98,22 +98,26 @@ export const Usa = () => {
         <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
+
                 {usaservices.map((i, index) => {
                     return (
-                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
+                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
+
+                                {/* front */}
+                                <div className="relative h-full w-full rounded-lg shadow">
+
                                     <Image
                                         src={i.img}
                                         alt="img"
                                         objectFit="cover"
                                         layout="fill"
                                         objectPosition="center"
-                                        className="rounded-lg"
+                                        className="rounded-lg -z-10"
                                         priority
                                     />
 
-                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#00000077] p-4 text-white space-y-8">
+                                    <div className="rounded-lg w-full h-[100%] bg-[#00000077] p-4 text-white space-y-8">
                                         <div className="text-2xl font-semibold pb-3 border-b border-white">
                                             {i.head}
                                         </div>
@@ -121,9 +125,12 @@ export const Usa = () => {
                                             {i.desc}
                                         </div>
                                     </div>
+
+
                                 </div>
 
-                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-80 h-full">
+                                {/* back */}
+                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 h-full">
 
 
                                     <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
@@ -219,56 +226,63 @@ export const Canada = () => {
     return (
         <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
-                {canadaservices.map((i, index) => {
-                    return (
-                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
-                                    <Image
-                                        src={i.img}
-                                        alt="img"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        objectPosition="center"
-                                        className="rounded-lg"
-                                        priority
-                                    />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
 
-                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#00000077] p-4 text-white space-y-8">
-                                        <div className="text-2xl font-semibold pb-3 border-b border-white">
-                                            {i.head}
-                                        </div>
-                                        <div className="text-lg">
-                                            {i.desc}
-                                        </div>
-                                    </div>
-                                </div>
+            {canadaservices.map((i, index) => {
+                return (
+                    <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                        <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
 
-                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-80 h-full">
+                            {/* front */}
+                            <div className="relative h-full w-full rounded-lg shadow">
 
+                                <Image
+                                    src={i.img}
+                                    alt="img"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    objectPosition="center"
+                                    className="rounded-lg -z-10"
+                                    priority
+                                />
 
-                                    <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
+                                <div className="rounded-lg w-full h-[100%] bg-[#00000077] p-4 text-white space-y-8">
+                                    <div className="text-2xl font-semibold pb-3 border-b border-white">
                                         {i.head}
                                     </div>
-
-                                    <ul className="list-none">
-                                        {i.list.map((j, ind) => {
-                                            return (
-                                                <li key={ind} className="flex border-b border-gray-300 p-2 mb-2">
-                                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                                    {j}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
+                                    <div className="text-lg">
+                                        {i.desc}
+                                    </div>
                                 </div>
-                            </ReactCardFlip>
-                        </div>
-                    )
-                })}
-            </div>
+
+
+                            </div>
+
+                            {/* back */}
+                            <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 h-full">
+
+
+                                <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
+                                    {i.head}
+                                </div>
+
+                                <ul className="list-none">
+                                    {i.list.map((j, ind) => {
+                                        return (
+                                            <li key={ind} className="flex border-b border-gray-300 p-2 mb-2">
+                                                <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                                {j}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </ReactCardFlip>
+                    </div>
+                )
+            })}
         </div>
+    </div>
     )
 }
 
@@ -358,56 +372,63 @@ export const Australia = () => {
     return (
         <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
-                {australiaservices.map((i, index) => {
-                    return (
-                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
-                                    <Image
-                                        src={i.img}
-                                        alt="img"
-                                        objectFit="cover"
-                                        layout="fill"
-                                        objectPosition="center"
-                                        className="rounded-lg"
-                                        priority
-                                    />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
 
-                                    <div className="rounded-lg absolute top-0 left-0 w-full h-full bg-[#00000077] p-4 text-white space-y-8">
-                                        <div className="text-2xl font-semibold pb-3 border-b border-white">
-                                            {i.head}
-                                        </div>
-                                        <div className="text-lg">
-                                            {i.desc}
-                                        </div>
-                                    </div>
-                                </div>
+            {australiaservices.map((i, index) => {
+                return (
+                    <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                        <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
 
-                                <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 min-h-80 h-full">
+                            {/* front */}
+                            <div className="relative h-full w-full rounded-lg shadow">
 
+                                <Image
+                                    src={i.img}
+                                    alt="img"
+                                    objectFit="cover"
+                                    layout="fill"
+                                    objectPosition="center"
+                                    className="rounded-lg -z-10"
+                                    priority
+                                />
 
-                                    <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
+                                <div className="rounded-lg w-full h-[100%] bg-[#00000077] p-4 text-white space-y-8">
+                                    <div className="text-2xl font-semibold pb-3 border-b border-white">
                                         {i.head}
                                     </div>
-
-                                    <ul className="list-none">
-                                        {i.list.map((j, ind) => {
-                                            return (
-                                                <li key={ind} className="flex border-b border-gray-300 p-2 mb-2">
-                                                    <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
-                                                    {j}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
+                                    <div className="text-lg">
+                                        {i.desc}
+                                    </div>
                                 </div>
-                            </ReactCardFlip>
-                        </div>
-                    )
-                })}
-            </div>
+
+
+                            </div>
+
+                            {/* back */}
+                            <div className="shadow rounded-lg w-full border border-[#9F8D1B] p-4 space-y-4 h-full">
+
+
+                                <div className="text-2xl font-semibold pb-3 border-b text-[#1B2D9F] border-[#9F8D1B]">
+                                    {i.head}
+                                </div>
+
+                                <ul className="list-none">
+                                    {i.list.map((j, ind) => {
+                                        return (
+                                            <li key={ind} className="flex border-b border-gray-300 p-2 mb-2">
+                                                <SiTicktick className="text-lg text-[#9F8D1B] mt-1 mr-2 flex shrink-0" />
+                                                {j}
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </ReactCardFlip>
+                    </div>
+                )
+            })}
         </div>
+    </div>
     )
 }
 
