@@ -18,17 +18,17 @@ const jost = Jost({ subsets: ["latin"], weight: '700' });
 
 export const Whoweare = () => {
     return (
-        <div className="px-8 py-16 flex items-center my-auto w-full relative">
-            <div className="grid grid-cols-2 gap-3">
+        <div className="px-5 md:px-8 py-16 flex items-center my-auto w-full relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-3">
 
                 <div className="flex justify-center items-center m-auto w-full">
                     <div className="w-fit relative">
                         <Image
                             src={About2}
                             alt="About1"
-                            className="shadow-lg h-96 w-auto"
+                            className="shadow-lg w-full h-auto md:h-96 md:w-auto"
                         />
-                        <div className="absolute -bottom-6 -left-5 w-[80%] h-[80%] bg-[#9f8e1b5c] -z-10"></div>
+                        <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 w-full h-full lg:-bottom-6 lg:-left-5 lg:w-[80%] lg:h-[80%] bg-[#9f8e1b5c] -z-10"></div>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@ export const Whoweare = () => {
 export const MissionVision = () => {
     return (
         <div className="pt-5 pb-10">
-            <div className="grid grid-cols-2 gap-x-4">
+            <div className="lg:grid grid-cols-2 space-y-8 lg:space-y-0 gap-x-4">
                 <div className={`${jost.className} flex justify-center items-center mx-auto text-[140px] text-nowrap text-gray-200`}>
                     {/* <Image
                         src={CircleIcon}
@@ -83,24 +83,26 @@ export const MissionVision = () => {
                     /> */}
                 </div>
 
-                <div className="bg-[#9F8D1B] px-5 py-8 rounded-l-full">
-                    <div className="flex">
-                        <div className="min-w-[20%] flex justify-end mt-2">
-                            <GoGoal className="text-white h-14 w-auto flex-shrink-0" />
-                        </div>
-
-                        <div className="text-white ml-4 space-y-4">
-                            <div className="font-semibold text-3xl pt-3">
-                                Our Mission
+                <div className="flex justify-end w-full">
+                    <div className="md:w-[80%] lg:w-full flex justify-end bg-[#9F8D1B] md:px-5 py-8 rounded-l-full">
+                        <div className="flex pl-10 md:pl-0">
+                            <div className="min-w-[20%] flex justify-end mt-2">
+                                <GoGoal className="text-white h-14 w-auto flex-shrink-0" />
                             </div>
-                            <div>
-                                At Accomate Global, we empower CPAs and Financial Professionals for unparalleled success through premium outsourcing solutions. As a trusted partner, we utilize expertise and advanced technology to boost clients' efficiency, productivity, and profitability.
+
+                            <div className="text-white ml-4 space-y-4">
+                                <div className="font-semibold text-3xl pt-3">
+                                    Our Mission
+                                </div>
+                                <div>
+                                    At Accomate Global, we empower CPAs and Financial Professionals for unparalleled success through premium outsourcing solutions. As a trusted partner, we utilize expertise and advanced technology to boost clients' efficiency, productivity, and profitability.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-[#1B2D9F] px-7 py-8 rounded-r-full relative">
+                <div className="md:w-[80%] lg:w-full bg-[#1B2D9F] px-7 py-8 rounded-r-full relative">
                     <div className="flex">
                         <div className="min-w-[10%] flex justify-end mt-2">
                             <FaRegLightbulb className="text-white h-14 w-auto flex-shrink-0" />
@@ -131,8 +133,15 @@ export const MissionVision = () => {
 
 export const Director = () => {
     return (
-        <div className="px-8 py-16 flex space-x-4 w-full h-fit">
-            <div className="lg:w-[70%] border border-[#9F8D1B] p-10 rounded-bl-3xl flex flex-col justify-between">
+        <div className="px-5 md:px-8 py-16 md:flex md:space-x-4 w-full h-fit">
+            <div className="md:hidden relative w-fit border-t border-r border-l border-[#9F8D1B]">
+                <Image
+                    src={DirectorImg}
+                    alt="director"
+                    className="w-full h-auto"
+                />
+            </div>
+            <div className="md:w-[70%] border border-[#9F8D1B] p-5 md:p-7 lg:p-10 rounded-bl-3xl flex flex-col justify-between">
                 <div className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
@@ -162,13 +171,18 @@ export const Director = () => {
                 </div>
             </div>
 
-            <div className="lg:w-[30%] h-auto relative border border-black">
+            <div className="md:w-[30%] h-full hidden md:flex items-center my-auto lg:block lg:my-0 lg:h-auto relative">
                 <Image
                     src={DirectorImg}
                     objectFit="cover"
                     layout="fill"
                     alt="director"
-                    className=""
+                    className="hidden lg:block"
+                />
+                <Image
+                    src={DirectorImg}
+                    alt="director"
+                    className="w-full h-auto flex items-center my-auto lg:hidden"
                 />
                 <div className="absolute -bottom-3 -left-3 bg-[#9f8e1b5c] w-full h-[70%] -z-10"></div>
             </div>
@@ -187,7 +201,7 @@ export const Team = () => {
         { name: 'Dr. Ashutosh Bharadwaj', img: '/team/ashutosh.jpg', list: ['Growth strategist', '20 Years of Industry Experience'] },
         // core
         { name: 'Beena Mulani', img: '/team/beena.jpeg', list: ['Director', '20 Years of Industry Experience', 'EGMP (IIM-L), HRM (XLRI-J)'] },
-        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['Business Development Head','8 Years Experience in Audit and Taxation', 'CA, CPA (Aus), DISA, FAFD (ICAI)'] },
+        { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['Business Development Head', '8 Years Experience in Audit and Taxation', 'CA, CPA (Aus), DISA, FAFD (ICAI)'] },
         { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['Non Executive Director', '8 Years Experience in Audit and Taxation', 'CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing'] },
         // Country Representative
         { name: 'Meet Thakkar', img: '/team/meet.jpeg', list: ['BDM Australia', '7 Years of Industry Experience', 'MBA (Marketing)​'] },

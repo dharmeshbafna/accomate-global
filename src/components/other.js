@@ -1,10 +1,12 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link"
 
 import Logo1 from "../../public/n_logo1.png"
 import Logo2 from "../../public/n_logo2.png"
 import WhiteLogo from "../../public/accomate_logo_white.png"
 import WhiteLogo2 from "../../public/n_accomate_white.png"
+import CircleIcon from "../../public/n_accomate_circle.png"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaBars, FaWhatsapp } from "react-icons/fa6";
@@ -23,32 +25,115 @@ import { HiBuildingStorefront } from "react-icons/hi2";
 
 export const Sidebar = ({ toogle, setToogle }) => {
 
+    const [d1, setD1] = useState(false);
+    const [d2, setD2] = useState(false);
+    const path = usePathname();
     const navitems = [
         { name: "Home", link: "/" },
-        // { name: "About Us", link: "/about" },
-        // { name: "Our Team", link: "/team" },
         {
-            name: "Company", link: "#",
+            name: "Company", link: "",
             dropdown: [
                 { name: 'About Us', link: '/about' },
                 { name: 'Our Team', link: '/team' },
             ]
         },
         {
-            name: "Services", link: "/services",
+            name: "Services", link: "",
             dropdown: [
                 { name: 'USA', link: '/services/usa' },
                 { name: 'Canada', link: '/services/canada' },
                 { name: 'Australia', link: '/services/australia' },
             ]
         },
-        { name: "Infrastructure", link: "/infrastructure" },
+        { name: "Data Security", link: "/data-security" },
+        { name: "Career", link: "/career" },
     ];
+
+    const isActive = (href) => {
+        return path == href;
+    };
 
     return (
         <div className="">
-            <div className={`bg-white lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-[60%] md:w-1/2 shadow-lg z-50`}>
+            <div className={`space-y-4 p-4 bg-white lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-[60%] md:w-1/2 shadow-lg z-50`}>
 
+                <div className="w-full">
+                    <Image
+                        src={CircleIcon}
+                        alt="circle icon"
+                        className="w-[60%] h-auto flex justify-center mx-auto"
+                    />
+                </div>
+
+                <div className="space-y-4">
+                    {navitems.map((i, index) => {
+                        return (
+                            <div key={index} className="w-full relative border-b pb-2">
+                                {i.link ?
+                                    <a href={i.link} className="hover:text-[#1B2D9F] duration-300 text-nowrap">
+                                        <span className="flex items-center my-auto">
+                                            {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
+                                        </span>
+                                    </a> :
+                                    <div>
+                                        <button className="text-nowrap" onClick={
+                                            i.name == 'Company' ? () => setD1(!d1) :
+                                                i.name == 'Services' ? () => setD2(!d2) :
+                                                    () => { }
+                                        }>
+                                            <span className="flex items-center my-auto">
+                                                {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
+                                            </span>
+                                        </button>
+
+                                        {d1 && i.name == 'Company' ?
+                                            <div className="border space-y-2 px-2 py-3 rounded-lg w-[80%]">
+                                                {i.dropdown.map((j, ind) => {
+                                                    return (
+                                                        <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                            <a href={j.link}>
+                                                                {j.name}
+                                                            </a>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div> : ''}
+
+                                        {d2 && i.name == 'Services' ?
+                                            <div className="border space-y-2 px-2 py-3 rounded-lg w-[80%]">
+                                                {i.dropdown.map((j, ind) => {
+                                                    return (
+                                                        <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                            <a href={j.link}>
+                                                                {j.name}
+                                                            </a>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div> : ''}
+                                    </div>
+                                }
+                                <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}>
+                                </span>
+                            </div>
+                        )
+                    })}
+                </div>
+
+                <div className="flex justify-between">
+                    <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
+                        <FaFacebookF className="text-lg" />
+                    </a>
+                    <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
+                        <FaInstagram className="text-lg" />
+                    </a>
+                    <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
+                        <FaLinkedinIn className="text-lg" />
+                    </a>
+                    <a href="#" className="rounded-full p-2 border-2 border-[#1B2D9F] shadow text-[#1B2D9F] hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
+                        <FaXTwitter className="text-lg" />
+                    </a>
+                </div>
             </div>
             <div onClick={() => setToogle(false)} className={`bg-transparent lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-full shadow-lg z-40`}>
             </div>
@@ -109,15 +194,15 @@ export const Navbar = () => {
     return (
         <div className={``}>
             <div className={`p-5 lg:py-6 lg:px-8 bg-[#1B2D9F]`}>
-                <div className="flex items-center my-auto w-full">
+                <div className="flex items-center my-auto w-full justify-between">
 
                     {/* Logo */}
-                    <div className="flex items-center w-[80%] lg:w-[35%]">
+                    <div className="flex items-center md:w-[80%] lg:w-[35%]">
                         <a href="/">
                             <Image
                                 src={WhiteLogo}
                                 alt="Accomate Logo"
-                                className="w-full h-auto md:h-5 md:w-auto"
+                                className="h-4 w-auto md:h-5 md:w-auto"
                             />
                         </a>
                     </div>
@@ -148,7 +233,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -162,7 +247,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -178,7 +263,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Hamburger */}
-                    <div className="flex justify-end w-full lg:hidden">
+                    <div className="flex justify-end w-auto lg:hidden">
                         <FaBars className=" text-white" onClick={() => setToogle(true)} />
                     </div>
                 </div>
@@ -186,15 +271,15 @@ export const Navbar = () => {
 
             {/* Sticky */}
             <div className={`${sticky ? 'fixed top-0 left-0 w-full z-50 shadow-lg ' : 'hidden'} p-5 lg:py-6 lg:px-8 bg-white`}>
-                <div className="flex items-center my-auto w-full">
+                <div className="flex items-center my-auto w-full justify-between">
 
                     {/* Logo */}
-                    <div className="flex items-center w-[80%] lg:w-[35%]">
+                    <div className="flex items-center md:w-[80%] lg:w-[35%]">
                         <a href="/">
                             <Image
                                 src={Logo1}
                                 alt="Accomate Logo"
-                                className="w-full h-auto md:h-5 md:w-auto"
+                                className="h-4 w-auto md:h-5 md:w-auto"
                             />
                         </a>
                     </div>
@@ -218,8 +303,7 @@ export const Navbar = () => {
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : () => { }}
                                         className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}>
-                                            
-                                        </span>
+                                    </span>
 
                                     {dropdown && i.name == "Services" ?
                                         <div
@@ -229,7 +313,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : ''} block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -243,7 +327,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : ''} text-nowrap block text-black hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -259,7 +343,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Hamburger */}
-                    <div className="flex justify-end w-full lg:hidden">
+                    <div className="flex justify-end w-auto lg:hidden">
                         <FaBars className=" text-[#1B2D9F]" onClick={() => setToogle(true)} />
                     </div>
                 </div>
@@ -272,7 +356,7 @@ export const Navbar = () => {
 export const Footer = () => {
     return (
         <div className="px-5 lg:px-8 pt-14 pb-10 bg-gray-900 text-white">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:flex w-full space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:flex w-full md:space-x-3 space-y-4 lg:space-y-0">
                 {/* About */}
                 <div className="lg:w-[40%] space-y-4">
                     <Image
@@ -362,7 +446,7 @@ export const Footer = () => {
 export const Clients = () => {
     return (
         <div className="bg-gray-200 px-8 py-14 space-y-12">
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+            <div className="font-semibold text-3xl flex justify-center mx-auto text-center leading-relaxed">
                 Clients We Help Thrive
             </div>
 
@@ -370,7 +454,7 @@ export const Clients = () => {
                 Accomate Global is dedicated to providing outsourcing services to various clientele and then in horizontal line add above clientel with different icons if possible.
             </div> */}
 
-            <div className="grid grid-cols-5 gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-5">
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
@@ -456,7 +540,7 @@ export const Breadcrumb = () => {
             <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 flex justify-center items-center m-auto">
 
                 <div className="space-y-3">
-                    <div className="text-white font-semibold text-[3.5rem] text-center">
+                    <div className="text-white font-semibold text-[2.5rem] md:text-[3.5rem] text-center">
                         {
                             path == '/about' ? 'About Us' :
                                 path == '/team' ? 'Our Team' :
