@@ -2,6 +2,9 @@
 import { useState, useEffect } from "react"
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import { CareerForm } from "@/api/form";
+
+import { Oval } from "react-loader-spinner";
 
 export const CareerComp = () => {
 
@@ -13,6 +16,7 @@ export const CareerComp = () => {
         msg: '',
         desig: '',
     });
+    const [file, setFile] = useState(null);
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
     const [load, setLoad] = useState(false);
@@ -26,6 +30,51 @@ export const CareerComp = () => {
         { name: 'USA Mortgage Loan Processor' },
         { name: 'Australian Mortgage Loan Processor' },
     ];
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        setLoad(true);
+        setModal(true);
+
+        const formd = new FormData();
+        formd.append('fd', JSON.stringify(fd));
+        formd.append('file', file);
+
+        const res = await CareerForm(formd);
+
+        if (res.success) {
+            setSuccess(res.success);
+            setErr('');
+            setLoad(false);
+            setTimeout(() => {
+                setSuccess('');
+                setModal(false);
+                setFd({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    msg: '',
+                    desig: '',
+                });
+            }, 3000);
+        } else {
+            setSuccess('');
+            setErr(res.error || 'Internal server error');
+            setLoad(false);
+            setTimeout(() => {
+                setErr('');
+                setModal(false);
+                setFd({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    msg: '',
+                    desig: '',
+                });
+            }, 3000);
+        }
+    };
 
     return (
         <div className="px-5 md:px-8 py-16">
@@ -71,7 +120,7 @@ export const CareerComp = () => {
                         </div> :
                         err ?
                             <div className="text-center text-red-500">
-                                {error}
+                                {err}
                             </div> :
                             load ?
                                 <div className="flex justify-center mx-auto">
@@ -79,13 +128,14 @@ export const CareerComp = () => {
                                         visible={true}
                                         height="80"
                                         width="80"
-                                        color="#274A94"
+                                        color="#1B2D9F"
+                                        secondaryColor="#9F8D1B"
                                         ariaLabel="oval-loading"
                                         wrapperStyle={{}}
                                         wrapperClass=""
                                     />
                                 </div> :
-                                <form className="space-y-4 overflow-y-auto">
+                                <form onSubmit={handleSubmit} className="space-y-4 overflow-y-auto">
                                     <div className="font-semibold text-xl flex justify-center mx-auto text-center">
                                         Apply Now
                                     </div>
@@ -96,6 +146,8 @@ export const CareerComp = () => {
                                             type="name"
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Name*"
+                                            value={fd.name}
+                                            onChange={(e) => setFd({ ...fd, name: e.target.value })}
                                             required
                                         />
 
@@ -103,6 +155,8 @@ export const CareerComp = () => {
                                             type="email"
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Email*"
+                                            value={fd.email}
+                                            onChange={(e) => setFd({ ...fd, email: e.target.value })}
                                             required
                                         />
 
@@ -110,6 +164,8 @@ export const CareerComp = () => {
                                             type="tel"
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Phone*"
+                                            value={fd.phone}
+                                            onChange={(e) => setFd({ ...fd, phone: e.target.value })}
                                             required
                                         />
 
@@ -131,6 +187,8 @@ export const CareerComp = () => {
                                     <textarea
                                         className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                         placeholder="Additional Message"
+                                        value={fd.msg}
+                                        onChange={(e) => setFd({ ...fd, msg: e.target.value })}
                                         rows={5}
                                     >
                                     </textarea>
@@ -141,6 +199,7 @@ export const CareerComp = () => {
                                         </span>
                                         <input
                                             type="file"
+                                            onChange={(e) => setFile(e.target.files[0])}
                                             required
                                         />
                                     </div>

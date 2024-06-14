@@ -16,6 +16,12 @@ import { MdOutlineEmail } from "react-icons/md";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { LuMapPin } from "react-icons/lu";
 
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import { Oval } from "react-loader-spinner";
+
+import { ContactForm } from "@/api/form"
+
 export const Contact = () => {
 
     const [fd, setFd] = useState({
@@ -25,6 +31,10 @@ export const Contact = () => {
         sub: '',
         phone: ''
     });
+    const [modal, setModal] = useState(false);
+    const [load, setLoad] = useState(false);
+    const [success, setSuccess] = useState('');
+    const [err, setErr] = useState('');
     const contactdetails = [
         { country: 'India', phone: '+91-8000494669', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
         { country: 'Australia', phone: '+61 4  3319  7164', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
@@ -32,9 +42,45 @@ export const Contact = () => {
         { country: 'USA', phone: '+1 917 744 7835', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
     ];
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(fd);
+        
+        setLoad(true);
+        setModal(true);
+
+        const res = await ContactForm(fd);
+
+        if(res.success) {
+            setSuccess(res.success);
+            setErr('');
+            setLoad(false);
+            setTimeout(() => {
+                setSuccess('');
+                setModal(false);
+                setFd({
+                    name: '',
+                    email: '',
+                    message: '',
+                    sub: '',
+                    phone: ''
+                });
+            }, 3000);
+        } else {
+            setSuccess('');
+            setErr(res.error || 'Internal server error');
+            setLoad(false);
+            setTimeout(() => {
+                setErr('');
+                setModal(false);
+                setFd({
+                    name: '',
+                    email: '',
+                    message: '',
+                    sub: '',
+                    phone: ''
+                });
+            }, 3000);
+        }
     };
 
     return (
@@ -175,6 +221,37 @@ export const Contact = () => {
                     </a>
                 </div>
             </div>
+
+            <Modal
+                open={modal}
+                onClose={() => setModal(false)}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box className="absolute top-1/2 left-1/2 bg-white rounded-lg shadow-lg p-3 focus:outline-none -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[65%] lg:w-auto md:max-w-[80%]">
+                    {success ?
+                        <div className="text-center text-green-500">
+                            {success}
+                        </div> :
+                        err ?
+                            <div className="text-center text-red-500">
+                                {err}
+                            </div> :
+                            load ?
+                                <div className="flex justify-center mx-auto">
+                                    <Oval
+                                        visible={true}
+                                        height="80"
+                                        width="80"
+                                        color="#1B2D9F"
+                                        secondaryColor="#9F8D1B"
+                                        ariaLabel="oval-loading"
+                                        wrapperStyle={{}}
+                                        wrapperClass=""
+                                    />
+                                </div> : ''}
+                </Box>
+            </Modal>
         </div>
     )
 }
