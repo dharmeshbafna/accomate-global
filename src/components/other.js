@@ -57,7 +57,7 @@ export const Sidebar = ({ toogle, setToogle }) => {
         <div className="">
             <div className={`space-y-4 px-6 py-4 bg-white lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-[70%] md:w-1/2 shadow-lg z-50`}>
 
-                <IoClose onClick={() => setToogle(false)} className="focus:outline-none absolute top-2 right-2 h-8 w-8" />
+                <IoClose onClick={() => setToogle(false)} className="focus:outline-none absolute top-3 right-4 h-8 w-8" />
                 <div className="w-full">
                     <Image
                         src={CircleIcon}
