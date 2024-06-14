@@ -57,17 +57,21 @@ export const Contact = () => {
                             </div>
 
                             <div className="space-y-4">
-                                <div className="pb-2 border-b flex items-center my-auto space-x-2">
-                                    <IoCallOutline className="text-lg font-semibold flex shrink-0" />
-                                    <div className="text-sm">
-                                        {i.phone}
-                                    </div>
+                                <div className="pb-2 border-b space-x-2">
+                                    <a href={`tel:${i.phone}`} className="hover:text-[#1B2D9F] duration-300 flex items-center my-auto space-x-2">
+                                        <IoCallOutline className="text-lg font-semibold flex shrink-0" />
+                                        <div className="text-sm">
+                                            {i.phone}
+                                        </div>
+                                    </a>
                                 </div>
-                                <div className="pb-2 border-b flex items-center my-auto space-x-2">
-                                    <MdOutlineEmail className="text-lg font-semibold flex shrink-0" />
-                                    <div className="text-sm">
-                                        {i.email}
-                                    </div>
+                                <div className="pb-2 border-b space-x-2">
+                                    <a href={`mailto:${i.email}`} className="hover:text-[#1B2D9F] duration-300 flex items-center my-auto space-x-2">
+                                        <MdOutlineEmail className="text-lg font-semibold flex shrink-0" />
+                                        <div className="text-sm">
+                                            {i.email}
+                                        </div>
+                                    </a>
                                 </div>
                                 <div className="pb-2 flex space-x-2">
                                     <LuMapPin className="text-lg font-semibold mt-1 flex shrink-0" />
