@@ -280,7 +280,7 @@ export const Team = () => {
                             </div>
 
                             <div className="flex items-center my-auto">
-                                <div className="px-5 py-2">
+                                <div className="p-5 lg:py-3">
                                     <div className="text-2xl font-semibold text-[#1B2D9F] mb-4">
                                         {i.name}
                                     </div>
