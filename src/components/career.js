@@ -28,7 +28,7 @@ export const CareerComp = () => {
     ];
 
     return (
-        <div className="px-8 py-16">
+        <div className="px-5 md:px-8 py-16">
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join Our Team and Grow With Us!
             </div>
@@ -42,7 +42,7 @@ export const CareerComp = () => {
                 We invite you to explore the exciting career opportunities at our organization. The designations are as per listed below. To apply, please complete the online form and upload your resume.
             </div>
 
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {fields.map((i, index) => {
                     return (
                         <div className="p-4 rounded-lg shadow border border-[#9F8D1B]">
@@ -64,7 +64,7 @@ export const CareerComp = () => {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box className="absolute top-1/2 left-1/2 bg-white rounded-lg shadow-lg p-3 focus:outline-none -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[65%] lg:w-auto md:max-w-[80%]">
+                <Box className="absolute top-1/2 left-1/2 bg-white rounded-lg shadow-lg p-6 focus:outline-none -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[65%] lg:w-auto md:max-w-[80%]">
                     {success ?
                         <div className="text-center text-green-500">
                             {success}
@@ -90,7 +90,7 @@ export const CareerComp = () => {
                                         Apply Now
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                                         <input
                                             type="name"
@@ -136,7 +136,7 @@ export const CareerComp = () => {
                                     </textarea>
 
                                     <div className="flex items-center my-auto space-x-3">
-                                        <span className="">
+                                        <span className="text-nowrap">
                                             Upload Your Resume :
                                         </span>
                                         <input
