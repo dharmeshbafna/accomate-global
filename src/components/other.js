@@ -13,7 +13,7 @@ import { FaBars, FaWhatsapp } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
-import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
+import { IoCallOutline, IoLocationOutline, IoClose } from "react-icons/io5";
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
@@ -55,8 +55,9 @@ export const Sidebar = ({ toogle, setToogle }) => {
 
     return (
         <div className="">
-            <div className={`space-y-4 p-4 bg-white lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-[60%] md:w-1/2 shadow-lg z-50`}>
+            <div className={`space-y-4 px-6 py-4 bg-white lg:hidden ${toogle ? 'translate-x-0 transition-transform duration-700 ease-in-out transform' : 'translate-x-full transition-transform duration-700 ease-in-out transform'} fixed z-40 right-0 top-0 h-full w-[70%] md:w-1/2 shadow-lg z-50`}>
 
+                <IoClose onClick={() => setToogle(false)} className="focus:outline-none absolute top-2 right-2 h-8 w-8" />
                 <div className="w-full">
                     <Image
                         src={CircleIcon}

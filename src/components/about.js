@@ -223,9 +223,9 @@ export const Team = () => {
                         [0, data.length];
 
     return (
-        <div className="px-8 py-16 w-full space-y-12">
+        <div className="px-5 md:px-8 py-16 w-full space-y-12">
 
-            <div className="text-center flex justify-center mx-auto lg:w-[85%] text-xl">
+            <div className="text-center flex justify-center mx-auto lg:w-[85%] text-lg md:text-xl">
                 We boast a team of self-driven, reliable, and qualified 30+ skilled
                 professionals. Their goal is to deliver exceptional outcomes to our partners.
                 Despite possessing substantial technical and industrial knowledge, our team
@@ -234,38 +234,38 @@ export const Team = () => {
                 exceptional results for our partners.
             </div>
 
-            <div className="flex justify-center mx-auto space-x-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:flex lg:justify-center lg:mx-auto lg:space-x-5">
 
                 <button
                     onClick={() => setShow('advisory')}
-                    className={`${show == "advisory" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
+                    className={`${show == "advisory" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Advisory Team
                 </button>
 
                 <button
                     onClick={() => setShow('kmp')}
-                    className={`${show == "kmp" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
+                    className={`${show == "kmp" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Core Team
                 </button>
 
                 <button
                     onClick={() => setShow('country')}
-                    className={`${show == "country" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
+                    className={`${show == "country" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Country Representative
                 </button>
 
                 <button
                     onClick={() => setShow('op')}
-                    className={`${show == "op" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
+                    className={`${show == "op" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Global Operation Head
                 </button>
 
             </div>
 
-            <div className="grid grid-cols-2 gap-8 container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto">
                 {data.slice(...sliced).map((i, index) => {
                     return (
-                        <div className="grid grid-cols-2 rounded-lg shadow border-2 border-[#9F8D1B]">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 rounded-lg shadow border-2 border-[#9F8D1B]">
                             <div className="flex justify-center mx-auto p-5">
                                 <div className="relative w-60 h-60 bg-gray-200 rounded-full shadow-lg">
                                     <Image
