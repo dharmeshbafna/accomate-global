@@ -356,7 +356,7 @@ export const Navbar = () => {
 
                     {/* Hamburger */}
                     <div className="flex justify-end w-auto lg:hidden">
-                        <FaBars className=" text-[#1B2D9F]" onClick={() => setToogle(true)} />
+                        <FaBars className=" text-[#1B2D9F] text-xl" onClick={() => setToogle(true)} />
                     </div>
                 </div>
             </div>
