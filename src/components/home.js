@@ -94,7 +94,7 @@ export const Banner = () => {
         const { onClick } = props;
         return (
             <button
-                className="absolute top-1/2 right-4 z-20 rounded-full text-white p-2 border-2 border-white rounded-full hover:scale-[110%] duration-300"
+                className="absolute bottom-[10%] right-[35%] md:bottom-auto md:top-1/2 md:right-4 z-20 rounded-full text-white p-2 border-2 border-white rounded-full hover:scale-[110%] duration-300"
                 onClick={onClick}>
                 <FaChevronRight className="text-lg duration-300" />
             </button>
@@ -105,7 +105,7 @@ export const Banner = () => {
         const { onClick } = props;
         return (
             <button
-                className="absolute top-1/2 left-4 z-20 rounded-full text-white p-2 border-2 border-white rounded-full hover:scale-[110%] duration-300"
+                className="absolute bottom-[10%] left-[35%] md:bottom-auto md:top-1/2 md:left-4 z-20 rounded-full text-white p-2 border-2 border-white rounded-full hover:scale-[110%] duration-300"
                 onClick={onClick}>
                 <FaChevronLeft className="text-lg duration-300" />
             </button>
@@ -116,7 +116,7 @@ export const Banner = () => {
         <div className="overflow-x-hidden relative">
             <Slider ref={sliderRef} {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="h-[90vh] w-full relative">
+                    <div key={index} className="h-[90vh] md:h-[60vh] lg:h-[90vh] w-full relative">
                         <Image
                             src={slide.image}
                             priority={true}
@@ -128,12 +128,12 @@ export const Banner = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-[#0000005d]"></div>
 
                         {/* Text */}
-                        <div className={`space-y-6 absolute top-[30%] left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                            <div className="font-semibold text-white text-4xl leading-[3rem]">
+                        <div className={`px-5 md:px-16 lg:px-0 space-y-6 absolute top-[30%] lg:left-20 lg:w-1/2 transition-all duration-1000 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+                            <div className="font-semibold text-white text-2xl md:text-4xl leading-relaxed md:leading-[3rem]">
                                 {slide.title}
                             </div>
 
-                            <div className="text-lg text-white leading-relaxed">
+                            <div className="md:text-lg text-white leading-relaxed">
                                 {slide.description}
                             </div>
                         </div>
@@ -1297,14 +1297,14 @@ export const Testimonial = () => {
     ];
 
     return (
-        <div className="px-8 py-14">
+        <div className="px-5 md:px-8 py-14">
             {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Testimonials</div> */}
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Testimonials
             </div>
 
             <div className="mt-10 pb-6 relative">
-                <div className="absolute top-0 left-[17%]">
+                <div className="absolute top-0 -left-2 lg:left-[17%]">
                     <FaQuoteLeft className="text-[#1b2d9f5b] h-6 w-auto" />
                 </div>
                 <Slider ref={sliderRef} {...settings}>
