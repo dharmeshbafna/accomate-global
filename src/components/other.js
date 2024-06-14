@@ -62,7 +62,7 @@ export const Sidebar = ({ toogle, setToogle }) => {
                     <Image
                         src={CircleIcon}
                         alt="circle icon"
-                        className="w-[60%] h-auto flex justify-center mx-auto"
+                        className="w-[50%] h-auto flex justify-center mx-auto"
                     />
                 </div>
 
@@ -125,6 +125,11 @@ export const Sidebar = ({ toogle, setToogle }) => {
                             </div>
                         )
                     })}
+                    <div className="flex justify-center mx-auto my-2">
+                        <a href="/contact" className="hover:scale-[110%] duration-300 text-white bg-[#1B2D9F]  px-5 py-2 rounded-full shadow-lg">
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 <div className="flex justify-between">
@@ -271,7 +276,7 @@ export const Navbar = () => {
 
                     {/* Hamburger */}
                     <div className="flex justify-end w-auto lg:hidden">
-                        <FaBars className=" text-white" onClick={() => setToogle(true)} />
+                        <FaBars className=" text-white text-xl" onClick={() => setToogle(true)} />
                     </div>
                 </div>
             </div>

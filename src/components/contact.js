@@ -38,12 +38,12 @@ export const Contact = () => {
     };
 
     return (
-        <div className="px-8 py-16">
+        <div className="px-5 md:px-8 py-16">
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join With Us, Now!
             </div>
 
-            <div className="mt-10 grid grid-cols-4 gap-4">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {contactdetails.map((i, index) => {
                     return (
                         <div className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
@@ -84,7 +84,7 @@ export const Contact = () => {
 
 
             <div className="flex w-full mt-10">
-                <div className="lg:w-[35%]">
+                <div className="lg:w-[35%] hidden lg:flex">
                     <div className="relative h-full w-full flex justify-center mx-auto">
                         <Image
                             src={ContactImg}
@@ -96,13 +96,13 @@ export const Contact = () => {
                     </div>
                 </div>
 
-                <div className="lg:w-[75%] space-y-10 border-b border-t border-r border-[#9F8D1B] p-10 rounded-br-3xl">
-                    <div className="font-semibold text-3xl">
+                <div className="w-full lg:w-[75%] space-y-10 border border-l lg:border-l-0 border-[#9F8D1B] p-3 md:p-10 rounded-br-3xl">
+                    <div className="font-semibold text-3xl leading-relaxed">
                         Ready to Get Started?
                     </div>
 
                     <form className="" onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input
                                 type="name"
                                 className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
@@ -161,7 +161,7 @@ export const Contact = () => {
 
             {/* CTA */}
             <div className="mt-16 mb-10 space-y-10">
-                <div className="font-semibold text-center flex justify-center mx-auto text-4xl lg:w-1/2">
+                <div className="font-semibold text-center flex justify-center mx-auto text-4xl lg:w-1/2 leading-relaxed">
                     Want to Know More About Us?
                 </div>
 
