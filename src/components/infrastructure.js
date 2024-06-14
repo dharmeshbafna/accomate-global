@@ -69,11 +69,22 @@ export const Infrastructure = () => {
     ];
 
     return (
-        <div className="px-8 py-16 space-y-16">
-            <div className='grid grid-cols-2 gap-3'>
-                <div>
+        <div className="px-5 md:px-8 py-16 space-y-16">
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
+                <div className='space-y-8'>
                     <div className="font-semibold text-3xl text-[#1B2D9F]">
                         Data Security
+                    </div>
+
+                    <div className='md:hidden flex justify-center items-center m-auto'>
+                        <div className='relative w-fit'>
+                            <Image
+                                src={Infra1}
+                                alt='data security image'
+                                className='h-auto w-full shadow-lg flex justify-center mx-auto'
+                            />
+                            <div className="absolute -bottom-3 -right-3 w-full h-full bg-[#9f8e1b5c] -z-10"></div>
+                        </div>
                     </div>
 
                     <div className="my-6">
@@ -88,18 +99,9 @@ export const Infrastructure = () => {
                             Clients can rest assured that their data is in safe hands with Accomate.
                         </div>
                     </div>
-
-                    <div>
-
-                    </div>
                 </div>
 
-                <div className='flex justify-center items-center m-auto'>
-                    {/* <iframe 
-                src="https://lottie.host/embed/d9ea6eb8-b288-484a-a662-1f2199dd7f54/9W9PWV516R.json"
-                className='h-72 w-auto'
-                ></iframe> */}
-
+                <div className='hidden md:flex justify-center items-center m-auto'>
                     <div className='relative w-fit'>
                         <Image
                             src={Infra1}
@@ -111,12 +113,76 @@ export const Infrastructure = () => {
                 </div>
             </div>
 
-            <div className='flex w-full'>
+            <div className='grid grid-cols-1 gap-5 lg:flex w-full'>
 
-                <div className='lg:w-[30%] space-y-5'>
+                <div className='lg:hidden flex justify-center items-center m-auto'>
+
+                    <div className='relative p-14 rounded-full'>
+
+                        <div className='relative p-12 rounded-full'>
+
+                            <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
+                                <Image
+                                    src={CircleIcon}
+                                    alt="Main Icon"
+                                    className="h-12 md:h-16 w-auto shadow-md rounded-full "
+                                />
+                            </div>
+
+                            {/* First Circle */}
+                            <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
+                                <div className="relative w-full h-full rounded-full rotate-animation">
+                                    <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex items-center justify-center absolute top-0 left-0 border-2 border-[#1B2D9F]">
+                                        <Image
+                                            src={I1}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto bg-white flex items-center justify-center m-auto"
+                                        />
+                                    </div>
+                                    <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex items-center justify-center absolute bottom-0 right-0 border-2 border-[#1B2D9F]">
+                                        <Image
+                                            src={I2}
+                                            alt="Main Icon"
+                                            className="h-auto w-auto flex items-center justify-center m-auto"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* ======== Second Circle ======== */}
+                        <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                            <div className="relative w-full h-full rotate-animation2">
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -top-5 left-1/2 ">
+                                    <Image
+                                        src={I3}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -bottom-5 right-1/2 ">
+                                    <Image
+                                        src={I4}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute bottom-1/2 -right-5 ">
+                                    <Image
+                                        src={I5}
+                                        alt="Main Icon"
+                                        className="h-auto w-auto bg-white"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='lg:w-[30%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5'>
                     {data.slice(0, 2).map((i, index) => {
                         return (
-                            <div className='p-2 rounded-lg shadow-lg'>
+                            <div className='py-5 px-3 rounded-lg shadow-lg'>
                                 <div className='font-semibold text-xl text-center text-[#1B2D9F] p-2 m-2 border-b border-[#9F8D1B]'>
                                     {i.title}
                                 </div>
@@ -138,7 +204,7 @@ export const Infrastructure = () => {
                     })}
                 </div>
 
-                <div className='lg:w-[40%] px-2 flex items-center justify-center m-auto'>
+                <div className='lg:w-[40%] px-2 hidden lg:flex items-center justify-center m-auto'>
                     <div className='relative p-16 rounded-full'>
                         <div className='relative p-14 rounded-full'>
                             <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
@@ -152,14 +218,14 @@ export const Infrastructure = () => {
                             {/* First Circle */}
                             <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
                                 <div className="relative w-full h-full rounded-full rotate-animation">
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex items-center justify-center absolute top-0 left-0 border-2 border-[#1B2D9F]">
+                                    <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex items-center justify-center absolute top-0 left-0 border-2 border-[#1B2D9F]">
                                         <Image
                                             src={I1}
                                             alt="Main Icon"
                                             className="h-auto w-auto bg-white flex items-center justify-center m-auto"
                                         />
                                     </div>
-                                    <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex items-center justify-center absolute bottom-0 right-0 border-2 border-[#1B2D9F]">
+                                    <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex items-center justify-center absolute bottom-0 right-0 border-2 border-[#1B2D9F]">
                                         <Image
                                             src={I2}
                                             alt="Main Icon"
@@ -173,21 +239,21 @@ export const Infrastructure = () => {
                         {/* ======== Second Circle ======== */}
                         <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
                             <div className="relative w-full h-full rotate-animation2">
-                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -top-5 left-1/2 ">
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -top-5 left-1/2 ">
                                     <Image
                                         src={I3}
                                         alt="Main Icon"
                                         className="h-auto w-auto bg-white"
                                     />
                                 </div>
-                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -bottom-5 right-1/2 ">
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute -bottom-5 right-1/2 ">
                                     <Image
                                         src={I4}
                                         alt="Main Icon"
                                         className="h-auto w-auto bg-white"
                                     />
                                 </div>
-                                <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute bottom-1/2 -right-5 ">
+                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 flex justify-center items-center border-2 border-[#1B2D9F] absolute bottom-1/2 -right-5 ">
                                     <Image
                                         src={I5}
                                         alt="Main Icon"
@@ -199,10 +265,10 @@ export const Infrastructure = () => {
                     </div>
                 </div>
 
-                <div className='lg:w-[30%] space-y-5'>
+                <div className='lg:w-[30%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5'>
                     {data.slice(3, 6).map((i, index) => {
                         return (
-                            <div className='p-2 rounded-lg shadow-lg'>
+                            <div className='py-5 px-3 rounded-lg shadow-lg'>
                                 <div className='font-semibold text-xl text-center text-[#1B2D9F] p-2 m-2 border-b border-[#9F8D1B]'>
                                     {i.title}
                                 </div>
