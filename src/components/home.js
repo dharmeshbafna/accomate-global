@@ -1214,7 +1214,7 @@ export const Counter = () => {
     }, []);
 
     return (
-        <div className="block px-5 md:px-8 py-20 min-h-[100vh] md:min-h-[35vh] w-full home-counter relative">
+        <div className="block px-5 md:px-8 py-20 min-h-[90vh] md:min-h-[35vh] w-full home-counter relative">
             <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 px-5 md:px-8 py-16 flex items-center my-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-7 lg:gap-5 w-full" id="counters-section">
 
