@@ -146,16 +146,16 @@ export const Banner = () => {
 
 export const About = () => {
     return (
-        <div className="px-8 py-10 min-h-[100vh] flex items-center my-auto w-full relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
+        <div className="px-5 md:px-8 py-10 min-h-[100vh] flex items-center my-auto w-full relative overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 lg:gap-3 w-full z-10">
 
                 <div className="relative mb-5">
                     <Image
                         src={AboutImg}
                         alt="About Image"
-                        className="w-[80%] h-auto flex justify-center mx-auto drop-shadow-xl"
+                        className="w-full md:w-[80%] h-auto flex justify-center mx-auto drop-shadow-xl"
                     />
-                    <div className="drop-shadow-lg absolute w-[80%] h-full bg-[#9f8e1b5c] top-[5%] left-[7%] -z-10"></div>
+                    <div className="drop-shadow-lg absolute w-full md:w-[80%] h-full bg-[#9f8e1b5c] -bottom-3 -left-3 md:top-[5%] md:left-[7%] -z-10"></div>
                 </div>
 
                 <div className="flex items-center my-auto">
@@ -207,7 +207,7 @@ export const Services = () => {
             '(min-width: 768px)': {
                 slides: {
                     origin: 'auto',
-                    perView: 1.25,
+                    perView: 1.6,
                     spacing: 16,
                 },
             },
@@ -558,7 +558,7 @@ export const Services = () => {
     }, [slider2, hoverd]);
 
     return (
-        <div className="px-8 py-16 bg-gray-100">
+        <div className="px-6 md:px-8 py-16 bg-gray-100">
             {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div> */}
             <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Our Services
@@ -568,7 +568,7 @@ export const Services = () => {
 
                 {/* Country */}
                 <div className="flex justify-center items-center m-auto pb-10">
-                    <div className="lg:w-1/2 flex items-center my-auto space-x-5">
+                    <div className="w-full lg:w-1/2 block md:flex items-center my-auto space-y-5 md:space-y-0 md:space-x-5">
                         <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#1B2D9F] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#1B2D9F] hover:scale-[110%] duration-300`}>
                             <div className="bg-white p-1 rounded-full border-r-2 border-[#1B2D9F]">
                                 <Image
@@ -816,14 +816,124 @@ export const Services = () => {
 
 export const Software = () => {
     return (
-        <div className="px-8 py-16 min-h-[100vh] flex items-center my-auto w-full">
+        <div className="px-5 md:px-8 py-16 lg:min-h-[100vh] flex items-center my-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
 
                 <div className="flex items-center my-auto">
-                    <div>
+                    <div className="space-y-8 lg:space-y-6">
                         {/* <div className="text-[#1B2D9F]">Software Expertise</div> */}
-                        <div className="font-semibold text-3xl">
+                        <div className="font-semibold text-3xl leading-relaxed">
                             We prioritize adaptability, agility, and unwavering reliability.
+                        </div>
+
+                        {/* Circular animate */}
+                        <div className="lg:hidden flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%] w-full">
+
+                            <div className="relative p-20 rounded-full">
+
+                                <div className="relative p-16 rounded-full">
+
+                                    <div className="relative p-12 rounded-full">
+                                        {/* Main icon */}
+                                        <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
+                                            <Image
+                                                src={CircleIcon}
+                                                alt="Main Icon"
+                                                className="h-20 w-auto shadow-md rounded-full "
+                                            />
+                                        </div>
+
+                                        {/* ====== First Circle ======= */}
+                                        <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
+                                            <div className="relative w-full h-full rounded-full rotate-animation">
+                                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute top-0 left-0">
+                                                    <Image
+                                                        src={Myob}
+                                                        alt="Main Icon"
+                                                        className="h-auto w-auto bg-white flex items-center my-auto"
+                                                    />
+                                                </div>
+                                                <div className="rounded-full h-12 w-12 shadow-lg bg-white p-3 border border-gray-300 absolute bottom-0 right-0">
+                                                    <Image
+                                                        src={CCH}
+                                                        alt="Main Icon"
+                                                        className="h-auto w-auto"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* ======== Second Circle ======== */}
+                                    <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                                        <div className="relative w-full h-full rotate-animation2">
+                                            <div className="rounded-full h-16 w-16 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
+                                                <Image
+                                                    src={Drake}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-14 w-14 shadow-lg bg-white p-3 flex items-center border border-gray-300 absolute -bottom-5 right-1/2 ">
+                                                <Image
+                                                    src={Taxcycle}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
+                                                <Image
+                                                    src={Ultratax}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                                <Image
+                                                    src={BGL}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                {/* ======== Third Circle ======== */}
+                                <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                                    <div className="relative w-full h-full rotate-animation3">
+                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                            <Image
+                                                src={Quickbooks}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-14 w-14 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -right-5">
+                                            <Image
+                                                src={SalesTrekker}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto  bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute -bottom-5 right-[30%]">
+                                            <Image
+                                                src={Xero}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-16 w-16 shadow-lg bg-white p-2 border border-gray-300 absolute -top-5 left-[30%]">
+                                            <Image
+                                                src={Certified}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="my-4">
@@ -839,7 +949,7 @@ export const Software = () => {
                 </div>
 
                 {/* Circular animate */}
-                <div className="flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%]">
+                <div className="hidden lg:flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%] w-full">
 
                     <div className="relative p-20 rounded-full">
 
@@ -994,11 +1104,11 @@ export const Counter = () => {
     }, []);
 
     return (
-        <div className="hidden lg:block px-8 py-20 lg:min-h-[35vh] w-full home-counter relative">
-            <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 px-8 py-16 ">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full" id="counters-section">
+        <div className="block px-5 md:px-8 py-20 min-h-[100vh] md:min-h-[35vh] w-full home-counter relative">
+            <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 px-5 md:px-8 py-16 flex items-center my-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-7 lg:gap-5 w-full" id="counters-section">
 
-                    <div className="flex justify-center mx-auto">
+                    <div className="flex lg:justify-center lg:mx-auto">
                         <div className="flex text-white gap-x-4">
                             <BsFileEarmarkCheck className="h-20 w-auto mt-1" />
                             <div className="font-semibold">
@@ -1008,7 +1118,7 @@ export const Counter = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mx-auto">
+                    <div className="flex lg:justify-center lg:mx-auto">
                         <div className="flex text-white gap-x-4">
                             <HiOutlinePresentationChartLine className="h-20 w-auto mt-1" />
                             <div className="font-semibold">
@@ -1018,7 +1128,7 @@ export const Counter = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mx-auto">
+                    <div className="flex lg:justify-center lg:mx-auto">
                         <div className="flex text-white gap-x-4">
                             <BsFileEarmarkFont className="h-20 w-auto mt-1" />
                             <div className="font-semibold">
@@ -1028,7 +1138,7 @@ export const Counter = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center mx-auto">
+                    <div className="flex lg:justify-center lg:mx-auto">
                         <div className="flex text-white gap-x-4">
                             <PiUsersThree className="h-20 w-auto mt-1" />
                             <div className="font-semibold">

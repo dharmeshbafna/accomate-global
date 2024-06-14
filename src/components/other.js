@@ -68,53 +68,59 @@ export const Sidebar = ({ toogle, setToogle }) => {
                 <div className="space-y-4">
                     {navitems.map((i, index) => {
                         return (
-                            <div key={index} className="w-full relative border-b pb-2">
-                                {i.link ?
-                                    <a href={i.link} className="hover:text-[#1B2D9F] duration-300 text-nowrap">
-                                        <span className="flex items-center my-auto">
-                                            {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
-                                        </span>
-                                    </a> :
-                                    <div>
-                                        <button className="text-nowrap" onClick={
-                                            i.name == 'Company' ? () => setD1(!d1) :
-                                                i.name == 'Services' ? () => setD2(!d2) :
-                                                    () => { }
-                                        }>
-                                            <span className="flex items-center my-auto">
-                                                {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
+                            <div key={index} className="w-full border-b pb-2">
+                                <div className="w-full">
+                                    {i.link ?
+                                        <div className="w-fit relative">
+                                            <a href={i.link} className="hover:text-[#1B2D9F] duration-300 text-nowrap">
+                                                <span className="flex items-center my-auto">
+                                                    {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
+                                                </span>
+                                            </a>
+
+                                            <span className={`absolute -bottom-2 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}>
                                             </span>
-                                        </button>
+                                        </div>
+                                        :
+                                        <div>
+                                            <button className="text-nowrap" onClick={
+                                                i.name == 'Company' ? () => setD1(!d1) :
+                                                    i.name == 'Services' ? () => setD2(!d2) :
+                                                        () => { }
+                                            }>
+                                                <span className="flex items-center my-auto">
+                                                    {i.name} <FiChevronDown className={`ml-1 ${i.name == "Services" || i.name == "Company" ? '' : 'hidden'} flex-shrink-0`} />
+                                                </span>
+                                            </button>
 
-                                        {d1 && i.name == 'Company' ?
-                                            <div className="border space-y-2 px-2 py-3 rounded-lg w-[80%]">
-                                                {i.dropdown.map((j, ind) => {
-                                                    return (
-                                                        <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
-                                                            <a href={j.link}>
-                                                                {j.name}
-                                                            </a>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div> : ''}
+                                            {d1 && i.name == 'Company' ?
+                                                <div className="border space-y-2 px-2 py-3 rounded-lg md:w-1/2 w-[80%]">
+                                                    {i.dropdown.map((j, ind) => {
+                                                        return (
+                                                            <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                                <a href={j.link} className="text-nowrap">
+                                                                    {j.name}
+                                                                </a>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div> : ''}
 
-                                        {d2 && i.name == 'Services' ?
-                                            <div className="border space-y-2 px-2 py-3 rounded-lg w-[80%]">
-                                                {i.dropdown.map((j, ind) => {
-                                                    return (
-                                                        <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
-                                                            <a href={j.link}>
-                                                                {j.name}
-                                                            </a>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div> : ''}
-                                    </div>
-                                }
-                                <span className={`absolute bottom-0 h-1 transform ${isActive(i.link) ? 'w-full h-[2px] scale-x-100' : 'scale-x-0'} bg-[#1B2D9F] transition-transform duration-200 ease-out origin-center hover:scale-x-100`}>
-                                </span>
+                                            {d2 && i.name == 'Services' ?
+                                                <div className="border space-y-2 px-2 py-3 rounded-lg md:w-1/2 w-[80%]">
+                                                    {i.dropdown.map((j, ind) => {
+                                                        return (
+                                                            <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                                <a href={j.link} className="text-nowrap">
+                                                                    {j.name}
+                                                                </a>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div> : ''}
+                                        </div>
+                                    }
+                                </div>
                             </div>
                         )
                     })}
