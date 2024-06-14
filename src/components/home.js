@@ -817,17 +817,127 @@ export const Services = () => {
 export const Software = () => {
     return (
         <div className="px-5 md:px-8 py-16 lg:min-h-[100vh] flex items-center my-auto w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 w-full">
+            <div className="lg:grid grid-cols-2 gap-3 w-full">
 
                 <div className="flex items-center my-auto">
                     <div className="space-y-8 lg:space-y-6">
-                        {/* <div className="text-[#1B2D9F]">Software Expertise</div> */}
                         <div className="font-semibold text-3xl leading-relaxed">
                             We prioritize adaptability, agility, and unwavering reliability.
                         </div>
 
-                        {/* Circular animate */}
-                        <div className="lg:hidden flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%] w-full">
+                        {/* SM Circular animate */}
+                        <div className="md:hidden w-full flex justify-center items-center m-auto">
+                            <div className="relative p-14 rounded-full">
+
+                                <div className="relative p-12 rounded-full">
+
+                                    <div className="relative p-10 rounded-full">
+
+                                        <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
+                                            <Image
+                                                src={CircleIcon}
+                                                alt="Main Icon"
+                                                className="h-12 w-auto shadow-md rounded-full "
+                                            />
+                                        </div>
+
+                                        {/* ====== First Circle ======= */}
+                                        <div className="absolute top-0 left-0 border-dashed border-2 border-gray-400 w-full h-full rounded-full">
+                                            <div className="relative w-full h-full rounded-full rotate-animation">
+                                                <div className="rounded-full h-10 w-10 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute top-0 left-0">
+                                                    <Image
+                                                        src={Myob}
+                                                        alt="Main Icon"
+                                                        className="h-auto w-auto bg-white flex items-center my-auto"
+                                                    />
+                                                </div>
+                                                <div className="rounded-full h-10 w-10 shadow-lg bg-white p-3 border border-gray-300 absolute bottom-0 right-0">
+                                                    <Image
+                                                        src={CCH}
+                                                        alt="Main Icon"
+                                                        className="h-auto w-auto"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    {/* ======== Second Circle ======== */}
+                                    <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                                        <div className="relative w-full h-full rotate-animation2">
+                                            <div className="rounded-full h-12 w-12 shadow-lg bg-white p-1 flex items-center border border-gray-300 absolute -top-5 left-1/2 ">
+                                                <Image
+                                                    src={Drake}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-12 w-12 shadow-lg bg-white p-3 flex items-center border border-gray-300 absolute -bottom-5 right-1/2 ">
+                                                <Image
+                                                    src={Taxcycle}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute bottom-1/2 -right-5 ">
+                                                <Image
+                                                    src={Ultratax}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                            <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                                <Image
+                                                    src={BGL}
+                                                    alt="Main Icon"
+                                                    className="h-auto w-auto bg-white"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                {/* ======== Third Circle ======== */}
+                                <div className="absolute top-0 left-0  w-full h-full border-dashed border-2 border-gray-400 rounded-full">
+                                    <div className="relative w-full h-full rotate-animation3">
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -left-5 ">
+                                            <Image
+                                                src={Quickbooks}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute top-1/2 -right-5">
+                                            <Image
+                                                src={SalesTrekker}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto  bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute -bottom-5 right-[30%]">
+                                            <Image
+                                                src={Xero}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                        <div className="rounded-full h-12 w-12 shadow-lg bg-white p-2 border border-gray-300 absolute -top-5 left-[30%]">
+                                            <Image
+                                                src={Certified}
+                                                alt="Main Icon"
+                                                className="h-auto w-auto bg-white"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* MD Circular animate */}
+                        <div className="lg:hidden hidden md:flex items-center justify-center m-auto scale-[50%] md:scale-[100%] w-full">
 
                             <div className="relative p-20 rounded-full">
 
