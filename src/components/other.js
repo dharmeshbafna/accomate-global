@@ -464,45 +464,45 @@ export const Clients = () => {
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <MdGroups className="flex justify-center mx-auto h-12 w-auto" />
+                        <MdGroups className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
-                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                    <div className="text-center flex justify-center mx-auto font-semibold text-lg md:text-xl">
                         Individual
                     </div>
                 </div>
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <CgOrganisation className="flex justify-center mx-auto h-12 w-auto" />
+                        <CgOrganisation className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
-                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                    <div className="text-center flex justify-center mx-auto font-semibold text-lg md:text-xl">
                         Company
                     </div>
                 </div>
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <FaHandshakeAngle className="flex justify-center mx-auto h-12 w-auto" />
+                        <FaHandshakeAngle className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
-                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                    <div className="text-center flex justify-center mx-auto font-semibold text-lg md:text-xl">
                         Trust
                     </div>
                 </div>
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <TbMoneybag className="flex justify-center mx-auto h-12 w-auto" />
+                        <TbMoneybag className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
-                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                    <div className="text-center flex justify-center mx-auto font-semibold text-lg md:text-xl">
                         SMSF
                     </div>
                 </div>
 
                 <div className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
-                        <HiBuildingStorefront className="flex justify-center mx-auto h-12 w-auto" />
+                        <HiBuildingStorefront className="flex justify-center mx-auto h-10 w-auto" />
                     </div>
-                    <div className="text-center flex justify-center mx-auto font-semibold text-xl">
+                    <div className="text-center flex justify-center mx-auto font-semibold text-lg md:text-xl">
                         Small Businesses
                     </div>
                 </div>
