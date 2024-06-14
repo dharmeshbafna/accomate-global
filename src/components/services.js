@@ -95,14 +95,14 @@ export const Usa = () => {
     ];
 
     return (
-        <div className="px-8 py-10 overflow-x-hidden">
+        <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
-            <div className="grid grid-cols-2 gap-6 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
                 {usaservices.map((i, index) => {
                     return (
                         <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-80">
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
+                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
                                     <Image
                                         src={i.img}
                                         alt="img"
@@ -217,14 +217,14 @@ export const Canada = () => {
         },
     ];
     return (
-        <div className="px-8 py-10 overflow-x-hidden">
+        <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
-            <div className="grid grid-cols-2 gap-6 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-hidden">
                 {canadaservices.map((i, index) => {
                     return (
                         <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-80">
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
+                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
                                     <Image
                                         src={i.img}
                                         alt="img"
@@ -356,14 +356,14 @@ export const Australia = () => {
         },
     ];
     return (
-        <div className="px-8 py-10 overflow-x-hidden">
+        <div className="px-5 md:px-8 py-10 overflow-x-hidden">
 
-            <div className="grid grid-cols-2 gap-6 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden">
                 {australiaservices.map((i, index) => {
                     return (
                         <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')}>
-                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-80">
-                                <div className="relative w-full rounded-lg shadow min-h-80">
+                            <ReactCardFlip isFlipped={flip == i.head ? true : false} className="w-full h-[75vh] md:h-72 lg:h-80">
+                                <div className="relative w-full rounded-lg shadow min-h-[75vh] md:min-h-72 lg:min-h-80">
                                     <Image
                                         src={i.img}
                                         alt="img"
