@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function AboutPage() {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Breadcrumb />
             <Whoweare />
             <MissionVision />

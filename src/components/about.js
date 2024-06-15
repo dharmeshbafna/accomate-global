@@ -92,7 +92,7 @@ export const MissionVision = () => {
                     /> */}
                 </div>
 
-                <div className="flex justify-end w-full">
+                <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" className="flex justify-end w-full">
                     <div className="md:w-[80%] lg:w-full flex justify-end bg-[#9F8D1B] md:px-5 py-8 rounded-l-full">
                         <div className="flex pl-10 md:pl-0">
                             <div className="min-w-[20%] flex justify-end mt-2">
@@ -111,7 +111,7 @@ export const MissionVision = () => {
                     </div>
                 </div>
 
-                <div className="md:w-[80%] lg:w-full bg-[#1B2D9F] px-7 py-8 rounded-r-full relative">
+                <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="100" className="md:w-[80%] lg:w-full bg-[#1B2D9F] px-7 py-8 rounded-r-full relative">
                     <div className="flex">
                         <div className="min-w-[10%] flex justify-end mt-2">
                             <FaRegLightbulb className="text-white h-14 w-auto flex-shrink-0" />
@@ -143,7 +143,7 @@ export const MissionVision = () => {
 export const Director = () => {
     return (
         <div className="px-5 md:px-8 py-16 md:flex md:space-x-4 w-full h-fit">
-            <div className="md:hidden relative w-fit border-t border-r border-l border-[#9F8D1B]">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="md:hidden relative w-fit border-t border-r border-l border-[#9F8D1B]">
                 <Image
                     src={DirectorImg}
                     alt="director"
@@ -151,10 +151,10 @@ export const Director = () => {
                 />
             </div>
             <div className="md:w-[70%] border border-[#9F8D1B] p-5 md:p-7 lg:p-10 rounded-bl-3xl flex flex-col justify-between">
-                <div className="font-semibold text-2xl">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="font-semibold text-2xl">
                     Accomate Director’s vision
                 </div>
-                <div className="my-5">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200" className="my-5">
                     Welcome to Accomate Global!
                     <br /><br />
                     As you learn about our company, I hope you will see that we're more than just a financial
@@ -172,7 +172,7 @@ export const Director = () => {
                         Let's grow together and unlock the potential of your business!
                     </span>
                 </div>
-                <div className="flex justify-end w-full pt-5">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="flex justify-end w-full pt-5">
                     <div className="text-right">
                         <div className="font-semibold text-lg">Beena Mulani</div>
                         <div>Director of Accomate Global</div>
@@ -180,7 +180,7 @@ export const Director = () => {
                 </div>
             </div>
 
-            <div className="md:w-[30%] h-full hidden md:flex items-center my-auto lg:block lg:my-0 lg:h-auto relative">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="md:w-[30%] h-full hidden md:flex items-center my-auto lg:block lg:my-0 lg:h-auto relative">
                 <Image
                     src={DirectorImg}
                     objectFit="cover"

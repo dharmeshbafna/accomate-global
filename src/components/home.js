@@ -855,7 +855,7 @@ export const Software = () => {
                         </div>
 
                         {/* SM Circular animate */}
-                        <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="md:hidden w-full flex justify-center items-center m-auto">
+                        <div className="md:hidden w-full flex justify-center items-center m-auto">
                             <div className="relative p-14 rounded-full">
 
                                 <div className="relative p-12 rounded-full">
@@ -966,7 +966,7 @@ export const Software = () => {
                         </div>
 
                         {/* MD Circular animate */}
-                        <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="lg:hidden hidden md:flex items-center justify-center m-auto scale-[50%] md:scale-[100%] w-full">
+                        <div className="lg:hidden hidden md:flex items-center justify-center m-auto scale-[50%] md:scale-[100%] w-full">
 
                             <div className="relative p-20 rounded-full">
 
