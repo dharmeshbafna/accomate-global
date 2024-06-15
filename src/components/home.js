@@ -29,6 +29,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
@@ -112,8 +114,14 @@ export const Banner = () => {
         );
     }
 
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
     return (
-        <div className="overflow-x-hidden relative">
+        <div data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="100" className="overflow-x-hidden relative">
             <Slider ref={sliderRef} {...settings}>
                 {slides.map((slide, index) => (
                     <div key={index} className="h-[90vh] md:h-[60vh] lg:h-[90vh] w-full relative">
@@ -145,11 +153,19 @@ export const Banner = () => {
 };
 
 export const About = () => {
+
+    
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
     return (
         <div className="px-5 md:px-8 py-10 min-h-[100vh] flex items-center my-auto w-full relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8 lg:gap-3 w-full z-10">
 
-                <div className="relative mb-5">
+                <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="100" className="relative mb-5">
                     <Image
                         src={AboutImg}
                         alt="About Image"
@@ -158,7 +174,7 @@ export const About = () => {
                     <div className="drop-shadow-lg absolute w-full md:w-[80%] h-full bg-[#9f8e1b5c] -bottom-3 -left-3 md:top-[5%] md:left-[7%] -z-10"></div>
                 </div>
 
-                <div className="flex items-center my-auto">
+                <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" className="flex items-center my-auto">
                     <div>
                         <div className="font-semibold text-3xl">
                             About Us
@@ -557,17 +573,23 @@ export const Services = () => {
         return () => clearInterval(interval);
     }, [slider2, hoverd]);
 
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
     return (
         <div className="px-6 md:px-8 py-16 bg-gray-100">
             {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Our Services</div> */}
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Our Services
             </div>
 
             <div className="mt-10 ">
 
                 {/* Country */}
-                <div className="flex justify-center items-center m-auto pb-10">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" className="flex justify-center items-center m-auto pb-10">
                     <div className="w-full lg:w-1/2 block md:flex items-center my-auto space-y-5 md:space-y-0 md:space-x-5">
                         <button onClick={() => setType('usa')} className={`${type == 'usa' ? 'bg-[#1B2D9F] text-white' : ''} w-[70%] rounded-full flex justify-center items-center m-auto border-2 border-[#1B2D9F] hover:scale-[110%] duration-300`}>
                             <div className="bg-white p-1 rounded-full border-r-2 border-[#1B2D9F]">
@@ -609,7 +631,7 @@ export const Services = () => {
                 </div>
 
                 {/* Services */}
-                <div className="px-4 relative">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500" className="px-4 relative">
                     {type == 'usa' ?
                         <div ref={sliderRef} className="keen-slider">
 
@@ -815,18 +837,25 @@ export const Services = () => {
 }
 
 export const Software = () => {
+
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+
     return (
         <div className="px-5 md:px-8 py-16 lg:min-h-[100vh] flex items-center my-auto w-full">
             <div className="lg:grid grid-cols-2 gap-3 w-full">
 
-                <div className="flex items-center my-auto">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="flex items-center my-auto">
                     <div className="space-y-8 lg:space-y-6">
                         <div className="font-semibold text-3xl leading-relaxed">
                             We prioritize adaptability, agility, and unwavering reliability.
                         </div>
 
                         {/* SM Circular animate */}
-                        <div className="md:hidden w-full flex justify-center items-center m-auto">
+                        <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="md:hidden w-full flex justify-center items-center m-auto">
                             <div className="relative p-14 rounded-full">
 
                                 <div className="relative p-12 rounded-full">
@@ -937,7 +966,7 @@ export const Software = () => {
                         </div>
 
                         {/* MD Circular animate */}
-                        <div className="lg:hidden hidden md:flex items-center justify-center m-auto scale-[50%] md:scale-[100%] w-full">
+                        <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="lg:hidden hidden md:flex items-center justify-center m-auto scale-[50%] md:scale-[100%] w-full">
 
                             <div className="relative p-20 rounded-full">
 
@@ -1059,7 +1088,7 @@ export const Software = () => {
                 </div>
 
                 {/* Circular animate */}
-                <div className="hidden lg:flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%] w-full">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300" className="hidden lg:flex items-center justify-center m-auto scale-[50%] md:scale-[90%] lg:scale-[100%] w-full">
 
                     <div className="relative p-20 rounded-full">
 
@@ -1299,11 +1328,11 @@ export const Testimonial = () => {
     return (
         <div className="px-5 md:px-8 py-14">
             {/* <div className="text-[#1B2D9F] flex justify-center mx-auto text-center">Testimonials</div> */}
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="font-semibold text-3xl flex justify-center mx-auto text-center">
                 Testimonials
             </div>
 
-            <div className="mt-10 pb-6 relative">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300" className="mt-10 pb-6 relative">
                 <div className="absolute top-0 -left-2 lg:left-[17%]">
                     <FaQuoteLeft className="text-[#1b2d9f5b] h-6 w-auto" />
                 </div>

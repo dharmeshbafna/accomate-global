@@ -22,6 +22,8 @@ import { CgOrganisation } from "react-icons/cg";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import { TbMoneybag } from "react-icons/tb";
 import { HiBuildingStorefront } from "react-icons/hi2";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Sidebar = ({ toogle, setToogle }) => {
 
@@ -201,6 +203,13 @@ export const Navbar = () => {
         return () => {
             window.removeEventListener('scroll', handlescroll);
         }
+    }, []);
+
+    
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
     }, []);
 
     return (
@@ -458,7 +467,7 @@ export const Footer = () => {
 export const Clients = () => {
     return (
         <div className="bg-gray-200 px-8 py-14 space-y-12">
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center leading-relaxed">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300" className="font-semibold text-3xl flex justify-center mx-auto text-center leading-relaxed">
                 Clients We Help Thrive
             </div>
 
@@ -468,7 +477,7 @@ export const Clients = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-5">
 
-                <div className="space-y-4 hover:scale-[110%] duration-300">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
                         <MdGroups className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
@@ -477,7 +486,7 @@ export const Clients = () => {
                     </div>
                 </div>
 
-                <div className="space-y-4 hover:scale-[110%] duration-300">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300" className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
                         <CgOrganisation className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
@@ -486,7 +495,7 @@ export const Clients = () => {
                     </div>
                 </div>
 
-                <div className="space-y-4 hover:scale-[110%] duration-300">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500" className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
                         <FaHandshakeAngle className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
@@ -495,7 +504,7 @@ export const Clients = () => {
                     </div>
                 </div>
 
-                <div className="space-y-4 hover:scale-[110%] duration-300">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="700" className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
                         <TbMoneybag className="flex justify-center mx-auto h-10 md:h-12 w-auto" />
                     </div>
@@ -504,7 +513,7 @@ export const Clients = () => {
                     </div>
                 </div>
 
-                <div className="space-y-4 hover:scale-[110%] duration-300">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="900" className="space-y-4 hover:scale-[110%] duration-300">
                     <div className="flex justify-center mx-auto rounded-full p-3 bg-[#1B2D9F] text-white w-fit">
                         <HiBuildingStorefront className="flex justify-center mx-auto h-10 w-auto" />
                     </div>
