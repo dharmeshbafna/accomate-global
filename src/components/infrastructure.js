@@ -71,7 +71,7 @@ export const Infrastructure = () => {
     return (
         <div className="px-5 md:px-8 py-16 space-y-16">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                <div className='space-y-8'>
+                <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="100" className='space-y-8'>
                     <div className="font-semibold text-3xl text-[#1B2D9F]">
                         Data Security
                     </div>
@@ -101,7 +101,7 @@ export const Infrastructure = () => {
                     </div>
                 </div>
 
-                <div className='hidden md:flex justify-center items-center m-auto'>
+                <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" className='hidden md:flex justify-center items-center m-auto'>
                     <div className='relative w-fit'>
                         <Image
                             src={Infra1}
@@ -182,7 +182,7 @@ export const Infrastructure = () => {
                 <div className='lg:w-[30%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5'>
                     {data.slice(0, 2).map((i, index) => {
                         return (
-                            <div className='py-5 px-3 rounded-lg shadow-lg'>
+                            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className='py-5 px-3 rounded-lg shadow-lg'>
                                 <div className='font-semibold text-xl text-center text-[#1B2D9F] p-2 m-2 border-b border-[#9F8D1B]'>
                                     {i.title}
                                 </div>
@@ -204,7 +204,7 @@ export const Infrastructure = () => {
                     })}
                 </div>
 
-                <div className='lg:w-[40%] px-2 hidden lg:flex items-center justify-center m-auto'>
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className='lg:w-[40%] px-2 hidden lg:flex items-center justify-center m-auto'>
                     <div className='relative p-16 rounded-full'>
                         <div className='relative p-14 rounded-full'>
                             <div className="relative hover:scale-[110%] duration-300 cursor-pointer z-40">
@@ -268,7 +268,7 @@ export const Infrastructure = () => {
                 <div className='lg:w-[30%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5'>
                     {data.slice(3, 6).map((i, index) => {
                         return (
-                            <div className='py-5 px-3 rounded-lg shadow-lg'>
+                            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className='py-5 px-3 rounded-lg shadow-lg'>
                                 <div className='font-semibold text-xl text-center text-[#1B2D9F] p-2 m-2 border-b border-[#9F8D1B]'>
                                     {i.title}
                                 </div>

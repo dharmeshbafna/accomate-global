@@ -78,11 +78,11 @@ export const CareerComp = () => {
 
     return (
         <div className="px-5 md:px-8 py-16">
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join Our Team and Grow With Us!
             </div>
 
-            <div className="my-8 text-center">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="my-8 text-center">
                 At Accomate Global, we believe in the power of collaboration and growth. We are dedicated to nurturing
                 talent and providing opportunities for professional development. Join our team and be part of a dynamic
                 environment where your skills are valued and your career aspirations are supported. Together, let's
@@ -94,7 +94,7 @@ export const CareerComp = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {fields.map((i, index) => {
                     return (
-                        <div className="p-4 rounded-lg shadow border border-[#9F8D1B]">
+                        <div key={index} data-aos="zoom-in" data-aos-duration="2000" data-aos-delay={`${index + 1}00`} className="p-4 rounded-lg shadow border border-[#9F8D1B]">
                             <div className="font-semibold text-[#1B2D9F] text-center border-b pb-4 mb-4 text-lg">
                                 {i.name}
                             </div>

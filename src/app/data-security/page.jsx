@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function INFRA() {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Breadcrumb />
             <Infrastructure />
         </div>

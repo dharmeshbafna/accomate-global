@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Career () {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Breadcrumb />
             <CareerComp />
         </div>

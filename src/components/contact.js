@@ -85,14 +85,14 @@ export const Contact = () => {
 
     return (
         <div className="px-5 md:px-8 py-16">
-            <div className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="font-semibold text-3xl flex justify-center mx-auto text-center w-full">
                 Join With Us, Now!
             </div>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {contactdetails.map((i, index) => {
                     return (
-                        <div className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
+                        <div key={index} data-aos="zoom-in" data-aos-duration="2000" data-aos-delay={`${index + 1}00`} className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
                             <div className="flex items-center my-auto space-x-3 pb-4 border-b border-gray-300">
                                 <Image
                                     src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : i.country == 'USA' ? USA : ''}
@@ -133,7 +133,7 @@ export const Contact = () => {
             </div>
 
 
-            <div className="flex w-full mt-10">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="flex w-full mt-10">
                 <div className="lg:w-[35%] hidden lg:flex">
                     <div className="relative h-full w-full flex justify-center mx-auto">
                         <Image
@@ -210,7 +210,7 @@ export const Contact = () => {
 
 
             {/* CTA */}
-            <div className="mt-16 mb-10 space-y-10">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="mt-16 mb-10 space-y-10">
                 <div className="font-semibold text-center flex justify-center mx-auto text-4xl lg:w-1/2 leading-relaxed">
                     Want to Know More About Us?
                 </div>
