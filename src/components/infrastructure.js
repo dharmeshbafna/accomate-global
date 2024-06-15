@@ -115,7 +115,7 @@ export const Infrastructure = () => {
 
             <div className='grid grid-cols-1 gap-5 lg:flex w-full'>
 
-                <div className='lg:hidden flex justify-center items-center m-auto'>
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100"  className='lg:hidden flex justify-center items-center m-auto'>
 
                     <div className='relative p-14 rounded-full'>
 
