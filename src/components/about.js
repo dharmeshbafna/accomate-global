@@ -13,15 +13,24 @@ import DirectorImg from "../../public/director.jpg"
 
 import { GoGoal } from "react-icons/go";
 import { FaRegLightbulb } from "react-icons/fa"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const jost = Jost({ subsets: ["latin"], weight: '700' });
 
 export const Whoweare = () => {
+    
+    useEffect(() => {
+        AOS.init({
+            once: true,
+        });
+    }, []);
+    
     return (
         <div className="px-5 md:px-8 py-16 flex items-center my-auto w-full relative">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-3">
 
-                <div className="flex justify-center items-center m-auto w-full">
+                <div data-aos="fade-right" data-aos-duration="2000" data-aos-delay="100" className="flex justify-center items-center m-auto w-full">
                     <div className="w-fit relative">
                         <Image
                             src={About2}
@@ -32,7 +41,7 @@ export const Whoweare = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center my-auto">
+                <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" className="flex items-center my-auto">
                     <div>
                         {/* <div className="text-[#1B2D9F]">Who We Are</div> */}
                         <div className="font-semibold text-3xl">
