@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function TeamPage() {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Breadcrumb />
             <Team />
         </div>

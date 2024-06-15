@@ -101,7 +101,7 @@ export const Usa = () => {
 
                 {usaservices.map((i, index) => {
                     return (
-                        <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                        <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
                             <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
 
                                 {/* front */}
@@ -230,7 +230,7 @@ export const Canada = () => {
 
             {canadaservices.map((i, index) => {
                 return (
-                    <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
                         <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
 
                             {/* front */}
@@ -376,7 +376,7 @@ export const Australia = () => {
 
             {australiaservices.map((i, index) => {
                 return (
-                    <div key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
+                    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" key={index} onMouseEnter={() => setFlip(i.head)} onMouseLeave={() => setFlip('')} className="w-full min-h-full">
                         <ReactCardFlip isFlipped={flip == i.head ? true : false} className="h-full" containerStyle={{ height: '100%' }}>
 
                             {/* front */}
@@ -472,7 +472,7 @@ export const Softwares = () => {
     ];
 
     return (
-        <div className="px-8 py-14">
+        <div className="px-8 py-14" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" >
             <div className="font-semibold text-4xl flex justify-center mx-auto">
                 Softwares
             </div>

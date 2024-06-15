@@ -234,7 +234,7 @@ export const Team = () => {
     return (
         <div className="px-5 md:px-8 py-16 w-full space-y-12">
 
-            <div className="text-center flex justify-center mx-auto lg:w-[85%] text-lg md:text-xl">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="text-center flex justify-center mx-auto lg:w-[85%] text-lg md:text-xl">
                 We boast a team of self-driven, reliable, and qualified 30+ skilled
                 professionals. Their goal is to deliver exceptional outcomes to our partners.
                 Despite possessing substantial technical and industrial knowledge, our team
@@ -243,22 +243,22 @@ export const Team = () => {
                 exceptional results for our partners.
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:flex lg:justify-center lg:mx-auto lg:space-x-5">
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:flex lg:justify-center lg:mx-auto lg:space-x-5">
 
                 <button
-                    onClick={() => setShow('advisory')}
+                    onClick={() => setShow('advisory')} 
                     className={`${show == "advisory" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Advisory Team
                 </button>
 
                 <button
-                    onClick={() => setShow('kmp')}
+                    onClick={() => setShow('kmp')} 
                     className={`${show == "kmp" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Core Team
                 </button>
 
                 <button
-                    onClick={() => setShow('country')}
+                    onClick={() => setShow('country')} 
                     className={`${show == "country" ? 'bg-[#1B2D9F] text-white' : ''} border-2 border-[#1B2D9F] rounded-lg px-5 py-2 w-full lg:w-fit text-[#1B2D9F] text-xl hover:bg-[#1B2D9F] hover:text-white duration-300`}>
                     Country Representative
                 </button>
@@ -271,7 +271,7 @@ export const Team = () => {
 
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto">
+            <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto">
                 {data.slice(...sliced).map((i, index) => {
                     return (
                         <div className="grid grid-cols-1 lg:grid-cols-2 rounded-lg shadow border-2 border-[#9F8D1B]">
