@@ -5,7 +5,8 @@ export const metadata = {
     title: 'Canada | Services | Accomate Global',
     icons: {
         icon: '/n_icon.png'
-    }
+    },
+    description: `Canada services includes accounting, tax complication, etc.`,
 }
 
 export default function CANADA() {

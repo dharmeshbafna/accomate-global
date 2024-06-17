@@ -6,7 +6,8 @@ export const metadata = {
     title: 'Contact | Accomate Global',
     icons: {
         icon: '/n_icon.png'
-    }
+    },
+    description: `Feel free to contact us.`
 }
 
 export default function CONTACT() {
