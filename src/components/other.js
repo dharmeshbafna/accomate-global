@@ -414,16 +414,13 @@ export const Footer = () => {
                             Useful Links
                         </div>
                         <div className="pl-2 mt-4 grid grid-cols-1 gap-2">
-                            <a href="#" className="hover:text-blue-500 duration-300">
+                            <a href="/privacy-policy" className="hover:text-blue-500 duration-300">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
+                            <a href="/terms-conditions" className="hover:text-blue-500 duration-300">
                                 Terms & Conditions
                             </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
-                                Disclaimer
-                            </a>
-                            <a href="#" className="hover:text-blue-500 duration-300">
+                            <a href="/contact" className="hover:text-blue-500 duration-300">
                                 Support
                             </a>
                         </div>
