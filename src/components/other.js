@@ -224,6 +224,7 @@ export const Navbar = () => {
                                 src={WhiteLogo}
                                 alt="Accomate Logo"
                                 className="h-4 w-auto md:h-5 md:w-auto"
+                                priority={true}
                             />
                         </a>
                     </div>
@@ -301,6 +302,7 @@ export const Navbar = () => {
                                 src={Logo1}
                                 alt="Accomate Logo"
                                 className="h-4 w-auto md:h-5 md:w-auto"
+                                priority={true}
                             />
                         </a>
                     </div>
@@ -554,6 +556,7 @@ export const Breadcrumb = () => {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
+                priority={true}
             />
             <div className="absolute w-full h-full bg-[#00000084] top-0 left-0 flex justify-center items-center m-auto">
 
