@@ -422,6 +422,9 @@ export const Footer = () => {
                             <a href="/terms-conditions" className="hover:text-blue-500 duration-300">
                                 Terms & Conditions
                             </a>
+                            <a href="/disclaimer" className="hover:text-blue-500 duration-300">
+                                Disclaimer
+                            </a>
                             <a href="/contact" className="hover:text-blue-500 duration-300">
                                 Support
                             </a>
