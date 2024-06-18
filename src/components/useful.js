@@ -177,6 +177,51 @@ export const Disclaimer = () => {
                 Disclaimer
             </div>
 
+            <div className="mt-10">
+                <span className="font-semibold">Effective Date: 13/06/2024</span><br /><br />
+                Welcome to Accomate Global. The information provided on our website is for general informational purposes only. By accessing and using our website, you acknowledge and agree to the terms of this Disclaimer. If you do not agree with any part of this Disclaimer, you must not use our website.
+                <br /><br />
+
+                <span className="font-semibold">1. No Professional Advice</span>
+                <br /><br />
+                The content on the Accomate Global website, including but not limited to text, graphics, images, and other material, is provided for general informational purposes only and does not constitute professional advice. While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained on the website. Any reliance you place on such information is strictly at your own risk.
+                <br /><br />
+
+                <span className="font-semibold">2. No Client Relationship</span>
+                <br /><br />
+                Your use of our website does not create a client relationship between you and Accomate Global. For specific accounting, financial, or tax advice, you should contact a qualified professional who is familiar with your particular situation.
+                <br /><br />
+
+                <span className="font-semibold">3. Third-Party Links</span>
+
+                <br /><br />
+                Our website may contain links to third-party websites or services that are not owned or controlled by Accomate Global. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them. You acknowledge and agree that Accomate Global shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.
+                <br /><br />
+
+                <span className="font-semibold">4. Limitation of Liability</span>
+                <br /><br />
+                To the fullest extent permitted by law, Accomate Global shall not be liable for any direct, indirect, incidental, consequential, or punitive damages, or any loss of profits, revenues, data, or use, incurred by you or any third party, whether in an action in contract, tort, or otherwise, arising from your access to, or use of, our website or any content provided on or through our website. This includes, but is not limited to, any errors or omissions in any content, any loss or damage of any kind incurred as a result of your use of any content posted, transmitted, or otherwise made available via the website, even if advised of their possibility.
+                <br /><br />
+
+                <span className="font-semibold">5. Changes to Content</span>
+                <br /><br />
+                We reserve the right to modify, update, or remove any part of the content on our website at any time without prior notice. We do not guarantee that the website will be available at all times or that access to the website will be uninterrupted, secure, or error-free.
+                <br /><br />
+
+                <span className="font-semibold">6. Contact Us</span>
+                <br /><br />
+                If you have any questions or concerns about this Disclaimer or any content found on our website, please contact us at:
+                <br /><br />
+                <span className="font-semibold">Accomate Global</span><br />
+                G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006<br />
+                Email: <a className="underline text-blue-500" href="mailto:info@accomateglobal.com">info@accomateglobal.com</a><br />
+                Phone: +61-3991-77471
+                <br /><br />
+                Thank you for visiting Accomate Global. We appreciate your understanding and cooperation.
+
+
+            </div>
+
         </div>
     )
 }
