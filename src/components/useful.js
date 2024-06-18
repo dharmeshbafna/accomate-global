@@ -89,6 +89,82 @@ export const Terms = () => {
                 Terms & Conditions
             </div>
 
+            <div className="mt-10">
+                <span className="font-semibold">Effective Date: 13/06/2024</span><br /><br />
+                Welcome to Accomate Global. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read these Terms and Conditions carefully before using our website and services.
+                <br /><br />
+
+                <span className="font-semibold">1. Acceptance of Terms</span>
+                <br /><br />
+                By accessing or using the Accomate Global website and services, you agree to be bound by these Terms and Conditions, our Privacy Policy, and any additional terms applicable to specific services. If you do not agree with any part of these terms, you must not use our website or services.
+                <br /><br />
+
+                <span className="font-semibold">2. Services</span>
+                <br /><br />
+                Accomate Global provides accounting outsourcing services to clients in the USA, Australia, and Canada. Our services include, but are not limited to, bookkeeping, payroll processing, financial reporting, and tax preparation.
+                <br /><br />
+
+                <span className="font-semibold">3. Use of the Website</span>
+                <br /><br />
+                You agree to use our website and services only for lawful purposes and in accordance with these Terms and Conditions. You agree not to:
+                <br /><br />
+                <ul className="list-disc pl-5">
+                    <li>Violate any applicable laws or regulations.</li>
+                    <li>Infringe on the intellectual property rights of others.</li>
+                    <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the website.</li>
+                    <li>Introduce any viruses, trojans, worms, logic bombs, or other harmful material.</li>
+                </ul>
+                <br /><br />
+
+                <span className="font-semibold">4. Intellectual Property Rights</span>
+                <br /><br />
+                All content on the Accomate Global website, including text, graphics, logos, images, and software, is the property of Accomate Global or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not use, reproduce, or distribute any content from our website without our prior written consent.
+                <br /><br />
+
+                <span className="font-semibold">5. Confidentiality</span>
+                <br /><br />
+                We understand the importance of confidentiality in our business. We are committed to maintaining the confidentiality of all client information and will not disclose any confidential information to third parties without your consent, except as required by law.
+                <br /><br />
+
+                <span className="font-semibold">6. Disclaimer of Warranties</span>
+                <br /><br />
+                Our website and services are provided "as is" and "as available" without any warranties of any kind, either express or implied. Accomate Global does not warrant that the website or services will be uninterrupted, error-free, or free of viruses or other harmful components. We disclaim all warranties, including but not limited to, implied warranties of merchantability and fitness for a particular purpose.
+                <br /><br />
+
+                <span className="font-semibold">7. Limitation of Liability</span>
+                <br /><br />
+                To the fullest extent permitted by law, Accomate Global shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your use or inability to use our website or services; (b) any unauthorized access to or use of our servers and/or any personal information stored therein; (c) any interruption or cessation of transmission to or from our website; (d) any bugs, viruses, trojans, or the like that may be transmitted to or through our website by any third party; or (e) any errors or omissions in any content or for any loss or damage of any kind incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available via the website or services.
+                <br /><br />
+
+                <span className="font-semibold">8. Indemnification</span>
+                <br /><br />
+                You agree to indemnify, defend, and hold harmless Accomate Global, its affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from your use of the website or services, your violation of these Terms and Conditions, or your violation of any rights of another.
+                <br /><br />
+
+                <span className="font-semibold">9. Termination</span>
+                <br /><br />
+                We reserve the right to terminate or suspend your access to our website and services, without notice, for conduct that we believe violates these Terms and Conditions or is harmful to other users of the website, us, or third parties, or for any other reason at our sole discretion.
+                <br /><br />
+
+                <span className="font-semibold">10. Changes to Terms and Conditions</span>
+                <br /><br />
+                We may update these Terms and Conditions from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of our website and services after any such changes constitutes your acceptance of the new Terms and Conditions.
+                <br /><br />
+
+                <span className="font-semibold">11. Contact Us</span>
+                <br /><br />
+                If you have any questions or concerns about these Terms and Conditions, please contact us at:
+                <br /><br />
+                <span className="font-semibold">Accomate Global</span><br />
+                G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006<br />
+                Email: <a className="underline text-blue-500" href="mailto:info@accomateglobal.com">info@accomateglobal.com</a><br />
+                Phone: +61-3991-77471
+                <br /><br />
+
+                Thank you for choosing Accomate Global. We look forward to providing you with exceptional service.
+
+            </div>
+
         </div>
     )
 }
