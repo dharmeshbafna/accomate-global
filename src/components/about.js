@@ -213,10 +213,10 @@ export const Team = () => {
         { name: 'Ronak Jain', img: '/team/ronak.jpeg', list: ['Business Development Head', '8 Years Experience in Audit and Taxation', 'CA, CPA (Aus), DISA, FAFD (ICAI)'] },
         { name: 'Pankaj Sahewal', img: '/team/pankaj.jpeg', list: ['Non Executive Director', '8 Years Experience in Audit and Taxation', 'CA(AIR 24), MBA (Fin), CFA (L1),CPA (US) pursuing'] },
         // Country Representative
-        { name: 'Meet Thakkar', img: '/team/meet.jpeg', list: ['BDM Australia', '7 Years of Industry Experience', 'MBA (Marketing)​'] },
+        { name: 'Meet Thakkar', img: '/team/meet.jpeg', list: ['BDM - Australia', '7 Years of Industry Experience', 'MBA (Marketing)​'] },
         { name: 'Mitva Patel', img: '/team/mitva.jpeg', list: ['BDM - USA', '3 Years of Industry Experience', 'MBA (Finance)'] },
         { name: 'Parth Varia', img: '/team/parth.jpeg', list: ['BDM - Canada, Ontario', '8 Years Experience in Audit & Taxation', 'CA, CPA (CAN)'] },
-        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['BDM - Canada, British Columbia', '8 Years Experience in Audit and Tax', 'CPA (Can)'] },
+        { name: 'Harshil Amin', img: '/team/harshil.jpeg', list: ['BDM - Canada, British Columbia', '8 Years Experience in Audit and Tax', 'CPA (CAN)'] },
         // Global Operations
         { name: 'Hemant Chandak', img: '/team/hemant.jpg', list: ['Operation Head - Australia', '8 Years Experience in Audit and Taxation', 'Leading team of 3 Audit/Tax managers & Associates', 'CA'] },
         { name: 'Saurabh Jain', img: '/team/saurabh.jpeg', list: ['Operation Head – USA', '9 Years Experience in US Taxation', 'Leading team of 5 Tax managers & Associates', 'CA, EA, CPA (US)'] },

@@ -7,7 +7,7 @@ export const Privacy = () => {
             </div>
 
             <div className="mt-10">
-                <span className="font-semibold">Effective Date: 13/06/2024</span><br /><br />
+                <span className="font-semibold">Effective Date: 28/06/2024</span><br /><br />
                 Welcome to Accomate Global. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website and use our services.
                 <br /><br />
 
@@ -72,7 +72,7 @@ export const Privacy = () => {
                 <span className="font-semibold">Accomate Global</span><br />
                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006<br />
                 Email: <a className="underline text-blue-500" href="mailto:info@accomateglobal.com">info@accomateglobal.com</a><br />
-                Phone: +61-3991-77471
+                
                 <br /><br />
                 Thank you for trusting Accomate Global with your personal information. We are committed to safeguarding your privacy and ensuring that your personal data is protected.
             </div>
@@ -90,7 +90,7 @@ export const Terms = () => {
             </div>
 
             <div className="mt-10">
-                <span className="font-semibold">Effective Date: 13/06/2024</span><br /><br />
+                <span className="font-semibold">Effective Date: 28/06/2024</span><br /><br />
                 Welcome to Accomate Global. By accessing and using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read these Terms and Conditions carefully before using our website and services.
                 <br /><br />
 
@@ -158,7 +158,7 @@ export const Terms = () => {
                 <span className="font-semibold">Accomate Global</span><br />
                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006<br />
                 Email: <a className="underline text-blue-500" href="mailto:info@accomateglobal.com">info@accomateglobal.com</a><br />
-                Phone: +61-3991-77471
+                
                 <br /><br />
 
                 Thank you for choosing Accomate Global. We look forward to providing you with exceptional service.
@@ -178,7 +178,7 @@ export const Disclaimer = () => {
             </div>
 
             <div className="mt-10">
-                <span className="font-semibold">Effective Date: 13/06/2024</span><br /><br />
+                <span className="font-semibold">Effective Date: 28/06/2024</span><br /><br />
                 Welcome to Accomate Global. The information provided on our website is for general informational purposes only. By accessing and using our website, you acknowledge and agree to the terms of this Disclaimer. If you do not agree with any part of this Disclaimer, you must not use our website.
                 <br /><br />
 
@@ -215,7 +215,7 @@ export const Disclaimer = () => {
                 <span className="font-semibold">Accomate Global</span><br />
                 G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA - 380006<br />
                 Email: <a className="underline text-blue-500" href="mailto:info@accomateglobal.com">info@accomateglobal.com</a><br />
-                Phone: +61-3991-77471
+                
                 <br /><br />
                 Thank you for visiting Accomate Global. We appreciate your understanding and cooperation.
 

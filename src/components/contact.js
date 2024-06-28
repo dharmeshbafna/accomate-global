@@ -36,10 +36,10 @@ export const Contact = () => {
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
     const contactdetails = [
-        { country: 'India', phone: '+91-8000494669', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
+        { country: 'India', phone: '+91 9016200968', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
         { country: 'Australia', phone: '+61 4  3319  7164', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
         { country: 'Canada', phone: '+1 647 512 0026', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
-        { country: 'USA', phone: '+1 917 744 7835', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
+        { country: 'USA', phone: '+1 917 744 7835', email: 'usa@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
     ];
 
     const handleSubmit = async (e) => {
@@ -92,7 +92,7 @@ export const Contact = () => {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {contactdetails.map((i, index) => {
                     return (
-                        <div key={index} data-aos="zoom-in" data-aos-duration="2000" data-aos-delay={`${index + 1}00`} className="rounded-lg p-5 border shadow-lg space-y-4" key={index}>
+                        <div key={index} data-aos="zoom-in" data-aos-duration="2000" data-aos-delay={`${index + 1}00`} className="rounded-lg p-5 border shadow-lg space-y-4">
                             <div className="flex items-center my-auto space-x-3 pb-4 border-b border-gray-300">
                                 <Image
                                     src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : i.country == 'USA' ? USA : ''}

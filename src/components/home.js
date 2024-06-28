@@ -366,7 +366,7 @@ export const Services = () => {
             ]
         },
         {
-            icon: '/home.json',
+            icon: '/payroll.json',
             head: 'Payroll Processing',
             desc: 'Our services are designed to meet the various needs of businesses and accounting professionals. By outsourcing payroll preparation to Accomate, you can focus on your business while we handle inefficiencies, reporting, and cost-cutting.',
             head2: 'Our payroll services include:',
@@ -459,7 +459,7 @@ export const Services = () => {
             ]
         },
         {
-            icon: '/commodity.json',
+            icon: '/pig.json',
             head: 'Managing SMSF',
             desc: `Even though, SMSF provides excellent control of funds transfer after retirement, developing and managing SMSF compliance requirements is not only challenging but also time-consuming. 
             However, Our highly experienced fund advisors work closely with you to help you with end-to-end SMSF administration services
