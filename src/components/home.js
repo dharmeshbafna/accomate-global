@@ -154,7 +154,7 @@ export const Banner = () => {
 
 export const About = () => {
 
-    
+
     useEffect(() => {
         AOS.init({
             once: true,
@@ -643,6 +643,7 @@ export const Services = () => {
                                 };
                                 return (
                                     <div
+                                        key={index}
                                         onMouseEnter={() => setHovered(false)}
                                         onMouseLeave={() => setHovered(true)}
                                         className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
@@ -670,8 +671,8 @@ export const Services = () => {
                                                 </div>
 
                                                 <ul className="w-full list-disc pl-4">
-                                                    {i.list.slice(0, 3).map((j) => (
-                                                        <li>
+                                                    {i.list.slice(0, 3).map((j, ind) => (
+                                                        <li key={ind}>
                                                             {truncateText(j, 15)}
                                                         </li>
                                                     ))}
@@ -699,6 +700,7 @@ export const Services = () => {
                                     };
                                     return (
                                         <div
+                                            key={index}
                                             onMouseEnter={() => setHovered(false)}
                                             onMouseLeave={() => setHovered(true)}
                                             className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
@@ -734,8 +736,8 @@ export const Services = () => {
                                                     </div>
 
                                                     <ul className="w-full list-disc pl-4">
-                                                        {i.list.slice(0, 3).map((j) => (
-                                                            <li>
+                                                        {i.list.slice(0, 3).map((j, ind) => (
+                                                            <li key={ind}>
                                                                 {truncateText(j, 15)}
                                                             </li>
                                                         ))}
@@ -764,6 +766,7 @@ export const Services = () => {
 
                                         return (
                                             <div
+                                                key={index}
                                                 onMouseEnter={() => setHovered(false)}
                                                 onMouseLeave={() => setHovered(true)}
                                                 className="keen-slider__slide rounded-lg shadow-lg cursor-pointer">
@@ -799,8 +802,8 @@ export const Services = () => {
                                                         </div>
 
                                                         <ul className="w-full list-disc pl-4">
-                                                            {i.list.slice(0, 3).map((j) => (
-                                                                <li>
+                                                            {i.list.slice(0, 3).map((j, ind) => (
+                                                                <li key={ind}>
                                                                     {truncateText(j, 15)}
                                                                 </li>
                                                             ))}

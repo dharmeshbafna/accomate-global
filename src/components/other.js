@@ -100,7 +100,7 @@ export const Sidebar = ({ toogle, setToogle }) => {
                                                 <div className="border space-y-2 px-2 py-3 rounded-lg md:w-1/2 w-[80%]">
                                                     {i.dropdown.map((j, ind) => {
                                                         return (
-                                                            <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                            <div key={ind} className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
                                                                 <a href={j.link} className="text-nowrap">
                                                                     {j.name}
                                                                 </a>
@@ -113,7 +113,7 @@ export const Sidebar = ({ toogle, setToogle }) => {
                                                 <div className="border space-y-2 px-2 py-3 rounded-lg md:w-1/2 w-[80%]">
                                                     {i.dropdown.map((j, ind) => {
                                                         return (
-                                                            <div className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
+                                                            <div key={ind} className={`${isActive(j.link) ? 'text-[#1B2D9F]' : ''} hover:text-[#1B2D9F] duration-300 pb-2 border-b border-[#9F8D1B]`}>
                                                                 <a href={j.link} className="text-nowrap">
                                                                     {j.name}
                                                                 </a>
@@ -234,7 +234,7 @@ export const Navbar = () => {
 
                         {navitems.map((i, index) => {
                             return (
-                                <div className="w-fit text-lg relative">
+                                <div key={index} className="w-fit text-lg relative">
                                     <a
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
@@ -255,7 +255,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a key={index} href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -269,7 +269,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a key={index} href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -312,7 +312,7 @@ export const Navbar = () => {
 
                         {navitems.map((i, index) => {
                             return (
-                                <div className="w-fit text-lg relative overflow-x-visible">
+                                <div key={index} className="w-fit text-lg relative overflow-x-visible">
                                     <a
                                         onMouseEnter={i.name == "Services" ? () => setDropdown(true) : i.name == "Company" ? () => setDropdown2(true) : () => { }}
                                         onMouseLeave={i.name == "Services" ? () => setDropdown(false) : i.name == "Company" ? () => setDropdown2(false) : () => { }}
@@ -336,7 +336,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a key={index} href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -350,7 +350,7 @@ export const Navbar = () => {
 
                                             {i.dropdown.map((d, index) => {
                                                 return (
-                                                    <a href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
+                                                    <a key={index} href={d.link} className={`${isActive(d.link) ? 'text-[#1B2D9F]' : 'text-black'} text-nowrap block hover:text-[#1B2D9F] hover:pl-1 duration-300 pb-1 mt-1 ${index !== i.dropdown.length - 1 ? 'border-b border-[#9F8D1B]' : ''}`}>
                                                         {d.name}
                                                     </a>
                                                 )
@@ -456,7 +456,7 @@ export const Footer = () => {
             </div>
             {/* Copyright */}
             <div className="flex justify-center mx-auto border-t border-gray-500 pt-10 text-center mt-6">
-                © 2024 Accomate Global. All Rights Reserved.
+                © 2024 Accomate Global. Developed by&nbsp;<a href="https://anriyo.com" target="_blank" className="font-semibold">Anriyo</a>.
             </div>
         </div>
     )
