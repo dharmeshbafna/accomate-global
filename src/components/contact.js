@@ -105,7 +105,7 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-<div className="mt-10 flex text-left bg-[url('../../public/conbg.png')] bg-no-repeat bg-right bg-cover">
+<div className="mt-10 flex text-left bg-[url('/conbg.png')] bg-no-repeat bg-right bg-cover">
     <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg w-full">
         <div className="space-y-6">
             {/* Website */}
