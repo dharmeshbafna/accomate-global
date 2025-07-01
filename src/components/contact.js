@@ -8,6 +8,7 @@ import Canada from "../../public/circular_canada.jpg"
 import Australia from "../../public/circular_australia.jpg"
 import India from "../../public/india.jpg"
 import ContactImg from "../../public/contact.jpg"
+import conbg from "../../public/cbg.png"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -105,7 +106,7 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-<div className="mt-10 flex text-left bg-[url('https://unsplash.com/photos/a-white-and-beige-background-with-a-black-and-white-design-gneiEi5yN1s')] bg-no-repeat bg-right bg-cover">
+<div className="mt-10 flex text-left bg-[url('conbg')] bg-no-repeat bg-right bg-cover">
     <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg w-full">
         <div className="space-y-6">
             {/* Website */}
