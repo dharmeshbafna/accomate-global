@@ -105,7 +105,6 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-// With this new layout:
 <div className="mt-10 flex justify-center">
     <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg max-w-2xl w-full">
         <div className="space-y-6">
