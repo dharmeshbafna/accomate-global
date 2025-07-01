@@ -36,7 +36,7 @@ export const Contact = () => {
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
 
-    const contactdetails = {
+    const contactInfo = {
   website: 'www.accomateglobal.com',
   email: 'info@accomateglobal.com',
   phones: ['+91 8000494669', '+61 3 9917 7471'],
@@ -149,6 +149,56 @@ export const Contact = () => {
                 })}
             </div>
 
+// JSX for the new contact details layout
+<div className="contact-details-container">
+  {/* Website */}
+  <div className="contact-item">
+    <div className="contact-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+      </svg>
+    </div>
+    <span className="contact-text">{contactInfo.website}</span>
+  </div>
+
+  {/* Email */}
+  <div className="contact-item">
+    <div className="contact-icon">
+      <MdOutlineEmail size={20} />
+    </div>
+    <span className="contact-text">{contactInfo.email}</span>
+  </div>
+
+  {/* Phone Numbers */}
+  <div className="contact-item">
+    <div className="contact-icon">
+      <IoCallOutline size={20} />
+    </div>
+    <div className="contact-text">
+      {contactInfo.phones.map((phone, index) => (
+        <div key={index}>{phone}</div>
+      ))}
+    </div>
+  </div>
+
+  {/* Locations with Flags */}
+  {contactInfo.locations.map((location, index) => (
+    <div key={index} className="contact-item">
+      <div className="contact-icon">
+        <Image 
+          src={location.flag} 
+          alt={`${location.country} flag`} 
+          width={24} 
+          height={24} 
+          className="flag-icon"
+        />
+      </div>
+      <span className="contact-text">{location.address}</span>
+    </div>
+  ))}
+</div>
+
+                
 
             <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="flex w-full mt-10">
                 <div className="lg:w-[35%] hidden lg:flex">
