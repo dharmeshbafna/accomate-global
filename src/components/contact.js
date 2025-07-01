@@ -105,7 +105,7 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-<div className="mt-10 flex text-left bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')] bg-no-repeat bg-right bg-cover">
+<div className="mt-10 flex text-left bg-[url('https://unsplash.com/photos/a-white-and-beige-background-with-a-black-and-white-design-gneiEi5yN1s')] bg-no-repeat bg-right bg-cover">
     <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg w-full">
         <div className="space-y-6">
             {/* Website */}
