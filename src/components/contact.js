@@ -35,12 +35,29 @@ export const Contact = () => {
     const [load, setLoad] = useState(false);
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
-    const contactdetails = [
-        { country: 'India', phone: '+91 9016200968', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
-        { country: 'Australia', phone: '+61 4  3319  7164', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
-        { country: 'Canada', phone: '+1 647 512 0026', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
 
-    ];
+    const contactInfo = {
+  website: 'www.accomateglobal.com',
+  email: 'info@accomateglobal.com',
+  phones: ['+91 8000494669', '+61 3 9917 7471'],
+  locations: [
+    { 
+      country: 'Australia', 
+      flag: Australia, 
+      address: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' 
+    },
+    { 
+      country: 'Canada', 
+      flag: Canada, 
+      address: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' 
+    },
+    { 
+      country: 'India', 
+      flag: India, 
+      address: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' 
+    }
+  ]
+};
 
     const handleSubmit = async (e) => {
         e.preventDefault();
