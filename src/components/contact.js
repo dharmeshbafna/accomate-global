@@ -105,8 +105,8 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-<div className="mt-10 flex justify-center">
-    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg max-w-2xl w-full">
+<div className="mt-10 flex text-left">
+    <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg w-full">
         <div className="space-y-6">
             {/* Website */}
             <div className="flex items-center space-x-4">
