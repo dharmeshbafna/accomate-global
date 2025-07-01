@@ -36,7 +36,7 @@ export const Contact = () => {
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
 
-    const contactInfo = {
+    const contactdetails = {
   website: 'www.accomateglobal.com',
   email: 'info@accomateglobal.com',
   phones: ['+91 8000494669', '+61 3 9917 7471'],
