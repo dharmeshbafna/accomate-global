@@ -35,12 +35,30 @@ export const Contact = () => {
     const [load, setLoad] = useState(false);
     const [success, setSuccess] = useState('');
     const [err, setErr] = useState('');
-    const contactdetails = [
-        { country: 'India', phone: '+91 9016200968', email: 'info@accomateglobal.com', add: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' },
-        { country: 'Australia', phone: '+61 4  3319  7164', email: 'australia@accomateglobal.com', add: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' },
-        { country: 'Canada', phone: '+1 647 512 0026', email: 'canada@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
-        { country: 'USA', phone: '+1 917 744 7835', email: 'usa@accomateglobal.com', add: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' },
-    ];
+
+    // New consolidated contact info structure
+    const contactInfo = {
+        website: 'www.accomateglobal.com',
+        email: 'info@accomateglobal.com',
+        phones: ['+91 8000494669', '+61 3 9917 7471'],
+        locations: [
+            { 
+                country: 'Australia', 
+                flag: Australia, 
+                address: '203/2 Infinity Drive Truganina, VIC, Australia, 3029' 
+            },
+            { 
+                country: 'Canada', 
+                flag: Canada, 
+                address: '1234051 Dunmow Crescent Mississauga Ontario L4Z1E1' 
+            },
+            { 
+                country: 'India', 
+                flag: India, 
+                address: 'G-3,85, Madhuvan Building, Ellisbridge, Ahmedabad, INDIA – 380006' 
+            }
+        ]
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -89,49 +107,66 @@ export const Contact = () => {
                 Join With Us, Now!
             </div>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {contactdetails.map((i, index) => {
-                    return (
-                        <div key={index} data-aos="zoom-in" data-aos-duration="2000" data-aos-delay={`${index + 1}00`} className="rounded-lg p-5 border shadow-lg space-y-4">
-                            <div className="flex items-center my-auto space-x-3 pb-4 border-b border-gray-300">
-                                <Image
-                                    src={i.country == 'India' ? India : i.country == 'Australia' ? Australia : i.country == 'Canada' ? Canada : i.country == 'USA' ? USA : ''}
-                                    className="h-10 w-10 rounded-full drop-shadow-md"
-                                    alt="country"
-                                />
-                                <div className="pl-3 border-l border-gray-300 font-semibold text-lg text-[#1B2D9F]">{i.country}</div>
+            {/* New Contact Details Layout */}
+            <div className="mt-10 flex justify-center">
+                <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="rounded-lg p-8 border shadow-lg max-w-2xl w-full">
+                    <div className="space-y-6">
+                        {/* Website */}
+                        <div className="flex items-center space-x-4">
+                            <div className="text-[#1B2D9F] text-xl flex shrink-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+                                </svg>
                             </div>
-
-                            <div className="space-y-4">
-                                <div className="pb-2 border-b space-x-2">
-                                    <a href={`tel:${i.phone}`} className="hover:text-[#1B2D9F] duration-300 flex items-center my-auto space-x-2">
-                                        <IoCallOutline className="text-lg font-semibold flex shrink-0" />
-                                        <div className="text-sm">
-                                            {i.phone}
-                                        </div>
-                                    </a>
-                                </div>
-                                <div className="pb-2 border-b space-x-2">
-                                    <a href={`mailto:${i.email}`} className="hover:text-[#1B2D9F] duration-300 flex items-center my-auto space-x-2">
-                                        <MdOutlineEmail className="text-lg font-semibold flex shrink-0" />
-                                        <div className="text-sm">
-                                            {i.email}
-                                        </div>
-                                    </a>
-                                </div>
-                                <div className="pb-2 flex space-x-2">
-                                    <LuMapPin className="text-lg font-semibold mt-1 flex shrink-0" />
-                                    <div className="text-sm">
-                                        {i.add}
-                                    </div>
-                                </div>
-                            </div>
-
+                            <span className="text-gray-800 font-medium">{contactInfo.website}</span>
                         </div>
-                    )
-                })}
-            </div>
 
+                        {/* Email */}
+                        <div className="flex items-center space-x-4">
+                            <div className="text-[#1B2D9F] text-xl flex shrink-0">
+                                <MdOutlineEmail size={24} />
+                            </div>
+                            <a href={`mailto:${contactInfo.email}`} className="text-gray-800 font-medium hover:text-[#1B2D9F] duration-300">
+                                {contactInfo.email}
+                            </a>
+                        </div>
+
+                        {/* Phone Numbers */}
+                        <div className="flex items-start space-x-4">
+                            <div className="text-[#1B2D9F] text-xl flex shrink-0 mt-1">
+                                <IoCallOutline size={24} />
+                            </div>
+                            <div className="space-y-1">
+                                {contactInfo.phones.map((phone, index) => (
+                                    <div key={index}>
+                                        <a href={`tel:${phone}`} className="text-gray-800 font-medium hover:text-[#1B2D9F] duration-300">
+                                            {phone}
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Locations with Flags */}
+                        {contactInfo.locations.map((location, index) => (
+                            <div key={index} className="flex items-start space-x-4">
+                                <div className="flex shrink-0 mt-1">
+                                    <Image 
+                                        src={location.flag} 
+                                        alt={`${location.country} flag`} 
+                                        width={24} 
+                                        height={24} 
+                                        className="rounded-full object-cover"
+                                    />
+                                </div>
+                                <span className="text-gray-800 font-medium leading-relaxed">
+                                    {location.address}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="flex w-full mt-10">
                 <div className="lg:w-[35%] hidden lg:flex">
@@ -204,10 +239,7 @@ export const Contact = () => {
                         </div>
                     </form>
                 </div>
-
-
             </div>
-
 
             {/* CTA */}
             <div data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100" className="mt-16 mb-10 space-y-10">
