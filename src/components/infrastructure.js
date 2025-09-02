@@ -90,7 +90,7 @@ export const Infrastructure = () => {
                     <div className="my-6">
 
                         <div className='flex items-center my-auto'>
-                            Safeguarding clients' sensitive financial information is paramount in today's digital
+                            As an ISO certified company (ISO-27001), we understand that Safeguarding client's sensitive financial information is paramount in today's digital
                             landscape. We deeply understand the critical need to protect this data from theft and
                             cyber threats.
                             <br /><br />
