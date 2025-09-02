@@ -7,6 +7,8 @@ import Logo2 from "../../public/n_logo2.png"
 import WhiteLogo from "../../public/accomate_logo_white.png"
 import WhiteLogo2 from "../../public/n_accomate_white.png"
 import CircleIcon from "../../public/n_accomate_circle.png"
+import isologo from "../../public/iso-27001.png"
+import sgslogo from "../../public/sgsiso.jpg"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaBars, FaWhatsapp } from "react-icons/fa6";
@@ -393,6 +395,19 @@ export const Footer = () => {
                         in Private Equity, Venture Capital,
                         Technology, Financial Service, Real Estate,
                         Insurance, Healthcare, and Manufacturing.
+                    </div>
+                              {/* Certification logos */}
+                    <div className="flex items-center space-x-4 mt-4">
+                        <Image
+                            src={SgsIsoLogo}
+                            alt="SGS ISO/IEC 27001 UKAS certification"
+                            className="h-14 w-auto"
+                        />
+                        <Image
+                            src={Iso27001Logo}
+                            alt="ISO 27001 logo"
+                            className="h-14 w-auto"
+                        />
                     </div>
                     <div className="flex items-center my-auto space-x-5">
                         <a href="#" className="rounded-full p-2 border-2 border-white shadow text-white hover:border-[#1B2D9F] hover:scale-[110%] hover:bg-[#1B2D9F] hover:text-white duration-300">
