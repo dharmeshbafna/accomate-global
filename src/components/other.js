@@ -399,12 +399,12 @@ export const Footer = () => {
                               {/* Certification logos */}
                     <div className="flex items-center space-x-4 mt-4">
                         <Image
-                            src={SgsIsoLogo}
+                            src={sgslogo}
                             alt="SGS ISO/IEC 27001 UKAS certification"
                             className="h-14 w-auto"
                         />
                         <Image
-                            src={Iso27001Logo}
+                            src={isologo}
                             alt="ISO 27001 logo"
                             className="h-14 w-auto"
                         />
