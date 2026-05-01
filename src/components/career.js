@@ -6,6 +6,35 @@ import { CareerForm } from "@/api/form";
 
 import { Oval } from "react-loader-spinner";
 
+const FIELD_LIMITS = {
+    nameMin: 2,
+    nameMax: 30,
+    email: 320,
+    phone: 20,
+    messageMin: 10,
+    messageMax: 1000,
+};
+
+const NAME_PATTERN = /^[A-Za-z\s]{2,30}$/;
+const EMAIL_PATTERN = /^[a-zA-Z0-9._%+\-]{1,64}@[a-zA-Z0-9.\-]{1,253}\.[a-zA-Z]{2,}$/;
+const PHONE_PATTERN = /^(\+?[1-9]\d{0,2}[\s\-]?)?(\(?\d{2,4}\)?[\s\-]?)?\d{6,10}$/;
+const MESSAGE_PATTERN = /^(?=[\s\S]{10,1000}$)[^<>&]*$/;
+
+const cleanNameInput = (value) => value.replace(/[^A-Za-z\s]/g, '').slice(0, FIELD_LIMITS.nameMax);
+
+const cleanEmailInput = (value) => value.replace(/[^A-Za-z0-9._%+\-@]/g, '').slice(0, FIELD_LIMITS.email);
+
+const cleanPhoneInput = (value) => value.replace(/[^0-9+\s\-()]/g, '').slice(0, FIELD_LIMITS.phone);
+
+const cleanMessageInput = (value) => value.replace(/[<>&]/g, '').slice(0, FIELD_LIMITS.messageMax);
+
+const escapeDisplayText = (value) => String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 export const CareerComp = () => {
 
     const [modal, setModal] = useState(false);
@@ -34,6 +63,34 @@ export const CareerComp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (!NAME_PATTERN.test(fd.name)) {
+            setSuccess('');
+            setErr('Name must be 2-30 letters only. No numbers or symbols allowed.');
+            setModal(true);
+            return;
+        }
+
+        if (!EMAIL_PATTERN.test(fd.email)) {
+            setSuccess('');
+            setErr('Enter a valid email address (e.g. user@example.com).');
+            setModal(true);
+            return;
+        }
+
+        if (!PHONE_PATTERN.test(fd.phone)) {
+            setSuccess('');
+            setErr('Enter a valid phone number (e.g. +91 98765 43210 or 9876543210).');
+            setModal(true);
+            return;
+        }
+
+        if (fd.msg && !MESSAGE_PATTERN.test(fd.msg)) {
+            setSuccess('');
+            setErr('Message must be between 10 and 1000 characters. Avoid special symbols like < > &.');
+            setModal(true);
+            return;
+        }
+
         setLoad(true);
         setModal(true);
 
@@ -44,7 +101,7 @@ export const CareerComp = () => {
         const res = await CareerForm(formd);
 
         if (res.success) {
-            setSuccess(res.success);
+            setSuccess(escapeDisplayText(res.success));
             setErr('');
             setLoad(false);
             setTimeout(() => {
@@ -60,7 +117,7 @@ export const CareerComp = () => {
             }, 3000);
         } else {
             setSuccess('');
-            setErr(res.error || 'Internal server error');
+            setErr(escapeDisplayText(res.error || 'Internal server error'));
             setLoad(false);
             setTimeout(() => {
                 setErr('');
@@ -143,11 +200,15 @@ export const CareerComp = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                                         <input
-                                            type="name"
+                                            type="text"
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Name*"
                                             value={fd.name}
-                                            onChange={(e) => setFd({ ...fd, name: e.target.value })}
+                                            pattern="[A-Za-z\s]{2,30}"
+                                            minLength={FIELD_LIMITS.nameMin}
+                                            maxLength={FIELD_LIMITS.nameMax}
+                                            title="Name must be 2-30 letters only. No numbers or symbols allowed."
+                                            onChange={(e) => setFd({ ...fd, name: cleanNameInput(e.target.value) })}
                                             required
                                         />
 
@@ -156,7 +217,10 @@ export const CareerComp = () => {
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Email*"
                                             value={fd.email}
-                                            onChange={(e) => setFd({ ...fd, email: e.target.value })}
+                                            pattern="[a-zA-Z0-9._%+\-]{1,64}@[a-zA-Z0-9.\-]{1,253}\.[a-zA-Z]{2,}"
+                                            maxLength={FIELD_LIMITS.email}
+                                            title="Enter a valid email address (e.g. user@example.com)."
+                                            onChange={(e) => setFd({ ...fd, email: cleanEmailInput(e.target.value) })}
                                             required
                                         />
 
@@ -165,7 +229,10 @@ export const CareerComp = () => {
                                             className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                             placeholder="Your Phone*"
                                             value={fd.phone}
-                                            onChange={(e) => setFd({ ...fd, phone: e.target.value })}
+                                            pattern="(\+?[1-9]\d{0,2}[\s\-]?)?(\(?\d{2,4}\)?[\s\-]?)?\d{6,10}"
+                                            maxLength={FIELD_LIMITS.phone}
+                                            title="Enter a valid phone number (e.g. +91 98765 43210 or 9876543210)."
+                                            onChange={(e) => setFd({ ...fd, phone: cleanPhoneInput(e.target.value) })}
                                             required
                                         />
 
@@ -188,7 +255,12 @@ export const CareerComp = () => {
                                         className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:border focus:border-[#1B2D9F]"
                                         placeholder="Additional Message"
                                         value={fd.msg}
-                                        onChange={(e) => setFd({ ...fd, msg: e.target.value })}
+                                        minLength={fd.msg ? FIELD_LIMITS.messageMin : undefined}
+                                        maxLength={FIELD_LIMITS.messageMax}
+                                        title="Message must be between 10 and 1000 characters. Avoid special symbols like < > &."
+                                        onChange={(e) => setFd({ ...fd, msg: cleanMessageInput(e.target.value) })}
+                                        onInvalid={(e) => e.target.setCustomValidity('Message must be between 10 and 1000 characters. Avoid special symbols like < > &.')}
+                                        onInput={(e) => e.target.setCustomValidity('')}
                                         rows={5}
                                     >
                                     </textarea>

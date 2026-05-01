@@ -8,7 +8,6 @@ import WhiteLogo from "../../public/accomate_logo_white.png"
 import WhiteLogo2 from "../../public/n_accomate_white.png"
 import CircleIcon from "../../public/n_accomate_circle.png"
 import isologo from "../../public/iso-27001.png"
-import sgslogo from "../../public/sgsiso.jpg"
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaBars, FaWhatsapp } from "react-icons/fa6";
@@ -399,8 +398,10 @@ export const Footer = () => {
                               {/* Certification logos */}
                     <div className="flex items-center space-x-4 mt-4">
                         <Image
-                            src={sgslogo}
-                            alt="SGS ISO/IEC 27001 UKAS certification"
+                            src="/sgsiso.jpg"
+                            alt="SGS ISO/IEC 27001 UKAS certification"
+                            width={160}
+                            height={56}
                             className="h-14 w-auto"
                         />
                         <Image
