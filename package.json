@@ -14,7 +14,7 @@
     "@mui/material": "^5.15.20",
     "@syncfusion/ej2-react-maps": "^25.2.5",
     "aos": "^2.3.4",
-    "axios": "^1.7.2",
+    "axios": "^1.15.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
     "keen-slider": "^6.8.6",
